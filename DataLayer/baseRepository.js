@@ -74,6 +74,12 @@ class BaseRepository {
             })
         });
     }
+
+    addSet(object) {
+        var self = this;
+        var promises = object.map(o => self.add(o));
+        return Promise.all(promises);
+    }
 }
 
 module.exports = BaseRepository;

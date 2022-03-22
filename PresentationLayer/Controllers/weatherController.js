@@ -4,7 +4,7 @@ const PermissionMiddleWare = require("../permissionMiddleWare");
 function WeatherController(app) {
     app.put('/weather', PermissionMiddleWare.isAdmin, (req, res) => {
         try {
-            new WeatherService().addWeatherLog(req.body).then(
+            new WeatherService().addWeatherLogs(req.body).then(
                 (r) => res.send(r))
                 .catch((e) => {
                     res.statusCode = 401;

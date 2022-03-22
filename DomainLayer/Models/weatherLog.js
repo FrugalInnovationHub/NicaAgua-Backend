@@ -39,8 +39,8 @@ class WeatherLogParameter{
             throw("Invalid Name")
         if(!object.unit)
             throw("Invalid Unit")
-        if(object.value != undefined && typeof(object.value) != 'number')
-            throw("Invalid Value")
+        // if(object.value != undefined)
+        //     throw("Invalid Value")
 
         this.name = object.name;
         this.unit = object.unit;

@@ -16,6 +16,17 @@ class WeatherService {
         });
     }
 
+     /**Saves a new User in the DataBase 
+     * @summary Check if there is already a User with registered with the provided phone number. Case there is no user registered with this number then creates a new register for this user.
+     * @param {object} object - Object containing new User's information
+    */
+      addWeatherLogs(object) {
+        return new Promise((resolve, reject) => {
+            var newLog = object.map(o => new WeatherLog(o).toJson());
+            this.weatherRepository.addSet(newLog).then(() => resolve()).catch(() => reject());
+        });
+    }
+
     /**Saves a new User in the DataBase 
      * @summary Check if there is already a User with registered with the provided phone number. Case there is no user registered with this number then creates a new register for this user.
      * @param {object} object - Object containing new User's information

@@ -22,7 +22,7 @@ httpsServer.listen(3004, () => console.log('Express server is running at port #3
 
 
 app.use(cors());
-app.use(bodyparser.json());
+app.use(bodyparser.json({ limit: '50mb' }))
 app.use(bodyparser.urlencoded({ extended: false }));
 
 app.get('/',(req,res) => {
