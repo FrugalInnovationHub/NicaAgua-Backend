@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "nyc --reporter=html --reporter=text mocha",
-    "start": "node PresentationLayer/nicaraguapp.js"
+    "start": "serve PresentationLayer/nicaraguApp.js"
   },
   "author": "",
   "license": "ISC",
