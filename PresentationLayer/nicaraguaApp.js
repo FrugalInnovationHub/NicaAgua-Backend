@@ -1,8 +1,8 @@
 var fs = require('fs');
 var http = require('http');
 var https = require('https');
-var privateKey = fs.readFileSync('local.key', 'utf8');
-var certificate = fs.readFileSync('local.crt', 'utf8');
+var privateKey = fs.readFileSync('PresentationLayer/Local.key', 'utf8');
+var certificate = fs.readFileSync('PresentationLayerlocal.crt', 'utf8');
 var credentials = { key: privateKey, cert: certificate };
 var WeatherService = require('../DomainLayer/Services/weatherService');
 var RegionService = require('../DomainLayer/Services/regionService');
@@ -15,9 +15,9 @@ const JwtIssuer = require('./jwtIssuer');
 
 var httpServer = http.createServer(app);
 var httpsServer = https.createServer(credentials, app);
-
-httpServer.listen(81, () => console.log('Express server is running at port #80 HTTP'));
-httpsServer.listen(3004, () => console.log('Express server is running at port #3004 HTTPS'));
+const httpsPort = 3000;
+// httpServer.listen(81, () => console.log('Express server is running at port #80 HTTP'));
+httpsServer.listen(httpsPort, () => console.log(`Express server is running at port ${httpsPort} HTTPS`));
 
 
 
@@ -32,3 +32,4 @@ app.get('/',(req,res) => {
 require('./Controllers/userController')(app);
 require('./Controllers/regionsController')(app);
 require('./Controllers/weatherController')(app);
+require('./Controllers/waterAlertController')(app);

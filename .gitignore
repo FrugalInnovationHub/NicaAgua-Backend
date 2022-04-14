@@ -6533,3 +6533,9 @@ coverage/lcov-report/Nicaragua Backend/Test/regionTest.js.html
 coverage/lcov-report/Nicaragua Backend/Test/userTests.js.html
 coverage/lcov-report/Nicaragua Backend/Test/weatherLogTests.js.html
 .vscode/launch.json
+node_modules/.cache/nyc/region-a347265ae7df479a3bac11a383c9be5a9ab1bf35207f08caa56bb595a72bc904.js
+node_modules/.cache/nyc/user-667d360f73932fd35237892cdf99f10c84910ba03d7ead72d4ac9f08ae2ba3c7.js
+node_modules/.cache/nyc/waterAlert-3363406fe0cefa5389c27772af3cef61fe5f44a5f6135012602bc483ef74ab18.js
+node_modules/.cache/nyc/weatherLog-cc81426badbc10b7a9a0a7a8fb71d783e3a453f092c7eacd5cd47a557082e3b1.js
+.nyc_output/c0e5a037-7e1c-4dc8-897f-68cc38d8c058.json
+.nyc_output/processinfo/c0e5a037-7e1c-4dc8-897f-68cc38d8c058.json

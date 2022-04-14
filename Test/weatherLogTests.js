@@ -5,7 +5,6 @@ var validParam1 = { "unit": "mm", "name": "precipitation", "value": 1 }
 var validParam2 = { "unit": "%", "name": "humidity" }
 var invalidParam1 = { "unit": "%", "value": 60 }
 var invalidParam2 = { "name": "precipitation", "value": 1 }
-var invalidParam3 = { "unit": "mm", "name": "precipitation", "value": "A" }
 
 var validWeatherLog = { "dateTime": "2022-01-01", "userId": "123", "parameters": [validParam1, validParam2],"regions": ["NIC01"] };
 var validWeatherLog2 = { "userId": "123", "parameters": [validParam1, validParam2],"regions": ["NIC01"] };
@@ -56,19 +55,6 @@ describe('WeatherLogParameter', function () {
             catch (e) {
                 assert.equal(weatherParameter, null);
                 assert.equal(e, "Invalid Unit");
-            }
-        });
-    });
-
-    describe('Constructor', function () {
-        it("Invalid Value", function () {
-            try {
-                var weatherParameter = new WeatherLogParameter(invalidParam3)
-                assert.fail()
-            }
-            catch (e) {
-                assert.equal(weatherParameter, null);
-                assert.equal(e, "Invalid Value");
             }
         });
     });

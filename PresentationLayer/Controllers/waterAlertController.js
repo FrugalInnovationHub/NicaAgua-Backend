@@ -1,11 +1,11 @@
-const WeatherService = require("../../DomainLayer/Services/weatherService");
+const WaterAlertService = require("../../DomainLayer/Services/waterAlertService");
 const PermissionMiddleWare = require("../permissionMiddleWare");
 
 function WeatherController(app) {
-  app.put("/weather", PermissionMiddleWare.isAdmin, (req, res) => {
+  app.put("/waterAlert", PermissionMiddleWare.isAdmin, (req, res) => {
     try {
-      new WeatherService()
-        .addWeatherLogs(req.body)
+      new WaterAlertService()
+        .addWaterAlert(req.body)
         .then((r) => res.send(r))
         .catch((e) => {
           res.statusCode = 401;
@@ -17,10 +17,10 @@ function WeatherController(app) {
     }
   });
 
-  app.get("/weather", PermissionMiddleWare.isAuthenticated, (req, res) => {
+  app.get("/waterAlert", PermissionMiddleWare.isAuthenticated, (req, res) => {
     try {
-      new WeatherService()
-        .getWeatherLogList(req.query)
+      new WaterAlertService()
+        .getWaterAlerts(req.query)
         .then((r) => res.send(r))
         .catch((e) => {
           res.statusCode = 401;
@@ -32,10 +32,10 @@ function WeatherController(app) {
     }
   });
 
-  app.get("/weather/:id", PermissionMiddleWare.isAuthenticated, (req, res) => {
+  app.get("/waterAlert/:id", PermissionMiddleWare.isAuthenticated, (req, res) => {
     try {
-      new WeatherService()
-        .getWeatherLog(req.params.id)
+      new WaterAlertService()
+        .getWaterAlert(req.params.id)
         .then((r) => res.send(r))
         .catch((e) => {
           res.statusCode = 401;
