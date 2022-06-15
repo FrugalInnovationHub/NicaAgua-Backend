@@ -1,8 +1,8 @@
 var fs = require('fs');
 var http = require('http');
 var https = require('https');
-var privateKey = fs.readFileSync('PresentationLayer/Local.key', 'utf8');
-var certificate = fs.readFileSync('PresentationLayer/Local.crt', 'utf8');
+var privateKey = fs.readFileSync('./PresentationLayer/Local.key', 'utf8');
+var certificate = fs.readFileSync('./PresentationLayer/Local.crt', 'utf8');
 var credentials = { key: privateKey, cert: certificate };
 var WeatherService = require('../DomainLayer/Services/weatherService');
 var RegionService = require('../DomainLayer/Services/regionService');
