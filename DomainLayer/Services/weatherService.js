@@ -1,5 +1,5 @@
 const WeatherRepository = require('../../DataLayer/weatherRepository')
-const { WeatherLog, WeatherLogParameter } = require('../Models/weatherLog')
+const { WeatherLog, WeatherLogParameter, WeatherDayLog,groupByDateTime } = require('../Models/weatherLog')
 class WeatherService {
     constructor() {
         this.weatherRepository = new WeatherRepository();
@@ -23,7 +23,9 @@ class WeatherService {
       addWeatherLogs(object) {
         return new Promise((resolve, reject) => {
             var newLog = object.map(o => new WeatherLog(o).toJson());
-            this.weatherRepository.addSet(newLog).then(() => resolve()).catch(() => reject());
+            var logs = groupByDateTime(newLog);
+            console.log(logs);
+            this.weatherRepository.addSet(logs).then(() => resolve()).catch(() => reject());
         });
     }
 

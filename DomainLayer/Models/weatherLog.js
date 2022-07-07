@@ -48,5 +48,29 @@ class WeatherLogParameter{
     }
 }
 
+class WeatherDayLog{
+    constructor(object){
+        if(object == null)
+            throw("Invalid List of WeatherLogs");
+        this.id = object.id ?? null;
+        this.date = object.dateTime;
+        this.dateTime = new Date(object.dateTime);
+        this.logs = object.logs;
+        this.regions = [ Region.RegionCode("*****")];
+    }
+    toJson(){
+        return JSON.parse(JSON.stringify(this));
+    }
+}
 
-module.exports = {WeatherLogList,WeatherLog,WeatherLogParameter}
+function groupByDateTime (xs) {
+    var teste = xs.reduce(function(rv, x) {
+     var date = new Date(x.dateTime).toISOString().substring(0,10);
+     (rv[date] = rv[date] || []).push(x);
+      return Object.assign(rv);
+    }, {});
+    teste = Object.entries(teste).map(e => ({dateTime:e[0],logs :e[1]}));
+    return teste.map(r => new WeatherDayLog(r).toJson()); 
+  };
+
+module.exports = {WeatherLogList,WeatherLog,WeatherLogParameter,WeatherDayLog,groupByDateTime}

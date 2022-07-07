@@ -5,12 +5,10 @@ const BaseRepository = require('./baseRepository');
 class WeatherRepository extends BaseRepository {
     constructor(collection) {
         super();
-        this.key = null;
+        this.key = "date";
         collection = collection ?? 'Weather'
         this.collection = this.DataBase.collection(collection);
     }
-
-    upsert(object) { throw "Method Not Implemented" }
 
     getWeatherLogs(object) {
         return new Promise((resolve, reject) => {
