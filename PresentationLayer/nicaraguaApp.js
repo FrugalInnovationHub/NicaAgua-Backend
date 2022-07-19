@@ -33,3 +33,4 @@ require('./Controllers/userController')(app);
 require('./Controllers/regionsController')(app);
 require('./Controllers/weatherController')(app);
 require('./Controllers/waterAlertController')(app);
+require('./Controllers/forecastController')(app);

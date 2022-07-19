@@ -16,6 +16,7 @@
     "express": "^4.17.2",
     "firebase-admin": "^10.0.2",
     "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
     "nyc": "^15.1.0"
   },
   "mocha.files.glob": "Test/*.js"
