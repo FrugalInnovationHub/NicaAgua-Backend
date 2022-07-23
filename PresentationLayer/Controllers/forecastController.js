@@ -1,7 +1,7 @@
 const ForecastService = require("../../DomainLayer/Services/forecastService");
 const PermissionMiddleWare = require("../permissionMiddleWare");
 
-function RegionsController(app) {
+function ForecastController(app) {
     app.put('/shortTerm', PermissionMiddleWare.isAdmin, (req, res) => {
         try {
             new ForecastService().addForecast(req.body).then(
@@ -33,4 +33,4 @@ function RegionsController(app) {
     })
 }
 
-module.exports = RegionsController
+module.exports = ForecastController

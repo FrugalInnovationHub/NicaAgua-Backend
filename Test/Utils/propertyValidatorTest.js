@@ -8,7 +8,8 @@ describe("Property Validator", function () {
             assert.fail();
         }
         catch(e){
-            assert.equal(e,"number cannot be null");
+            var index = e.indexOf("number cannot be null")
+            assert.ok(index>-1);
         }
       });
 

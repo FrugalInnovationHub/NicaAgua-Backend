@@ -1,22 +1,19 @@
 const Region = require("./region");
 const { Timestamp } = require('firebase-admin/firestore');
+const { Base } = require("../Utils/propertyValidator");
 
-class WaterAlert {
+class WaterAlert extends Base{
 
   constructor(object) {
-    if (!object) throw "Object provided cannot be null.";
-    if (object.message == null) throw "Message cannot be null";
-    if (!Array.isArray(object.regions)) throw "Regions must be an Array";
-    if (object.regions.length < 1) throw "Regions must contain at least one element";
-
+    super();
     this.message = object.message;
-    this.regions = object.regions.map((a) => Region.RegionCode(a));
+    this.CheckNull("message");
+    this.regions = object.regions?.map((a) => Region.RegionCode(a)) ?? null;
+    if (this.regions == null || this.regions?.length < 1 || !Array.isArray(this.regions)){
+      this.error.push("Regions must be an Array with at least one element.");
+    }
     this.dateTime = object.dateTime ?? Date.now();
-  }
-
-  toJson() {
-    var json = JSON.parse(JSON.stringify(this));
-    return json;
+    this.CheckErrors();
   }
 }
 

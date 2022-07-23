@@ -1,60 +1,66 @@
 var moment = require('moment');
-/**Represents a Forecast */
-class Forecast {
+const { Base } = require('../Utils/propertyValidator');
+/**Represents a Short term Forecast */
+class Forecast extends Base {
   /**Constructor
    * @param {object} object - Object containing the properties of a Forecast
    */
   constructor(object) {
-    var err = "";
-    if (object.fiveDays == null) err += "Forecast for Five Days cannot be null.\n";
-    if (object.fiveDaysMin == null) err += "Forecast for Five Days cannot be null.\n";
-    if (object.fiveDaysMax == null) err += "Forecast for Five Days cannot be null.\n";
-    if (object.tenDays == null) err += "Forecast for Ten Days cannot be null.\n";
-    if (object.tenDaysMin == null) err += "Forecast for Ten Days cannot be null.\n";
-    if (object.tenDaysMax == null) err += "Forecast for Ten Days cannot be null.\n";
-    if (object.fifteenDays == null)
-      err += "Forecast for Fifteen Days cannot be null.\n";
-    if (object.fifteenDaysMin == null)
-      err += "Forecast for Fifteen Days cannot be null.\n";
-    if (object.fifteenDaysMax == null)
-      err += "Forecast for Fifteen Days cannot be null.\n";
-    if (err == "") {
-      if (object.fiveDays > object.tenDays || object.tenDays > object.fifteenDays)
-        err += "(10,15) days forecast cannot be greater than (5,10) days forecast.\n";
-
-      if (
-        object.fiveDaysMin > object.fiveDaysMax ||
-        object.tenDaysMin > object.tenDaysMax ||
-        object.fifteenDaysMin > object.fifteenDaysMax
-      )
-        err += "Min cannot be greater than Max.\n";
-    }
-
-    if (err != "") throw err;
-    /**5 Days Precipitation Forecast */
+    super();
     this.fiveDays = object.fiveDays;
-    /**5 Days Max Preciptation based on previews data*/
+    this.CheckNumber({nullable:false,min:0,max:null},"fiveDays");
     this.fiveDaysMin = object.fiveDaysMin;
-    /**5 Days Min Preciptation based on previews data*/
+    this.CheckNumber({nullable:false,min:0,max:null},"fiveDaysMin");
     this.fiveDaysMax = object.fiveDaysMax;
-    /**10 Days Precipitation Forecast */
-    this.tenDays = object?.tenDays;
-    /**10 Days Max Preciptation based on previews data*/
+    this.CheckNumber({nullable:false,min:this.fiveDaysMin,max:null},"fiveDaysMax");
+    this.tenDays = object.tenDays;
+    this.CheckNumber({nullable:false,min:this.fiveDays,max:null},"tenDays");
     this.tenDaysMin = object.tenDaysMin;
-    /**10 Days Min Preciptation based on previews data*/
+    this.CheckNumber({nullable:false,min:this.fiveDaysMin,max:null},"tenDaysMin");
     this.tenDaysMax = object.tenDaysMax;
-    /**15 Days Precipitation Forecast */
-    this.fifteenDays = object?.fifteenDays;
-    /**15 Days Max Preciptation based on previews data*/
-    this.fifteenDaysMin = object.fifteenDaysMin;
-    /**15 Days Min Preciptation based on previews data*/
+    this.CheckNumber({nullable:false,min:this.fiveDaysMax,max:null},"tenDaysMax");
+    this.fifteenDays = object.fifteenDays;
+    this.CheckNumber({nullable:false,min:this.tenDays,max:null},"fifteenDays");
     this.fifteenDaysMax = object.fifteenDaysMax;
-    this.date = object.date ?? moment(new Date()).format('DD-MM-YYYY');
-  }
-
-  toJson() {
-    return JSON.parse(JSON.stringify(this));
+    this.CheckNumber({nullable:false,min:this.tenDaysMax,max:null},"tenDaysMax");
+    this.fifteenDaysMin = object.fifteenDaysMin;
+    this.CheckNumber({nullable:false,min:this.tenDaysMin,max:null},"tenDaysMin");
+    this.date =object.date != null ? moment(new Date(object.date)).format('YYYY-MM-DD') :  moment(new Date()).format('YYYY-MM-DD');
+    this.CheckErrors();
   }
 }
 
-module.exports = Forecast;
+
+class LongTermForecast extends Base {
+  /**Constructor
+   * @param {object} object - Object containing the properties of a Forecast
+   */
+  constructor(object) {
+    super();
+    this.id = object.id??null;
+    if(object.dry + object.wet > 100){
+      this.error.push("Dry and Wet should sum less than 100."); 
+    }
+    else{
+    this.dry = object.dry;
+    this.CheckNumber({nullable:false,min:0,max:100},"dry");
+    this.wet = object.wet;
+    var maxWet = this.dry <= 100 ? 100-this.dry: null;
+    this.CheckNumber({nullable:false,min:0,max:maxWet},"wet");
+    this.normal = 100 - this.wet - this.dry;
+    this.startDate = object.startDate != null ? moment(new Date(object.startDate)).format('YYYY-MM-DD'):null;
+    this.CheckNull("startDate");
+    this.endDate = object.endDate != null ? moment(new Date(object.endDate)).format('YYYY-MM-DD'):null;
+    this.CheckNull("endDate");
+    if(new Date(this.startDate) > new Date(this.endDate))
+      this.error.push("startDate must be smaller than endDate.")
+    var today = moment(new Date()).format('YYYY-MM-DD');
+    this.date =object.date != null? moment(new Date(object.date)).format('YYYY-MM-DD') :today;
+    }
+    this.CheckErrors();
+  }
+}
+
+
+
+module.exports = {Forecast,LongTermForecast};

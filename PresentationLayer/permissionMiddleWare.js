@@ -12,8 +12,10 @@ class PermissionMiddleWare{
      */
     static isAdmin(req,res,next){
         var role = JwtIssuer.getUserRole(req.headers.authorization);
-        if( role in [0,1])
+
+        if( role in [0,1]){
             next();
+        }
         else{
             res.statusCode = 401;
             res.end();
