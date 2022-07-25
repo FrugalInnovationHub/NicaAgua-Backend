@@ -4,6 +4,7 @@ const PermissionMiddleWare = require("../permissionMiddleWare");
 function ForecastController(app) {
     app.put('/shortTerm', PermissionMiddleWare.isAdmin, (req, res) => {
         try {
+            console.log(req.body);
             new ForecastService().addForecast(req.body).then(
                 (r) => res.send(r))
                 .catch((e) => {
