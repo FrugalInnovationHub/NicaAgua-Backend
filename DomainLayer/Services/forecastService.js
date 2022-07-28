@@ -31,13 +31,12 @@ class ForecastService {
 
   getForecast(date) {
     return new Promise((resolve, reject) => {
+
       this.foreCastRepository
-        .getById(date)
+        .getLatest()
         .then((u) => {
           if (u != null) {
-            console.log(u);
-            var forecast = new Forecast(u);
-            resolve(forecast);
+            resolve(u);
           } else {
             reject("No forecast for this date;");
           }

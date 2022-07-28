@@ -37,7 +37,6 @@ class LongTermForecast extends Base {
    */
   constructor(object) {
     super();
-    this.id = object.id??null;
     if(object.dry + object.wet > 100){
       this.error.push("Dry and Wet should sum less than 100."); 
     }
@@ -54,13 +53,20 @@ class LongTermForecast extends Base {
     this.CheckNull("endDate");
     if(new Date(this.startDate) > new Date(this.endDate))
       this.error.push("startDate must be smaller than endDate.")
-    var today = moment(new Date()).format('YYYY-MM-DD');
-    this.date =object.date != null? moment(new Date(object.date)).format('YYYY-MM-DD') :today;
     }
     this.CheckErrors();
   }
 }
 
+class LongTermForecasts extends Base{
+  constructor(object){
+    super();
+    var today = moment(new Date()).format('YYYY-MM-DD');
+    this.date =object.date != null? moment(new Date(object.date)).format('YYYY-MM-DD') :today;
+    this.forecasts = object.forecasts.map((f) => new LongTermForecast(f).toJson());
+    this.CheckErrors();
+  }
+}
 
 
-module.exports = {Forecast,LongTermForecast};
+module.exports = {Forecast,LongTermForecast,LongTermForecasts};

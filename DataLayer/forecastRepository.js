@@ -1,5 +1,6 @@
 const { reject } = require("bcrypt/promises");
-const { LongTermForecast } = require("../DomainLayer/Models/forecast");
+const { query } = require("express");
+const { LongTermForecasts,Forecast } = require("../DomainLayer/Models/forecast");
 const BaseRepository = require("./baseRepository");
 
 class ForeCastRepository extends BaseRepository {
@@ -9,24 +10,19 @@ class ForeCastRepository extends BaseRepository {
     collection = collection ?? "ShortTerm";
     this.collection = this.DataBase.collection(collection);
   }
-}
-class LongTermForeCastRepository extends BaseRepository {
-  constructor(collection) {
-    super();
-    collection = collection ?? "LongTerm";
-    this.collection = this.DataBase.collection(collection);
-  }
 
-  getByDate(date) {
+  getLatest() {
     return new Promise((resolve, reject) => {
-      var query = this.collection.where("date", "==", date);
+      var query = this.collection.orderBy("date","desc");
+      query = query.limit(1);
       query.get().then((d) => {
+        var res = null;
         if (d) {
-          var res = d.docs.map((r) => {
-            var data = r.data();
-            data.id = r.id;
-            return new LongTermForecast(data).toJson();
-          });
+          if(d.docs.length > 0){
+            var data = d.docs[0].data();
+            data.id = d.docs[0].id;
+            res = new Forecast(data).toJson();
+          };
           resolve(res);
         } else {
           reject();
@@ -34,6 +30,36 @@ class LongTermForeCastRepository extends BaseRepository {
       });
     });
   }
+}
+class LongTermForeCastRepository extends BaseRepository {
+  constructor(collection) {
+    super();
+    collection = collection ?? "LongTerm";
+    this.key = "date";
+    this.collection = this.DataBase.collection(collection);
+  }
+
+  getLatest() {
+    return new Promise((resolve, reject) => {
+      var query = this.collection.orderBy("date","desc");
+      query =query.limit(1);
+      query.get().then((d) => {
+        if (d) {
+          var res = null;
+          if(d.docs.length > 0){
+            var data = d.docs[0].data();
+            res = new LongTermForecasts(data).toJson();
+            console.log(res);
+          }
+          resolve(res);
+        } else {
+          reject();
+        }
+      });
+    });
+  }
+
+ 
 }
 
 module.exports = { ForeCastRepository, LongTermForeCastRepository };

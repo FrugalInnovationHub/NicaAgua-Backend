@@ -18,9 +18,9 @@ function ForecastController(app) {
         }
     })
 
-    app.get('/shortTerm/:date', PermissionMiddleWare.isAuthenticated, (req, res) => {
+    app.get('/shortTerm', PermissionMiddleWare.isAuthenticated, (req, res) => {
         try {
-            new ForecastService().getForecast(req.params.date).then(
+            new ForecastService().getForecast().then(
                 (r) => res.send(r))
                 .catch((e) => {
                     res.statusCode = 401;

@@ -1,5 +1,5 @@
 const {LongTermForeCastRepository} = require("../../DataLayer/forecastRepository");
-const {LongTermForecast} = require("../Models/forecast");
+const {LongTermForecast, LongTermForecasts} = require("../Models/forecast");
 
 class LongTermForeCastService {
   constructor() {
@@ -12,12 +12,12 @@ class LongTermForeCastService {
    */
   addForecast(object) {
     return new Promise((resolve, reject) => {
-      var newForecast = new LongTermForecast(object).toJson();
+      var newForecast = new LongTermForecasts(object).toJson();
       this.foreCastRepository
         .getById(newForecast.date)
         .then((u) => {
           this.foreCastRepository
-            .add(newForecast)
+            .upsert(newForecast)
             .then(() => resolve())
             .catch((err) => {
               reject(err);
@@ -29,11 +29,10 @@ class LongTermForeCastService {
     });
   }
 
-  getForecasts(date) {
-    console.log("Aqui");
+  getForecasts() {
     return new Promise((resolve, reject) => {
       this.foreCastRepository
-        .getByDate(date)
+        .getLatest()
         .then((u) => {
           if (u != null) {
             resolve(u);

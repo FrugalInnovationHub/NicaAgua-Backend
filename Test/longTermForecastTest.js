@@ -1,4 +1,4 @@
-const {LongTermForecast} = require("../DomainLayer/Models/forecast");
+const {LongTermForecast,LongTermForecasts} = require("../DomainLayer/Models/forecast");
 var moment = require('moment');
 var assert = require("assert");
 
@@ -28,13 +28,9 @@ describe("Long Term Forecast", function () {
       assert.equal(forecast.startDate, startDate);
       endDate = moment(new Date("2022-04-01")).format('YYYY-MM-DD');
       assert.equal(forecast.endDate, endDate);
-      date = moment(new Date("2021-12-31")).format('YYYY-MM-DD');
-      assert.equal(forecast.date, date);
     });
     it("Valid Forecast 2", function () {
       var forecast = new LongTermForecast(validLongTermForecast2);
-      var date = moment(new Date()).format('YYYY-MM-DD');
-      assert.equal(forecast.date,date );
     });
 
     it("Invalid Long Term Forecast Dry > 100", function () {
@@ -84,3 +80,12 @@ describe("Long Term Forecast", function () {
     });  
   });
 });
+
+
+describe("Long Term Forecasts", function () {
+  it("Valid Set Long Term forecast", function () {
+    var today = moment(new Date()).format('YYYY-MM-DD');
+    var lt = new LongTermForecasts({forecasts:[validLongTermForecast,validLongTermForecast2]});
+    assert.equal(lt.date,today);
+  });
+})
