@@ -32,6 +32,16 @@ function LongTermForecastController(app) {
         }
     })
 
+    app.get('/longTerm', PermissionMiddleWare.isAuthenticated, (req, res) => {
+        try {
+            res.redirect("/longTerm/*")
+        }
+        catch (e) {
+            res.statusCode = 400;
+            res.send(e);
+        }
+    })
+
     app.delete('/longTerm', PermissionMiddleWare.isAuthenticated, (req, res) => {
         try {
             new LongTermForeCastService().deleteForecast(req.body.id).then(
