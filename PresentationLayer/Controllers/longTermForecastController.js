@@ -34,7 +34,12 @@ function LongTermForecastController(app) {
 
     app.get('/longTerm', PermissionMiddleWare.isAuthenticated, (req, res) => {
         try {
-            res.redirect("/longTerm/*")
+            new LongTermForeCastService().getForecasts("*").then(
+                (r) => res.send(r))
+                .catch((e) => {
+                    res.statusCode = 401;
+                    res.send(e);
+                });
         }
         catch (e) {
             res.statusCode = 400;
