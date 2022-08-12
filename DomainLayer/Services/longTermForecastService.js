@@ -29,12 +29,14 @@ class LongTermForeCastService {
     });
   }
 
-  getForecasts() {
+  getForecasts(community) {
     return new Promise((resolve, reject) => {
       this.foreCastRepository
         .getLatest()
         .then((u) => {
           if (u != null) {
+            if(community != "*")
+              u.forecasts = u.forecasts.filter((e)=> e.community == community);
             resolve(u);
           } else {
             reject("No forecast for this date;");

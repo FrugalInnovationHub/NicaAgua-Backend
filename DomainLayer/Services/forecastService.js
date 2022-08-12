@@ -29,7 +29,7 @@ class ForecastService {
     });
   }
 
-  getForecast(date) {
+  getForecast() {
     return new Promise((resolve, reject) => {
 
       this.foreCastRepository

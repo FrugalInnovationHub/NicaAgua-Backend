@@ -3,6 +3,7 @@ var moment = require('moment');
 var assert = require("assert");
 
 const validLongTermForecast = {
+  community: "Venecia",
   dry: 10,
   wet: 15,
   startDate : "2022-01-01 GMT",
@@ -15,6 +16,7 @@ const invalidLongTermForecast2= {...validLongTermForecast,dry:90,wet:20};
 const invalidLongTermForecast3= {...validLongTermForecast,startDate:null};
 const invalidLongTermForecast4= {...validLongTermForecast,endDate:null};
 const invalidLongTermForecast5= {...validLongTermForecast,startDate:"2022-01-01",endDate:"2021-12-01"};
+const invalidLongTermForecast6= {...validLongTermForecast,community:null};
 
 
 describe("Long Term Forecast", function () {
@@ -24,6 +26,7 @@ describe("Long Term Forecast", function () {
       assert.equal(forecast.dry, 10);
       assert.equal(forecast.wet, 15);
       assert.equal(forecast.normal, 75);
+      assert.equal(forecast.community, "Venecia");
       startDate = moment(new Date("2022-01-01")).format('YYYY-MM-DD');
       assert.equal(forecast.startDate, startDate);
       endDate = moment(new Date("2022-04-01")).format('YYYY-MM-DD');
@@ -78,6 +81,14 @@ describe("Long Term Forecast", function () {
         assert.equal(e,"startDate must be smaller than endDate.");
       }
     });  
+    it("Invalid Long Term Forecast Null Community", function () {
+      try {
+        var forecast = new LongTermForecast(invalidLongTermForecast6);
+        assert.fail();
+      } catch (e) {
+        assert.equal(e,"community cannot be null");
+      }
+    });  
   });
 });
 
@@ -88,4 +99,5 @@ describe("Long Term Forecasts", function () {
     var lt = new LongTermForecasts({forecasts:[validLongTermForecast,validLongTermForecast2]});
     assert.equal(lt.date,today);
   });
+  
 })

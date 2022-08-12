@@ -49,7 +49,6 @@ class LongTermForeCastRepository extends BaseRepository {
           if(d.docs.length > 0){
             var data = d.docs[0].data();
             res = new LongTermForecasts(data).toJson();
-            console.log(res);
           }
           resolve(res);
         } else {
