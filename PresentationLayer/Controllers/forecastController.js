@@ -18,9 +18,26 @@ function ForecastController(app) {
         }
     })
 
+
+    app.get('/shortTerm/:community', PermissionMiddleWare.isAuthenticated, (req, res) => {
+        try {
+            new ForecastService().getForecast(req.params.community).then(
+                (r) => res.send(r))
+                .catch((e) => {
+                    res.statusCode = 401;
+                    res.send(e);
+                });
+        }
+        catch (e) {
+            res.statusCode = 400;
+            res.send(e);
+        }
+    })
+
+
     app.get('/shortTerm', PermissionMiddleWare.isAuthenticated, (req, res) => {
         try {
-            new ForecastService().getForecast().then(
+            new ForecastService().getForecasts("*").then(
                 (r) => res.send(r))
                 .catch((e) => {
                     res.statusCode = 401;

@@ -7,6 +7,7 @@ class Forecast extends Base {
    */
   constructor(object) {
     super();
+    this.community = object.community ?? "*";
     this.fiveDays = object.fiveDays;
     this.CheckNumber({ nullable: false, min: 0, max: null }, "fiveDays");
     this.fiveDaysMin = object.fiveDaysMin;
@@ -39,17 +40,31 @@ class Forecast extends Base {
     this.fifteenDaysMax = object.fifteenDaysMax;
     this.CheckNumber(
       { nullable: false, min: this.tenDaysMax, max: null },
-      "tenDaysMax"
+      "fifteenDaysMax"
     );
     this.fifteenDaysMin = object.fifteenDaysMin;
     this.CheckNumber(
       { nullable: false, min: this.tenDaysMin, max: null },
-      "tenDaysMin"
+      "fifteenDaysMin"
     );
     this.date =
       object.date != null
         ? moment(new Date(object.date)).format("YYYY-MM-DD")
         : moment(new Date()).format("YYYY-MM-DD");
+    this.CheckErrors();
+  }
+}
+class ShortTermForecasts extends Base{
+  constructor(object) {
+    super();
+    var today = moment(new Date()).format("YYYY-MM-DD");
+    this.date =
+      object.date != null
+        ? moment(new Date(object.date)).format("YYYY-MM-DD")
+        : today;
+    this.forecasts = object.forecasts.map((f) =>
+      new Forecast(f).toJson()
+    );
     this.CheckErrors();
   }
 }
@@ -103,4 +118,4 @@ class LongTermForecasts extends Base {
   }
 }
 
-module.exports = { Forecast, LongTermForecast, LongTermForecasts };
+module.exports = { Forecast, LongTermForecast, LongTermForecasts,ShortTermForecasts };

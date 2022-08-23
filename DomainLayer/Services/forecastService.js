@@ -1,5 +1,5 @@
 const {ForeCastRepository} = require("../../DataLayer/forecastRepository");
-const {Forecast} = require("../Models/forecast");
+const {Forecast, ShortTermForecasts} = require("../Models/forecast");
 
 class ForecastService {
   constructor() {
@@ -12,7 +12,7 @@ class ForecastService {
    */
   addForecast(object) {
     return new Promise((resolve, reject) => {
-      var newForecast = new Forecast(object).toJson();
+      var newForecast = new ShortTermForecasts(object).toJson();
       this.foreCastRepository
         .getById(newForecast.date)
         .then((u) => {
@@ -29,13 +29,14 @@ class ForecastService {
     });
   }
 
-  getForecast() {
+  getForecast(community) {
     return new Promise((resolve, reject) => {
-
       this.foreCastRepository
         .getLatest()
         .then((u) => {
           if (u != null) {
+            if(community != "*")
+              u.forecasts = u.forecasts.filter((e)=> e.community == community);
             resolve(u);
           } else {
             reject("No forecast for this date;");

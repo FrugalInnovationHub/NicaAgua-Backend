@@ -1,6 +1,6 @@
 const { reject } = require("bcrypt/promises");
 const { query } = require("express");
-const { LongTermForecasts,Forecast } = require("../DomainLayer/Models/forecast");
+const { LongTermForecasts,Forecast, ShortTermForecasts } = require("../DomainLayer/Models/forecast");
 const BaseRepository = require("./baseRepository");
 
 class ForeCastRepository extends BaseRepository {
@@ -21,7 +21,7 @@ class ForeCastRepository extends BaseRepository {
           if(d.docs.length > 0){
             var data = d.docs[0].data();
             data.id = d.docs[0].id;
-            res = new Forecast(data).toJson();
+            res = new ShortTermForecasts(data).toJson();
           };
           resolve(res);
         } else {
