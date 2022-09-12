@@ -19,7 +19,7 @@ function LongTermForecastController(app) {
 
     app.get('/longTerm/:community', PermissionMiddleWare.isAuthenticated, (req, res) => {
         try {
-            new LongTermForeCastService().getForecasts(req.params.community).then(
+            new LongTermForeCastService().getForecasts("El Naranjito").then(
                 (r) => res.send(r))
                 .catch((e) => {
                     res.statusCode = 401;

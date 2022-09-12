@@ -8,41 +8,41 @@ class Forecast extends Base {
   constructor(object) {
     super();
     this.community = object.community ?? "*";
-    this.fiveDays = object.fiveDays;
+    this.fiveDays = Math.round(object.fiveDays);
     this.CheckNumber({ nullable: false, min: 0, max: null }, "fiveDays");
-    this.fiveDaysMin = object.fiveDaysMin;
+    this.fiveDaysMin = Math.round(object.fiveDaysMin);
     this.CheckNumber({ nullable: false, min: 0, max: null }, "fiveDaysMin");
-    this.fiveDaysMax = object.fiveDaysMax;
+    this.fiveDaysMax = Math.round(object.fiveDaysMax);
     this.CheckNumber(
       { nullable: false, min: this.fiveDaysMin, max: null },
       "fiveDaysMax"
     );
-    this.tenDays = object.tenDays;
+    this.tenDays = Math.round(object.tenDays);
     this.CheckNumber(
       { nullable: false, min: this.fiveDays, max: null },
       "tenDays"
     );
-    this.tenDaysMin = object.tenDaysMin;
+    this.tenDaysMin = Math.round(object.tenDaysMin);
     this.CheckNumber(
       { nullable: false, min: this.fiveDaysMin, max: null },
       "tenDaysMin"
     );
-    this.tenDaysMax = object.tenDaysMax;
+    this.tenDaysMax = Math.round(object.tenDaysMax);
     this.CheckNumber(
       { nullable: false, min: this.fiveDaysMax, max: null },
       "tenDaysMax"
     );
-    this.fifteenDays = object.fifteenDays;
+    this.fifteenDays = Math.round(object.fifteenDays);
     this.CheckNumber(
       { nullable: false, min: this.tenDays, max: null },
       "fifteenDays"
     );
-    this.fifteenDaysMax = object.fifteenDaysMax;
+    this.fifteenDaysMax = Math.round(object.fifteenDaysMax);
     this.CheckNumber(
       { nullable: false, min: this.tenDaysMax, max: null },
       "fifteenDaysMax"
     );
-    this.fifteenDaysMin = object.fifteenDaysMin;
+    this.fifteenDaysMin = Math.round(object.fifteenDaysMin);
     this.CheckNumber(
       { nullable: false, min: this.tenDaysMin, max: null },
       "fifteenDaysMin"
