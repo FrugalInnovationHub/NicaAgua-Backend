@@ -52,6 +52,24 @@ class PermissionMiddleWare{
             res.end();
         }
     }
+
+    /**
+     * @summary This method verify if Token on header was issued to a Admin User or a Root User or if the Request Body contains a parameter <b> PhoneNumber </b> That belongs to the same use issuing the call.
+     * @param {*} req HTTP Request 
+     * @param {*} res HTTP Response
+     * @param {*} next Calback Function
+     */
+     static isAdminOrSelf(req,res,next){
+        var role = JwtIssuer.getUserRole(req.headers.authorization);
+        var phoneNumber = JwtIssuer.getUserPhoneNumber(req.headers.authorization);
+        if( role in [0,1] || req.body.phoneNumber == phoneNumber){
+            next();
+        }
+        else{
+            res.statusCode = 401;
+            res.end();
+        }
+    }
 }
 
 

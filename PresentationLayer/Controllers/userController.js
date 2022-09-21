@@ -3,7 +3,7 @@ const JwtIssuer = require('../jwtIssuer');
 const PermissionMiddleWare = require('../permissionMiddleWare')
 
 function UserController(app) {
-    app.delete('/user', PermissionMiddleWare.isAdmin, (req, res) => {
+    app.delete('/user', PermissionMiddleWare.isAdminOrSelf, (req, res) => {
         new UserService().deleteUser(req.body.phoneNumber).then(
             (r) => res.send(r))
             .catch((e) => {
