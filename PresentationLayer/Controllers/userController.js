@@ -52,10 +52,10 @@ function UserController(app) {
         }
     })
 
-    app.post('/user/regions', PermissionMiddleWare.isAuthenticated, (req, res) => {
+    app.post('/user/community', PermissionMiddleWare.isAuthenticated, (req, res) => {
         try {
             var phoneNumber = JwtIssuer.getUserPhoneNumber(req.headers.authorization)
-            new UserService().setRegions({ regions: req.body, phoneNumber }).then(
+            new UserService().setDefaultCommunity({ community: req.body, phoneNumber }).then(
                 (r) => res.send(r))
                 .catch((e) => {
                     res.statusCode = 401;

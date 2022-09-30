@@ -76,13 +76,13 @@ class UserService {
      * @param {string} phoneNumber - Phone number used as identity to login
      * @param {string} password - User's password  not cryptographed 
     */
-    setRegions(object) {
+    setDefaultCommunity(object) {
         return new Promise((resolve, reject) => {
             this.userRepository.getById(object.phoneNumber)
                 .then((u) => {
                     if (u) {
                         var user = new User(u);
-                        user.setRegions(object.regions);
+                        user.setDefaultCommunity(object.community);
                         user = user.toJson({exposed:true});
                         this.userRepository.upsert(user)
                         .then((u) => resolve())

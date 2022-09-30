@@ -64,6 +64,14 @@ class User {
         this.roleLevel = role;
     }
 
+    /**
+     * Set Default Community
+     * @param {*} role 
+     */
+    setDefaultCommunity(community) {
+        this.defaultCommunity = community;
+    }
+
     /**Return Object Json Formated
      * @summary Return the User Object json formated, be aware that using the exposed option will expose the hashed password.
      * @param {bool} exposed -expose HashedPassword
