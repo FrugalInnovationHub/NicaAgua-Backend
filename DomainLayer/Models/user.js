@@ -33,13 +33,7 @@ class User {
         this.lastName = object.lastName;
         /**Phone Number */
         this.phoneNumber = object.phoneNumber;
-        try{
-        /**Regions that this user is subscribed */
-            this.setRegions(object.regions);
-        }
-        catch{
-            throw "Invalid Region"
-        }
+        this.defaultCommunity = object.defaultCommunity ?? "" ;
         /**User's permission role */
         this.roleLevel = object?.roleLevel ?? Role.User;
         this.#hashedPassword = object?.hashedPassword;
@@ -47,9 +41,6 @@ class User {
             this.setPassword(object.password);
     }
 
-    setRegions(regions){
-        this.regions = regions.map((r) => Region.RegionCode(r));
-    }
     
     /**Sets User's password
      * @param {string} newPassword - User's new Password

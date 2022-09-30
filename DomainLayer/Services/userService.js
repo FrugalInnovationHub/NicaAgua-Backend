@@ -12,6 +12,7 @@ class UserService {
     addUser(object) {
         return new Promise((resolve, reject) => {
             var newUser = new User(object).toJson({ exposed: true });
+            console.log(newUser);
             this.userRepository.getById(newUser.phoneNumber)
                 .then((u) => {
                     if (!u)

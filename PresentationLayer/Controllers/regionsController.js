@@ -17,7 +17,7 @@ function RegionsController(app) {
         }
     })
 
-    app.get('/region', PermissionMiddleWare.isAuthenticated, (req, res) => {
+    app.get('/region', (req, res) => {
         try {
             new RegionService().getRegions().then(
                 (r) => res.send(r))
