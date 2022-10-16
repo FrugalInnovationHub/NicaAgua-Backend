@@ -28,7 +28,7 @@ describe('Water Alert', function () {
         assert.fail();
         }
         catch(e){
-          var index = e.indexOf("Regions must be an Array with at least one element.");
+          var index = e.indexOf("Constructor Argument cannot be null");
           assert.ok(index > -1);
         }
       });

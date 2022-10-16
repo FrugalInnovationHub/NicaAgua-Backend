@@ -1,5 +1,4 @@
 var crypto = require('crypto');
-const Region = require('./region');
 /**Enum of possible Roles */
 const Role = {
     /**User only access limited functionalities of the system*/

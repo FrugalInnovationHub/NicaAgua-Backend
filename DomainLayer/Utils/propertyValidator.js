@@ -37,6 +37,11 @@ class Base {
       this.error.push(`${property} cannot be null`);
   }
 
+  CheckNullObject(object){
+    if(object == null)
+      this.error.push(`Constructor Argument cannot be null`);
+  }
+
 
   /**
    * Throw exception in case of malformed object

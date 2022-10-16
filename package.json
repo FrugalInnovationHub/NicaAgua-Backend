@@ -17,7 +17,8 @@
     "firebase-admin": "^10.0.2",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.4",
-    "nyc": "^15.1.0"
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
   },
   "mocha.files.glob": "Test/*.js"
 }

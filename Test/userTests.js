@@ -23,7 +23,6 @@ describe('User', function () {
       assert.equal(newUser.hashedPassword, undefined) //Can only check Password
       newUser.setPassword("123")
       assert.equal(newUser.checkPassword("123"), true) //Can only check Password
-      assert.equal(newUser.regions[0], "NIC01");
     });
   });
 
@@ -34,7 +33,6 @@ describe('User', function () {
       assert.equal(newUser.lastName, 'LastName');
       assert.equal(newUser.phoneNumber, '6507326291');
       assert.equal(newUser.checkPassword("123"), true) //Can only check Password
-      assert.equal(newUser.regions[0], "NIC01");
     });
   });
 
@@ -98,19 +96,6 @@ describe('User', function () {
       }
       catch (e) {
         assert.equal(e, "Invalid Phone");
-        assert.equal(newUser, undefined);
-      }
-    })
-  });
-
-  describe('Constructor', function () {
-    it("Invalid Region", function () {
-      try {
-        var newUser = new User(invalidUser4);
-        assert.fail();
-      }
-      catch (e) {
-        assert.equal(e, "Invalid Region");
         assert.equal(newUser, undefined);
       }
     })

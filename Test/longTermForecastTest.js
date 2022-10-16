@@ -81,12 +81,12 @@ describe("Long Term Forecast", function () {
         assert.equal(e,"startDate must be smaller than endDate.");
       }
     });  
-    it("Invalid Long Term Forecast Null Community", function () {
+    it("Setting Community to Default", function () {
       try {
         var forecast = new LongTermForecast(invalidLongTermForecast6);
-        assert.fail();
+        assert.equal(forecast.community,"*");
       } catch (e) {
-        assert.equal(e,"community cannot be null");
+        assert.equal(e,"community not default");
       }
     });  
   });

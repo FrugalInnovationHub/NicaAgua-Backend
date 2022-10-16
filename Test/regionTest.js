@@ -94,17 +94,4 @@ describe('Region', function () {
     }
     });
   });
-
-  describe('Constructor', function () {
-    it("Invalid Code",function(){
-    try{
-      var newRegion = new Region(invalidRegion7);
-      assert.fail();
-    }
-    catch(e){
-      assert.equal(newRegion,undefined);
-      assert.equal(e, "Code cannot be null, must be a string and must be 5 characters long.");
-    }
-    });
-  });
 })

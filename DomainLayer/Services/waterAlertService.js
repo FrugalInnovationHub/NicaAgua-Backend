@@ -1,5 +1,7 @@
 const WaterAlertRepository = require('../../DataLayer/waterAlertRepository')
 const { WaterAlert } = require('../Models/waterAlert')
+const sendNotification = require("./notificationService")
+
 class WaterAlertService {
     constructor() {
         this.waterAlertRepository = new WaterAlertRepository();
@@ -10,8 +12,10 @@ class WaterAlertService {
      * @param {object} object - Object containing new Water Alert information
     */
     addWaterAlert(object) {
+        console.log(object);
         return new Promise((resolve, reject) => {
             var waterAlert = new WaterAlert(object).toJson();
+            sendNotification(waterAlert.regions,"Anuncio", waterAlert.message)
             this.waterAlertRepository.add(waterAlert).then(() => resolve()).catch(() => reject());
         });
     }
