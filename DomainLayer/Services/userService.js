@@ -72,6 +72,23 @@ class UserService {
         });
     }
 
+
+    getAllUsers(){
+        return new Promise((resolve, reject) => {
+            this.userRepository.getAll()
+                .then((u) => {
+                    if (u) {
+                        var users = u.map((e) => new User(e).toJson());
+                        resolve(users);
+                    }
+                    reject('Invalid Phone Number')
+                })
+                .catch((err) => {
+                    reject("Invalid Inputs.")
+                })
+        });
+    }
+
     /**Start a User session, returning User's profile data. 
      * @param {string} phoneNumber - Phone number used as identity to login
      * @param {string} password - User's password  not cryptographed 

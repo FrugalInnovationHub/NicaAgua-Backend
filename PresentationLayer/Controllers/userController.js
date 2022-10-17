@@ -37,6 +37,21 @@ function UserController(app) {
         }
     })
 
+    app.get('/users', PermissionMiddleWare.isAdmin, (req, res) => {
+        try {
+            new UserService().getAllUsers().then(
+                (r) => res.send(r))
+                .catch((e) => {
+                    res.statusCode = 401;
+                    res.send(e);
+                });
+        }
+        catch (e) {
+            res.statusCode = 400;
+            res.send(e);
+        }
+    })
+
     app.post('/user/login', (req, res) => {
         try {
             new UserService().logIn(req.body).then(
