@@ -22,7 +22,7 @@ class Base {
    */
   CheckNumber(config, property) {
     var value = this[property];
-    if (!config.nullable && !value)
+    if (!config.nullable && value == null && value == undefined)
       this.error.push(`${property} cannot be null`);
     if (typeof value != "number")
       this.error.push(`${property} must be a valid number`);
