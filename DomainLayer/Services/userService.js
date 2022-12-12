@@ -1,5 +1,8 @@
 const UserRepository = require('../../DataLayer/userRepository')
 const { User } = require('../Models/user')
+/**
+ * This class implements all logical operations related to a User Object.
+ */
 class UserService {
     constructor() {
         this.userRepository = new UserRepository();
@@ -31,9 +34,12 @@ class UserService {
         });
     }
 
-    deleteUser(id){
-        return this.userRepository.delete(id);
-    }
+    /**
+     * Delete specific User from Repository
+     * @param {string} id 
+     * @returns Promise to be resolved if deletion is successful.
+     */
+    deleteUser= (id) => this.userRepository.delete(id);
 
     /**Start a User session, returning User's profile data. 
      * @param {string} phoneNumber - Phone number used as identity to login
@@ -56,6 +62,11 @@ class UserService {
         });
     }
 
+    /**
+     * Get user data with matching phone number
+     * @param {string} phoneNumber Phone Number
+     * @returns Promise to be resolved with a Json object.
+     */
     getUser(phoneNumber){
         return new Promise((resolve, reject) => {
             this.userRepository.getById(phoneNumber)
@@ -72,7 +83,10 @@ class UserService {
         });
     }
 
-
+    /**
+     * Get all users.
+     * @returns Promise to be resolved with an array of Json object.
+     */
     getAllUsers(){
         return new Promise((resolve, reject) => {
             this.userRepository.getAll()
@@ -81,7 +95,7 @@ class UserService {
                         var users = u.map((e) => new User(e).toJson());
                         resolve(users);
                     }
-                    reject('Invalid Phone Number')
+                    reject('Error Fetching Users')
                 })
                 .catch((err) => {
                     reject("Invalid Inputs.")
@@ -89,10 +103,11 @@ class UserService {
         });
     }
 
-    /**Start a User session, returning User's profile data. 
-     * @param {string} phoneNumber - Phone number used as identity to login
-     * @param {string} password - User's password  not cryptographed 
-    */
+    /**
+     * Set User's default community.
+     * @param {string} object 
+     * @returns Promise to be resolved if this operation is successful
+     */
     setDefaultCommunity(object) {
         return new Promise((resolve, reject) => {
             this.userRepository.getById(object.phoneNumber)
@@ -112,10 +127,11 @@ class UserService {
         });
     }
 
-    /**Start a User session, returning User's profile data. 
-     * @param {string} phoneNumber - Phone number used as identity to login
-     * @param {string} password - User's password  not cryptographed 
-    */
+    /**
+     * Set User's role.
+     * @param {string} object 
+     * @returns Promise to be resolved if this operation is successful
+     */
      setRole(object) {
         return new Promise((resolve, reject) => {
             this.userRepository.getById(object.phoneNumber)

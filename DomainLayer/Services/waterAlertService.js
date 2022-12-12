@@ -2,17 +2,20 @@ const WaterAlertRepository = require('../../DataLayer/waterAlertRepository')
 const { WaterAlert } = require('../Models/waterAlert')
 const sendNotification = require("./notificationService")
 
+/**
+ * This class implements all operations related to Water Alerts.
+ */
 class WaterAlertService {
     constructor() {
         this.waterAlertRepository = new WaterAlertRepository();
     }
 
-    /**Saves a new Water Alert in the DataBase 
-     * @summary Check if there is already a User with registered with the provided phone number. Case there is no user registered with this number then creates a new register for this user.
-     * @param {object} object - Object containing new Water Alert information
-    */
+    /**
+     * Create a new Water Alert.
+     * @param {*} object Object to be persisted to the database.
+     * @returns A Promise that will resolve when the operation is successful.
+     */
     addWaterAlert(object) {
-        console.log(object);
         return new Promise((resolve, reject) => {
             var waterAlert = new WaterAlert(object).toJson();
             sendNotification(waterAlert.regions,"Anuncio", waterAlert.message)
@@ -20,21 +23,15 @@ class WaterAlertService {
         });
     }
 
-    /**Saves a new Water Alert in the DataBase 
-     * @summary Check if there is already a User with registered with the provided phone number. Case there is no user registered with this number then creates a new register for this user.
-     * @param {object} object - Object containing new Water Alert information
-    */
-     getWaterAlert(object) {
-        return this.waterAlertRepository.getById(object);
-    }
+    /**
+     * Get Water Alert by its ID
+     * @param {*} id Id of water alert to be fetched.
+     * @returns A Promise that when resolved will return a Water Alert Json Object
+     */
+     getWaterAlert = (id) => this.waterAlertRepository.getById(id);
 
-    /**Saves a new Water Alert in the DataBase 
-     * @summary Check if there is already a User with registered with the provided phone number. Case there is no user registered with this number then creates a new register for this user.
-     * @param {object} object - Object containing new Water Alert information
-    */
-     getWaterAlerts(object) {
-        return this.waterAlertRepository.getWaterAlerts(object);
+    
+     getWaterAlerts = (object) => this.waterAlertRepository.getWaterAlerts(object);
     }
-}
 
 module.exports = WaterAlertService;

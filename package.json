@@ -7,7 +7,7 @@
     "test": "nyc --reporter=html --reporter=text mocha",
     "start": "node PresentationLayer/nicaraguApp.js"
   },
-  "author": "",
+  "author": "Giulliano Siviero",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -20,5 +20,5 @@
     "nyc": "^15.1.0",
     "request": "^2.88.2"
   },
-  "mocha.files.glob": "Test/*.js"
+  "mocha.files.glob": "Test/**.js"
 }

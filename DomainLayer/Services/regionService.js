@@ -6,7 +6,7 @@ class RegionService {
         this.regionRepository = new RegionRepository();
     }
 
-       /**Saves a new User in the DataBase 
+    /**Saves a new User in the DataBase 
      * @summary Check if there is already a User with registered with the provided phone number. Case there is no user registered with this number then creates a new register for this user.
      * @param {object} object - Object containing new User's information
     */
@@ -31,6 +31,10 @@ class RegionService {
             });
         }
 
+        /**
+         * Get list of Regions from the Repository
+         * @returns Promise to be resolved with an array of Regions
+         */
         getRegions() {
             return new Promise((resolve, reject) => {
                 this.regionRepository.getAll()
@@ -49,6 +53,11 @@ class RegionService {
             });
         }
 
+        /**
+         * Delete specific Region.
+         * @param {string} id Id to be Deleted
+         * @returns Promise to be resolved if deletion is successful.
+         */
         deleteRegion(id){
             return this.regionRepository.delete(id);
         }

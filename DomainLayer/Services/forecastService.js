@@ -1,5 +1,5 @@
 const {ForeCastRepository} = require("../../DataLayer/forecastRepository");
-const {Forecast, ShortTermForecasts} = require("../Models/forecast");
+const {ShortTermForecasts} = require("../Models/forecast");
 
 class ForecastService {
   constructor() {

@@ -56,6 +56,16 @@ describe('Region', function () {
         assert.equal(e, 'Latitude must be a number.');
     }
     });
+
+    it("Invalid Code",function(){
+      try{
+        var newRegion = new Region(invalidRegion7);
+        assert.fail();
+      }
+      catch(e){
+          assert.equal(e, 'Code cannot be null, must be a string and must be 5 characters long.');
+      }
+      });
   });
 
   
@@ -94,4 +104,6 @@ describe('Region', function () {
     }
     });
   });
+
+  
 })

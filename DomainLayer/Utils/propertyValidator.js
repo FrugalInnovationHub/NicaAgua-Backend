@@ -16,8 +16,11 @@ class Base {
     this.error = [];
   }
   /**
-   *
-   * @param {Config} config
+   *Check Number property, this cheking is configurable for:
+   *Null
+   *Greater than
+   *Smaller than
+   * @param {Config} config Object with configuration: {nullable: bool, max: number, min: number}
    * @param {*} property
    */
   CheckNumber(config, property) {
@@ -31,12 +34,19 @@ class Base {
     if (config.min != undefined && value < config.min)
       this.error.push(`${property} must greater then ${config.min}`);
   }
-
+/**
+ * Checks if property is Null, if it is than add an errotor tho the error array
+ * @param {string} property Property Name
+ */
   CheckNull(property){
     if(this[property] == null)
       this.error.push(`${property} cannot be null`);
   }
 
+  /**
+ * Checks if property is Null, if it is than add an errotor tho the error array
+ * @param {string} property Property Name
+ */
   CheckNullObject(object){
     if(object == null)
       this.error.push(`Constructor Argument cannot be null`);

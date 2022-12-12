@@ -1,6 +1,7 @@
-const { reject } = require('bcrypt/promises');
 const BaseRepository = require('./baseRepository');
-
+/**
+ * This class implements a Region Repository
+ */
 class RegionRepository extends BaseRepository {
     constructor(collection) {
         super();

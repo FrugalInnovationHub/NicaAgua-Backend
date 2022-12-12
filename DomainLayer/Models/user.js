@@ -65,11 +65,9 @@ class User {
 
     /**
      * Set Default Community
-     * @param {*} role 
+     * @param {string} community 
      */
-    setDefaultCommunity(community) {
-        this.defaultCommunity = community;
-    }
+    setDefaultCommunity = (community) =>  this.defaultCommunity = community;
 
     /**Return Object Json Formated
      * @summary Return the User Object json formated, be aware that using the exposed option will expose the hashed password.

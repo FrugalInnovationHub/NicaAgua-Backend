@@ -1,9 +1,14 @@
-const { reject } = require("bcrypt/promises");
-const { query } = require("express");
-const { LongTermForecasts,Forecast, ShortTermForecasts } = require("../DomainLayer/Models/forecast");
+const { LongTermForecasts, ShortTermForecasts } = require("../DomainLayer/Models/forecast");
 const BaseRepository = require("./baseRepository");
 
+/**
+ * Implements a Repository of Forecasts.
+ */
 class ForeCastRepository extends BaseRepository {
+  /**
+   * Instantiates a Repository
+   * @param {string} collection Name of Collection to be implemented.
+   */
   constructor(collection) {
     super();
     this.key = "date";
@@ -11,6 +16,10 @@ class ForeCastRepository extends BaseRepository {
     this.collection = this.DataBase.collection(collection);
   }
 
+  /**
+   * Gets the latest Forecast of the repository based on the Date.
+   * @returns Promise that when resolved returns the latest forecast.
+   */
   getLatest() {
     return new Promise((resolve, reject) => {
       var query = this.collection.orderBy("date","desc");
@@ -31,7 +40,16 @@ class ForeCastRepository extends BaseRepository {
     });
   }
 }
+
+
+/**
+ * Implements a Repository of Forecasts.
+ */
 class LongTermForeCastRepository extends BaseRepository {
+  /**
+   * Instantiates a Repository
+   * @param {string} collection Name of Collection to be implemented.
+   */
   constructor(collection) {
     super();
     collection = collection ?? "LongTerm";
@@ -39,6 +57,10 @@ class LongTermForeCastRepository extends BaseRepository {
     this.collection = this.DataBase.collection(collection);
   }
 
+  /**
+   * Gets the latest Long Term Forecast of the repository based on the Date.
+   * @returns Promise that when resolved returns the latest long term forecast.
+   */
   getLatest() {
     return new Promise((resolve, reject) => {
       var query = this.collection.orderBy("date","desc");

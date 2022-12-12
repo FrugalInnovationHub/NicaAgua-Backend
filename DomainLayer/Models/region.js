@@ -1,4 +1,6 @@
-/**Represents a Region */
+/**Represents a Region 
+ * @todo Make it a extension of Base Class
+*/
 class Region {
     /**Constructor
      * @param {object} object - Object containing the properties of a Region
@@ -30,9 +32,7 @@ class Region {
         return value;
     }
 
-     toJson(){
-        return JSON.parse(JSON.stringify(this));
-    }
+     toJson = () =>JSON.parse(JSON.stringify(this));
 }
 
 module.exports = Region;

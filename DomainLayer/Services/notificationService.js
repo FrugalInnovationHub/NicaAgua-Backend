@@ -1,15 +1,5 @@
 var request = require("request");
-
-var options = {
-  method: "POST",
-  url: "https://fcm.googleapis.com/fcm/send",
-  headers: {
-    Authorization:
-      "Bearer AAAAuJ9ccbc:APA91bG90TxQneaATwKRQnhI3mZdev96dOIysvgow4z16vXUnpjIpku45gce8GKPGCW4NgNasO_nG2DAjIDdUpJ2kj0KwUXCtqt7KYyNa_aiqnEvTY3uRiChgYVXfd3agyPw5Gd2Tibs",
-    "Content-Type": "application/json",
-  },
-  body: null,
-};
+var options = require("../../config.json").notificationOptions;
 
 Object.defineProperty(Array.prototype, "chunk", {
   value: function (chunkSize) {
@@ -19,8 +9,6 @@ Object.defineProperty(Array.prototype, "chunk", {
     return R;
   },
 });
-
-
 
 function generateNotification(topics, title, body) {
   var conditions = topics.map((a) => `'${a.replace(" ", "_")}' in topics`); //Replace empty spaces with underscore.
@@ -39,7 +27,5 @@ function sendNotification(topics, title, body) {
   var notifications = topics.chunk(3).map(e =>request({...options,body:generateNotification(e,title,body)},(a) => {console.log(a)}));
   console.log(notifications);
 }
-
-
 
 module.exports = sendNotification;

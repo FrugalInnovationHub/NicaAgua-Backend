@@ -1,6 +1,9 @@
 const { reject } = require('bcrypt/promises');
 const BaseRepository = require('./baseRepository');
 
+/**
+ * This class implements a User Repository
+ */
 class UserRepository extends BaseRepository {
     constructor(collection) {
         super();
