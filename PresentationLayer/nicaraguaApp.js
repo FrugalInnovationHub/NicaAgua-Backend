@@ -1,10 +1,14 @@
 var http = require('http');
+const { program } = require('commander');
 const express = require('express');
+
+program.requiredOption('-p, --port <type>', 'Port where the server will run.');
+program.parse(process.argv);
 var app = express();
 const bodyparser = require('body-parser');
 
 var httpServer = http.createServer(app);
-const httpPort = 3000;
+const httpPort = program.opts().port;
 httpServer.listen(httpPort, () => console.log(`Express server is running at port ${httpPort} HTTPS`));
 
 app.use(bodyparser.json({ limit: '50mb' }))
