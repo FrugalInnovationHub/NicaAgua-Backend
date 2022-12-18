@@ -141,7 +141,7 @@ class LongTermForecast extends Base {
           : null;
       this.CheckNull("endDate");
 
-      this.next = object.text;
+      this.text = object.text;
       if (new Date(this.startDate) > new Date(this.endDate))
         this.error.push("startDate must be smaller than endDate.");
     }
