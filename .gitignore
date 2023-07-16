@@ -7021,3 +7021,4 @@ amplifytools.xcconfig
 firebase_local_data/*
 .idea
 .env
+ecosystem.config.js
