@@ -14,8 +14,7 @@ function generate_ref_id(destinationNumber, brandName, source) {
 // Function to reset user password
 async function resetPassword(phoneNumber, newPassword) {
     let userService = new UserService();
-    let user = await userService.getUser(phoneNumber);
-    let status = await user.setPassword(newPassword);
+    let status = await userService.setPassword({ phoneNumber: phoneNumber, password: newPassword});
     if (status) {
         return true;
     } else {

@@ -164,7 +164,7 @@ class UserService {
                         var user = new User(u);
                         user.setPassword(object.password);
                         user = user.toJson({exposed: true});
-                        this.userRepository.upsert(user).then((u) => resolve())
+                        this.userRepository.upsert(user).then((u) => resolve(true))
                             .catch(() => reject('No user found.'))
                     }
                 })
