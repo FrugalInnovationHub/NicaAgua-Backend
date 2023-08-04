@@ -2,14 +2,20 @@
   "functions": {
     "source": "functions"
   },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
   "emulators": {
     "firestore": {
-      "port": 9000
+      "port": 8088
     },
     "ui": {
-      "enabled": true,
-      "port": 9090
+      "enabled": true
     },
-    "singleProjectMode": true
+    "singleProjectMode": true,
+    "functions": {
+      "port": 5001
+    }
   }
 }

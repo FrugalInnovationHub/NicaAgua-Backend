@@ -2,7 +2,7 @@ var http = require('http');
 const { program } = require('commander');
 var cors = require('cors');
 const express = require('express');
-var corsOptions = {	origin: 'http://app.nicaagua.net' }
+var corsOptions = {	origin: 'https://app.nicaagua.net' }
 
 program.requiredOption('-p, --port <type>', 'Port where the server will run.');
 program.parse(process.argv);
