@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "nyc --reporter=html --reporter=text mocha",
-    "start": "node PresentationLayer/nicaraguApp.js"
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
   },
   "author": "Giulliano Siviero",
   "license": "ISC",
