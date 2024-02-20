@@ -7,6 +7,9 @@
     "test": "nyc --reporter=html --reporter=text mocha",
     "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
   },
+  "engines": {
+    "node": "16"
+  },
   "author": "Giulliano Siviero",
   "license": "ISC",
   "dependencies": {
@@ -16,6 +19,7 @@
     "crypto": "^1.0.1",
     "express": "^4.17.2",
     "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.4",
     "nyc": "^15.1.0",
