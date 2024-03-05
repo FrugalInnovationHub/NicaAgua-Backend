@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "nicaragua-project"
-  }
+  },
+  "targets": {
+    "nicaragua-project": {
+      "hosting": {
+        "test": [
+          "natest"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
