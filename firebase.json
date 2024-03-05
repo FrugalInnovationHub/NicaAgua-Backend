@@ -19,6 +19,7 @@
     }
   },
   "hosting": {
+    "target": "natest",
     "public": "/",
     "ignore": [
       "firebase.json",
