@@ -23,7 +23,6 @@ jobs:
 
       - name: Deploy to Firebase
         run: |
-          npm run start  # Adjust this based on your build script
           firebase deploy --only hosting:${{ secrets.FIREBASE_HOSTING_ID }} -P ${{ secrets.FIREBASE_PROJECT_ID }} --token "$FIREBASE_TOKEN"
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
