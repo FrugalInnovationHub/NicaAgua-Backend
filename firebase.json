@@ -17,5 +17,13 @@
     "functions": {
       "port": 5001
     }
+  },
+  "hosting": {
+    "public": "/",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
   }
 }
