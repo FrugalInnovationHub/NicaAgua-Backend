@@ -19,7 +19,7 @@
     }
   },
   "hosting": {
-    "target": "natest",
+    "target": "nicaagua-api",
     "public": "/",
     "ignore": [
       "firebase.json",
