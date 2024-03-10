@@ -17,14 +17,5 @@
     "functions": {
       "port": 5001
     }
-  },
-  "hosting": {
-    "target": "nicaagua-api",
-    "public": "/",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
   }
 }
