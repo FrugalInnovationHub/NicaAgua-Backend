@@ -2,30 +2,5 @@
   "functions": {
     "source": "/",
     "target": "nicaragua-api"
-  },
-  "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
-  },
-  "emulators": {
-    "firestore": {
-      "port": 8088
-    },
-    "ui": {
-      "enabled": true
-    },
-    "singleProjectMode": true,
-    "functions": {
-      "port": 5001
-    }
-  },
-  "hosting": {
-    "target": "nicaagua-api",
-    "public": "/",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
   }
 }
