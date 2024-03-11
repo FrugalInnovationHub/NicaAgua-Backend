@@ -42,7 +42,7 @@ jobs:
           npm install -g firebase-tools
           firebase deploy --token ${{ secrets.GITHUB_TOKEN }} --only functions
         env:
-          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_NICARAGUA }}
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_NICARAGUA_PROJECT }}
 
 # name: Deploy to Firebase Hosting on merge
 
