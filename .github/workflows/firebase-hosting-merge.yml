@@ -40,9 +40,9 @@ jobs:
       - name: Deploy Firebase Functions
         run: |
           npm install -g firebase-tools
-          firebase deploy --token ${{ secrets.FIREBASE_SERVICE_ACCOUNT_NICARAGUA_PROJECT }} --only functions
+          firebase deploy --token ${{ secrets.FIREBASE_SERVICE_ACCOUNT_NICARAGUA }} --only functions
         env:
-          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_NICARAGUA_PROJECT }}
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_NICARAGUA }}
 
 # name: Deploy to Firebase Hosting on merge
 
