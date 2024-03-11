@@ -45,7 +45,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Deploy to Firebase Hosting
+      - name: Deploy Firebase Functions
         run: |
           npm install -g firebase-tools
           firebase use --add nicaragua-project
