@@ -70,7 +70,7 @@ jobs:
       - name: Authenticate with Firebase
         run: |
           echo "$FIREBASE_SERVICE_ACCOUNT" > $HOME/gcp-key.json
-          firebase use --add nicaragua-project --token "$FIREBASE_SERVICE_ACCOUNT"
+          firebase use --token "$FIREBASE_SERVICE_ACCOUNT"
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_NICARAGUA_PROJECT }}
 
