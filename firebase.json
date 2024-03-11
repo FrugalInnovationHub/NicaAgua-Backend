@@ -1,6 +1,7 @@
 {
   "functions": {
-    "source": "/"
+    "source": "/",
+    "target": "nicaragua-api"
   },
   "firestore": {
     "rules": "firestore.rules",
