@@ -40,7 +40,6 @@ jobs:
       - name: Deploy Firebase Functions
         run: |
           npm install -g firebase-tools
-          firebase use --add nicaragua-project
           firebase deploy --token "$FIREBASE_SERVICE_ACCOUNT" --project nicaragua-project --only functions
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_NICARAGUA_PROJECT }}
