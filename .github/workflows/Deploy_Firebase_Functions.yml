@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create Config Json File
-        run: cat /src/config.json | base64
+        run: cat config.json | base64
       - name: Putting Data
         env:
           DATA: ${{ secrets.FIREBASE_CONFIGJSON }}
-        run: echo $DATA > /src/config.json
+        run: echo $DATA > config.json
       - uses: actions/checkout@v2
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
