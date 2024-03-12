@@ -18,5 +18,9 @@ jobs:
       - name: Download Backend Deps
         working-directory: "."
         run: npm install
-      - name: Firebase Deploy
-        run: firebase deploy
+      - name: Deploy Firebase Functions
+        run: |
+          npm install -g firebase-tools
+          firebase deploy --token ${{ secrets.GITHUB_TOKEN }} --only functions
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_NICARAGUA_PROJECT }}
