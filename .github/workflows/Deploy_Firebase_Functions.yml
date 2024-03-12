@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Create Json File
         working-directory: "."
-        run: echo ${{ secrets.GITHUB_TOKEN }} >> config.json | cat config.json
+        run: echo ${{ secrets.GITHUB_TOKEN }} >> $HOME/config.json | cat $HOME/config.json
       - uses: actions/checkout@v2
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
