@@ -1,0 +1,27 @@
+name: Deploy Firebase Functions
+
+'on':
+  push:
+    branches:
+      - main
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_NICARAGUA_PROJECT }}'
+          projectId: nicaragua-project
+          target: nicaragua-api
+          
+      - name: Download Functions Deps
+        working-directory: functions
+        run: npm install
+
+      - name: Download Backend Deps
+        working-directory: "."
+        run: npm install
+
+      - name: Deploy
+        run: firebase deploy
