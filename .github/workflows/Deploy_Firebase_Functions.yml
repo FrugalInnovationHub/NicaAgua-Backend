@@ -9,13 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Install Flutter SDK
+      - name: Create Config File
         uses: mobiledevops/secret-to-file-action@v1
         with:
           base64-encoded-secret: ${{ secrets.FIREBASE_CONFIGJSON }}
           filename: "config.json"
-          is-executable: true
-          working-directory: "./../"
       - uses: actions/checkout@v2
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
