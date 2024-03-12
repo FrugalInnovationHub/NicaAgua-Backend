@@ -19,8 +19,8 @@ jobs:
         working-directory: "."
         run: npm install
       - name: Deploy Firebase Functions
-        run: |
-          npm install -g firebase-tools
-          firebase deploy --token ${{ secrets.GITHUB_TOKEN }} --only functions
+        uses: w9jds/firebase-action@master
+        with:
+          ards: deploy --only functions
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_NICARAGUA_PROJECT }}
