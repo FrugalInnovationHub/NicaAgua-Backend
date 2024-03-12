@@ -16,7 +16,7 @@ jobs:
           filename: "config.json"
           is-executable: true
           working-directory: "."
-      - run: .config.json
+      - run: 
       - uses: actions/checkout@v2
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
