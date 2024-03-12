@@ -8,7 +8,7 @@ app.use(bodyparser.json({ limit: '50mb' }))
 app.use(bodyparser.urlencoded({ extended: false }));
 
 app.get('/version',(req,res) => {
-	res.send("Nica Agua API: Version 1.0!")
+	res.send("Nica Agua API: Version 1.01!")
 })
 
 require('./Controllers/userController')(app);
