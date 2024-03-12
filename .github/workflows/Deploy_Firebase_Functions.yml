@@ -18,3 +18,5 @@ jobs:
       - name: Download Backend Deps
         working-directory: "."
         run: npm install
+      - name: Firebase Deploy
+        run: firebase deploy
