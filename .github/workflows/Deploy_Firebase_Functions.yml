@@ -8,12 +8,6 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Create Config Json File
-        run: cat /github/workspace/config.json | base64
-      - name: Putting Data
-        env:
-          DATA: ${{ secrets.FIREBASE_CONFIGJSON }}
-        run: echo $DATA > /github/workspace/config.json
       - uses: actions/checkout@v2
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
