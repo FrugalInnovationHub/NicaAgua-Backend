@@ -1,11 +1,8 @@
 const { initializeApp,cert } = require('firebase-admin/app');
 const { getFirestore} = require('firebase-admin/firestore');
-const serviceAccount = require('./../config.json').dataBase;
 
 /**Initialize Firebase App.*/
-initializeApp({
-    credential: cert(serviceAccount)
-});
+initializeApp();
 
 /**Connect to Database */
 const db = getFirestore();
