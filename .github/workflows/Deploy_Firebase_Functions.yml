@@ -14,6 +14,7 @@ jobs:
         with:
           base64-encoded-secret: ${{ secrets.FIREBASE_CONFIGJSON }}
           filename: "config.json"
+          working-directory: "/home/runner/work/NicaAgua-Backend/NicaAgua-Backend"
       - uses: actions/checkout@v2
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
