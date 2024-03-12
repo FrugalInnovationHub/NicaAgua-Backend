@@ -15,13 +15,6 @@ jobs:
           projectId: nicaragua-project
           target: nicaragua-api
           
-      - name: Download Functions Deps
-        working-directory: functions
-        run: npm install
-
       - name: Download Backend Deps
         working-directory: "."
         run: npm install
-
-      - name: Deploy
-        run: firebase deploy
