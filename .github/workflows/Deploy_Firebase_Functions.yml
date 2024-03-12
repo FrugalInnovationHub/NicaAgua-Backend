@@ -8,9 +8,15 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Create Json File
-        working-directory: "."
-        run: echo ${{ secrets.GITHUB_TOKEN }} >> $HOME/config.json | cat $HOME/config.json
+      - uses: actions/checkout@v3
+      - name: Install Flutter SDK
+        uses: mobiledevops/secret-to-file-action@v1
+        with:
+          base64-encoded-secret: ${{ secrets.FIREBASE_CONFIGJSON }}
+          filename: "config.json"
+          is-executable: true
+          working-directory: "."
+      - run: .config.json
       - uses: actions/checkout@v2
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
