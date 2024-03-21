@@ -1,5 +1,6 @@
 var request = require("request");
-var options = require("../../config.json").notificationOptions;
+require('dotenv').config();
+var notificationToken = process.env.NotificationToken;
 
 Object.defineProperty(Array.prototype, "chunk", {
   value: function (chunkSize) {
@@ -24,7 +25,14 @@ function generateNotification(topics, title, body) {
 }
 
 function sendNotification(topics, title, body) {  
-  var notifications = topics.chunk(3).map(e =>request({...options,body:generateNotification(e,title,body)},(a) => {console.log(a)}));
+  var notifications = topics.chunk(3).map(e =>request({
+    method: "POST",
+    url: "https://fcm.googleapis.com/fcm/send",
+    headers: {
+      "Authorization":notificationToken,
+      "Content-Type": "application/json"
+    },
+    body:generateNotification(e,title,body)},(a) => {console.log(a)}));
   console.log(notifications);
 }
 

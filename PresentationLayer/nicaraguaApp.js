@@ -7,8 +7,8 @@ app.use(cors())
 app.use(bodyparser.json({ limit: '50mb' }))
 app.use(bodyparser.urlencoded({ extended: false }));
 
-app.get('/',(req,res) => {
-	res.send("Welcome to Nicaragua Project!")
+app.get('/version',(req,res) => {
+	res.send("Nica Agua API: Version 1.01!")
 })
 
 require('./Controllers/userController')(app);

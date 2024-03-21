@@ -1,8 +1,9 @@
 var jwt = require('jsonwebtoken');
-const tokenKey = require('./../config.json').tokenKey;
+require('dotenv').config();
+const tokenKey = process.env.JWT_TOKEN;
+
 class JwtIssuer{
     constructor(){
-
     }
 
     /**
