@@ -87,6 +87,29 @@ function UserController(app) {
         }
     })
 
+    app.post('/admin/user/login', (req, res) => {
+        try {
+            new UserService().logIn(req.body).then(
+                (r) => {
+                    if(r.roleLevel == 0) {
+                        res.send(JwtIssuer.generateToken(r.roleLevel, r.phoneNumber))
+                    }
+                    else {
+                        res.statusCode = 403
+                        res.send("User is not an Admin User!")
+                    }
+                })
+                .catch((e) => {
+                    res.statusCode = 401;
+                    res.send(e);
+                });
+        }
+        catch (e) {
+            res.statusCode = 400;
+            res.send(e);
+        }
+    })
+
     app.post('/user/community', PermissionMiddleWare.isAuthenticated, (req, res) => {
         try {
             var phoneNumber = JwtIssuer.getUserPhoneNumber(req.headers.authorization)

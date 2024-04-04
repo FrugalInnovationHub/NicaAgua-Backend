@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "nicaragua-project"
-  }
+  },
+  "targets": {
+    "nicaragua-project": {
+      "hosting": {
+        "natest": [
+          "natest"
+        ],
+        "nicaagua-api": [
+          "nicaagua-api"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

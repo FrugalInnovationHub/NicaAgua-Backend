@@ -1,21 +1,6 @@
 {
   "functions": {
-    "source": "functions"
-  },
-  "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
-  },
-  "emulators": {
-    "firestore": {
-      "port": 8088
-    },
-    "ui": {
-      "enabled": true
-    },
-    "singleProjectMode": true,
-    "functions": {
-      "port": 5001
-    }
+    "source": "/",
+    "target": "nicaragua-api"
   }
 }

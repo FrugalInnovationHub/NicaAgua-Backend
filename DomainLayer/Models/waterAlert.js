@@ -16,6 +16,7 @@ class WaterAlert extends Base{
     }
     /**Time of creation of this Water Alert */
     this.dateTime = object.dateTime ?? Date.now();
+    this.priority = object.priority ?? "Low";
     this.CheckErrors();
   }
 }
