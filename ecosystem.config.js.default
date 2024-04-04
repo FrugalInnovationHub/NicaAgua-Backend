@@ -1,0 +1,26 @@
+module.exports = {
+    apps: [{
+        name: "app",
+        script: "./PresentationLayer/nicaraguaApp.js",
+        env: {
+            NODE_ENV: "development",
+            PORT: 3000,
+            FIRESTORE_EMULATOR_HOST:""
+        },
+        env_test: {
+            NODE_ENV: "test",
+            PORT: 3000
+        },
+        env_staging: {
+            NODE_ENV: "staging",
+            PORT: 3000
+        },
+        env_production: {
+            NODE_ENV: "production",
+            PORT: 3000,
+            AWS_REGION: "",
+            ORIGINATION_NUMBER: "",
+            PROJECT_ID: "",
+        }
+    }]
+}
