@@ -28,7 +28,7 @@ class WaterAlertRepository extends BaseRepository {
             query = object.dateTimeEnd ? query.where("dateTime","<",new Date(object.dateTimeEnd).getTime()): query;
             query = query.limit(parseInt(object.limit?? 10));
             query = query.offset(parseInt(object.offset ?? 0));
-            query.orderBy('dateTime','desc');
+            query = query.orderBy('dateTime','desc');
             query.get().then((d) => {
                 if (d) {
                     var res = d.docs.map((r) => {

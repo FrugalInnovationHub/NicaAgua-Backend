@@ -1,6 +1,7 @@
 var UserService = require('../../DomainLayer/Services/userService');
 const JwtIssuer = require('../jwtIssuer');
-const PermissionMiddleWare = require('../permissionMiddleWare')
+const PermissionMiddleWare = require('../permissionMiddleWare');
+require("firebase-functions/logger/compat");
 
 const { SendOTPMessageCommand, VerifyOTPMessageCommand, PinpointClient} = require("@aws-sdk/client-pinpoint");
 const crypto = require('crypto');
@@ -77,6 +78,7 @@ function UserController(app) {
             new UserService().logIn(req.body).then(
                 (r) => res.send(JwtIssuer.generateToken(r.roleLevel, r.phoneNumber)))
                 .catch((e) => {
+                    console.log("AQUI",e);
                     res.statusCode = 401;
                     res.send(e);
                 });
