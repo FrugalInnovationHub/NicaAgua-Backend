@@ -13,6 +13,8 @@
   "author": "Giulliano Siviero",
   "license": "ISC",
   "dependencies": {
+    "@aws-sdk/client-pinpoint": "^3.282.0",
+    "aws-amplify": "^5.0.15",
     "bcrypt": "^5.0.1",
     "commander": "^9.4.1",
     "cors": "^2.8.5",
