@@ -90,5 +90,4 @@ extractTokenFromHeader = function(token){
         return token.substring(7);
     return token
 }
-//test
 module.exports = JwtIssuer;
