@@ -1,6 +1,6 @@
 var request = require("request");
 require('dotenv').config();
-var notificationToken = process.env.NotificationToken;
+var notificationToken = process.env.NOTIFICATION_TOKEN;
 
 Object.defineProperty(Array.prototype, "chunk", {
   value: function (chunkSize) {
