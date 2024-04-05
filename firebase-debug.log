@@ -1,0 +1,1033 @@
+[debug] [2024-04-05T17:14:41.340Z] ----------------------------------------------------------------------
+[debug] [2024-04-05T17:14:41.342Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2024-04-05T17:14:41.342Z] CLI Version:   13.5.2
+[debug] [2024-04-05T17:14:41.342Z] Platform:      darwin
+[debug] [2024-04-05T17:14:41.343Z] Node Version:  v20.11.0
+[debug] [2024-04-05T17:14:41.343Z] Time:          Fri Apr 05 2024 10:14:41 GMT-0700 (Pacific Daylight Time)
+[debug] [2024-04-05T17:14:41.343Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-05T17:14:41.410Z] Object ".functions" in "firebase.json" has unknown property: {"additionalProperty":"target"}
+[debug] [2024-04-05T17:14:41.410Z] Field ".functions" in "firebase.json" is possibly invalid: should be array
+[debug] [2024-04-05T17:14:41.410Z] Field ".functions" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2024-04-05T17:14:41.414Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-05T17:14:41.414Z] > authorizing via signed-in user (scufrugalinnovation@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[warn] ⚠  logging: Logging Emulator unable to start on port 4500, starting on 4501 instead. {"metadata":{"emulator":{"name":"logging"},"message":"Logging Emulator unable to start on port 4500, starting on 4501 instead."}}
+[debug] [2024-04-05T17:14:41.815Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-05T17:14:41.815Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4501}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-04-05T17:14:41.818Z] [hub] writing locator at /var/folders/tj/b0q3gzvx3n75qntlth0jjc540000gn/T/hub-nicaragua-project.json
+[debug] [2024-04-05T17:14:42.013Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-05T17:14:42.013Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-05T17:14:42.013Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4501}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[debug] [2024-04-05T17:14:42.018Z] defaultcredentials: writing to file /Users/harshzota/.config/firebase/scufrugalinnovation_gmail_com_application_default_credentials.json
+[debug] [2024-04-05T17:14:42.031Z] Setting GAC to /Users/harshzota/.config/firebase/scufrugalinnovation_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/harshzota/.config/firebase/scufrugalinnovation_gmail_com_application_default_credentials.json"}}
+[debug] [2024-04-05T17:14:42.033Z] > refreshing access token with scopes: []
+[debug] [2024-04-05T17:14:42.034Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-04-05T17:14:42.034Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-04-05T17:14:42.158Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-04-05T17:14:42.158Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-04-05T17:14:42.191Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nicaragua-project/adminSdkConfig [none]
+[debug] [2024-04-05T17:14:42.823Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nicaragua-project/adminSdkConfig 200
+[debug] [2024-04-05T17:14:42.823Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nicaragua-project/adminSdkConfig {"projectId":"nicaragua-project","storageBucket":"nicaragua-project.appspot.com","locationId":"us-west3"}
+[debug] [2024-04-05T17:14:42.863Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-04-05T17:14:42.863Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-04-05T17:14:42.863Z] Starting Emulator UI with command {"binary":"node","args":["/Users/harshzota/.cache/firebase/emulators/ui-v1.11.8/server/server.mjs"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/harshzota/.cache/firebase/emulators/ui-v1.11.8/server/server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-04-05T17:14:42.938Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2024-04-05T17:14:42.938Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "/Users/harshzota/Desktop/Dev/NicaAgua-Backend/" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/\" for Cloud Functions..."}}
+[debug] [2024-04-05T17:14:43.138Z] Validating nodejs source
+[debug] [2024-04-05T17:14:43.658Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-05T17:14:43.658Z] Building nodejs source
+[debug] [2024-04-05T17:14:43.659Z] Failed to find version of module node: reached end of search path /Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:14:43.664Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-05T17:14:43.667Z] Found firebase-functions binary at '/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8971
+
+[debug] [2024-04-05T17:14:44.275Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] ✔  functions[us-central1-api]: http function initialized (http://127.0.0.1:5001/nicaragua-project/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/nicaragua-project/us-central1/api)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4501
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-04-05T17:19:22.598Z] File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js changed, reloading triggers"}}
+[debug] [2024-04-05T17:19:23.602Z] Validating nodejs source
+[debug] [2024-04-05T17:19:24.089Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-05T17:19:24.089Z] Building nodejs source
+[debug] [2024-04-05T17:19:24.089Z] Failed to find version of module node: reached end of search path /Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:19:24.094Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-05T17:19:24.094Z] Found firebase-functions binary at '/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8296
+
+[debug] [2024-04-05T17:19:24.616Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2024-04-05T17:19:35.192Z] File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js changed, reloading triggers"}}
+[debug] [2024-04-05T17:19:36.193Z] Validating nodejs source
+[debug] [2024-04-05T17:19:36.605Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-05T17:19:36.605Z] Building nodejs source
+[debug] [2024-04-05T17:19:36.605Z] Failed to find version of module node: reached end of search path /Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:19:36.605Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-05T17:19:36.606Z] Found firebase-functions binary at '/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8552
+
+[debug] [2024-04-05T17:19:36.846Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2024-04-05T17:19:49.428Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/api/user/login-2024-04-05T17:19:49.428Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-05T17:19:49.429Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/api/user/login-2024-04-05T17:19:49.428Z"],"workRunningCount":1}
+[debug] [2024-04-05T17:19:49.429Z] Accepted request POST /nicaragua-project/us-central1/api/user/login --> us-central1-api
+[debug] [2024-04-05T17:19:49.439Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-05T17:19:49.440Z] [functions] Got req.url=/nicaragua-project/us-central1/api/user/login, mapping to path=/user/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/api/user/login, mapping to path=/user/login"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:19:49.448Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2024-04-05T17:19:49.450Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2024-04-05T17:19:50.671Z] [runtime-status] [49014] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49014] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-04-05T17:19:50.672Z] [runtime-status] [49014] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49014] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-05T17:19:50.672Z] [runtime-status] [49014] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49014] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2024-04-05T17:19:50.672Z] [runtime-status] [49014] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49014] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-05T17:19:50.861Z] [runtime-status] [49014] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49014] Checked functions.config() {\"config\":{}}"}}
+[debug] [2024-04-05T17:19:50.861Z] [runtime-status] [49014] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49014] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2024-04-05T17:19:50.862Z] [runtime-status] [49014] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49014] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-05T17:19:50.862Z] [runtime-status] [49014] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49014] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-04-05T17:19:50.871Z] [runtime-status] [49014] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49014] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-05T17:19:50.871Z] [runtime-status] [49014] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49014] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2024-04-05T17:19:51.110Z] [runtime-status] [49014] Functions runtime initialized. {"cwd":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend","node_version":"20.11.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49014] Functions runtime initialized. {\"cwd\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend\",\"node_version\":\"20.11.0\"}"}}
+[debug] [2024-04-05T17:19:51.110Z] [runtime-status] [49014] Listening to port: /var/folders/tj/b0q3gzvx3n75qntlth0jjc540000gn/T/fire_emu_089a9bb06b5b2715.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49014] Listening to port: /var/folders/tj/b0q3gzvx3n75qntlth0jjc540000gn/T/fire_emu_089a9bb06b5b2715.sock"}}
+[debug] [2024-04-05T17:19:51.175Z] [worker-us-central1-api-8d089700-fc27-43fd-9b1c-5c3a632c4426]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-8d089700-fc27-43fd-9b1c-5c3a632c4426]: IDLE"}}
+[debug] [2024-04-05T17:19:51.175Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-04-05T17:19:51.175Z] [worker-us-central1-api-8d089700-fc27-43fd-9b1c-5c3a632c4426]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-8d089700-fc27-43fd-9b1c-5c3a632c4426]: BUSY"}}
+[warn] ⚠  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[debug] [2024-04-05T17:19:51.997Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 821.978125ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 821.978125ms"}}
+[debug] [2024-04-05T17:19:51.998Z] [worker-us-central1-api-8d089700-fc27-43fd-9b1c-5c3a632c4426]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-8d089700-fc27-43fd-9b1c-5c3a632c4426]: IDLE"}}
+[debug] [2024-04-05T17:19:51.998Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-05T17:19:51.998Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-05T17:19:51.998Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-05T17:19:52.019Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/api/shortTerm-2024-04-05T17:19:52.019Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-05T17:19:52.019Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/api/shortTerm-2024-04-05T17:19:52.019Z"],"workRunningCount":1}
+[debug] [2024-04-05T17:19:52.019Z] Accepted request PUT /nicaragua-project/us-central1/api/shortTerm --> us-central1-api
+[debug] [2024-04-05T17:19:52.020Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-05T17:19:52.020Z] [functions] Got req.url=/nicaragua-project/us-central1/api/shortTerm, mapping to path=/shortTerm {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/api/shortTerm, mapping to path=/shortTerm"}}
+[debug] [2024-04-05T17:19:52.020Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-04-05T17:19:52.020Z] [worker-us-central1-api-8d089700-fc27-43fd-9b1c-5c3a632c4426]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-8d089700-fc27-43fd-9b1c-5c3a632c4426]: BUSY"}}
+[info] >  14 new forecase {"user":"14 new forecase","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m 14 new forecase"}}
+[info] >  El Bramadero {"user":"El Bramadero","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m El Bramadero"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Daraili {"user":"Daraili","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Daraili"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  La Laguna {"user":"La Laguna","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m La Laguna"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  San Andres {"user":"San Andres","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m San Andres"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Las Limas {"user":"Las Limas","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Las Limas"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Venecia {"user":"Venecia","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Venecia"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  El Bijahual {"user":"El Bijahual","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m El Bijahual"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  El Naranjito {"user":"El Naranjito","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m El Naranjito"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  San Jeronimo {"user":"San Jeronimo","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m San Jeronimo"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  El Naranjo {"user":"El Naranjo","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m El Naranjo"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Los Planes {"user":"Los Planes","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Los Planes"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  El Robledalito {"user":"El Robledalito","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m El Robledalito"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Varonesa {"user":"Varonesa","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Varonesa"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  La Palmera {"user":"La Palmera","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m La Palmera"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  Send Notif {"user":"Send Notif","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Send Notif"}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    'El Bramadero', 'Daraili', {"user":"  'El Bramadero', 'Daraili',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'El Bramadero', 'Daraili',"}}
+[info] >    'La Laguna',    'San Andres', {"user":"  'La Laguna',    'San Andres',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'La Laguna',    'San Andres',"}}
+[info] >    'Las Limas',    'Venecia', {"user":"  'Las Limas',    'Venecia',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'Las Limas',    'Venecia',"}}
+[info] >    'El Bijahual',  'El Naranjito', {"user":"  'El Bijahual',  'El Naranjito',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'El Bijahual',  'El Naranjito',"}}
+[info] >    'San Jeronimo', 'El Naranjo', {"user":"  'San Jeronimo', 'El Naranjo',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'San Jeronimo', 'El Naranjo',"}}
+[info] >    'Los Planes',   'El Robledalito', {"user":"  'Los Planes',   'El Robledalito',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'Los Planes',   'El Robledalito',"}}
+[info] >    'Varonesa',     'La Palmera' {"user":"  'Varonesa',     'La Palmera'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'Varonesa',     'La Palmera'"}}
+[info] >  ] alert regions {"user":"] alert regions","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ] alert regions"}}
+[debug] [2024-04-05T17:19:52.193Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 172.672292ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 172.672292ms"}}
+[debug] [2024-04-05T17:19:52.193Z] [worker-us-central1-api-8d089700-fc27-43fd-9b1c-5c3a632c4426]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-8d089700-fc27-43fd-9b1c-5c3a632c4426]: IDLE"}}
+[debug] [2024-04-05T17:19:52.193Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-05T17:19:52.193Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-05T17:19:52.194Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-05T17:25:34.591Z] File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js changed, reloading triggers"}}
+[debug] [2024-04-05T17:25:35.593Z] Validating nodejs source
+[debug] [2024-04-05T17:25:36.105Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-05T17:25:36.105Z] Building nodejs source
+[debug] [2024-04-05T17:25:36.105Z] Failed to find version of module node: reached end of search path /Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:25:36.107Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-05T17:25:36.108Z] Found firebase-functions binary at '/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8679
+
+[debug] [2024-04-05T17:25:36.487Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2024-04-05T17:25:41.503Z] [worker-pool] Shutting down IDLE worker (us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-api)"}}
+[debug] [2024-04-05T17:25:41.503Z] [worker-us-central1-api-8d089700-fc27-43fd-9b1c-5c3a632c4426]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-8d089700-fc27-43fd-9b1c-5c3a632c4426]: FINISHING"}}
+[debug] [2024-04-05T17:25:41.509Z] [worker-us-central1-api-8d089700-fc27-43fd-9b1c-5c3a632c4426]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-8d089700-fc27-43fd-9b1c-5c3a632c4426]: exited"}}
+[debug] [2024-04-05T17:25:41.509Z] [worker-us-central1-api-8d089700-fc27-43fd-9b1c-5c3a632c4426]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-8d089700-fc27-43fd-9b1c-5c3a632c4426]: FINISHED"}}
+[debug] [2024-04-05T17:26:16.554Z] File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js changed, reloading triggers"}}
+[debug] [2024-04-05T17:26:17.556Z] Validating nodejs source
+[debug] [2024-04-05T17:26:17.954Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-05T17:26:17.954Z] Building nodejs source
+[debug] [2024-04-05T17:26:17.954Z] Failed to find version of module node: reached end of search path /Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:26:17.960Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-05T17:26:17.961Z] Found firebase-functions binary at '/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8034
+
+[debug] [2024-04-05T17:26:18.234Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2024-04-05T17:26:22.432Z] File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/waterAlertService.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/waterAlertService.js changed, reloading triggers"}}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2024-04-05T17:26:23.434Z] Validating nodejs source
+[debug] [2024-04-05T17:26:23.827Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-05T17:26:23.827Z] Building nodejs source
+[debug] [2024-04-05T17:26:23.827Z] Failed to find version of module node: reached end of search path /Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:26:23.830Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-05T17:26:23.830Z] Found firebase-functions binary at '/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8457
+
+[debug] [2024-04-05T17:26:24.088Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2024-04-05T17:27:16.743Z] File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js changed, reloading triggers"}}
+[debug] [2024-04-05T17:27:17.746Z] Validating nodejs source
+[debug] [2024-04-05T17:27:18.244Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-05T17:27:18.244Z] Building nodejs source
+[debug] [2024-04-05T17:27:18.244Z] Failed to find version of module node: reached end of search path /Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:27:18.247Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-05T17:27:18.248Z] Found firebase-functions binary at '/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8317
+
+[debug] [2024-04-05T17:27:18.619Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2024-04-05T17:27:31.750Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/api/user/login-2024-04-05T17:27:31.750Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-05T17:27:31.751Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/api/user/login-2024-04-05T17:27:31.750Z"],"workRunningCount":1}
+[debug] [2024-04-05T17:27:31.751Z] Accepted request POST /nicaragua-project/us-central1/api/user/login --> us-central1-api
+[debug] [2024-04-05T17:27:31.756Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-05T17:27:31.757Z] [functions] Got req.url=/nicaragua-project/us-central1/api/user/login, mapping to path=/user/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/api/user/login, mapping to path=/user/login"}}
+[debug] [2024-04-05T17:27:31.757Z] [worker-pool] Cleaned up workers for us-central1-api: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-api: 1 --> 0"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:27:31.762Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2024-04-05T17:27:31.763Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2024-04-05T17:27:32.703Z] [runtime-status] [49902] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49902] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-04-05T17:27:32.703Z] [runtime-status] [49902] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49902] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-05T17:27:32.703Z] [runtime-status] [49902] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49902] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2024-04-05T17:27:32.704Z] [runtime-status] [49902] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49902] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-05T17:27:32.855Z] [runtime-status] [49902] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49902] Checked functions.config() {\"config\":{}}"}}
+[debug] [2024-04-05T17:27:32.855Z] [runtime-status] [49902] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49902] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2024-04-05T17:27:32.855Z] [runtime-status] [49902] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49902] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-05T17:27:32.856Z] [runtime-status] [49902] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49902] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-04-05T17:27:32.857Z] [runtime-status] [49902] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49902] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-05T17:27:32.857Z] [runtime-status] [49902] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49902] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2024-04-05T17:27:33.040Z] [runtime-status] [49902] Functions runtime initialized. {"cwd":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend","node_version":"20.11.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49902] Functions runtime initialized. {\"cwd\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend\",\"node_version\":\"20.11.0\"}"}}
+[debug] [2024-04-05T17:27:33.040Z] [runtime-status] [49902] Listening to port: /var/folders/tj/b0q3gzvx3n75qntlth0jjc540000gn/T/fire_emu_2afbaff5d136b0de.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49902] Listening to port: /var/folders/tj/b0q3gzvx3n75qntlth0jjc540000gn/T/fire_emu_2afbaff5d136b0de.sock"}}
+[debug] [2024-04-05T17:27:33.086Z] [worker-us-central1-api-ab67b12a-2505-4273-b3ed-1db42e76ec74]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-ab67b12a-2505-4273-b3ed-1db42e76ec74]: IDLE"}}
+[debug] [2024-04-05T17:27:33.086Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-04-05T17:27:33.086Z] [worker-us-central1-api-ab67b12a-2505-4273-b3ed-1db42e76ec74]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-ab67b12a-2505-4273-b3ed-1db42e76ec74]: BUSY"}}
+[warn] ⚠  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[debug] [2024-04-05T17:27:33.679Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 593.107917ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 593.107917ms"}}
+[debug] [2024-04-05T17:27:33.680Z] [worker-us-central1-api-ab67b12a-2505-4273-b3ed-1db42e76ec74]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-ab67b12a-2505-4273-b3ed-1db42e76ec74]: IDLE"}}
+[debug] [2024-04-05T17:27:33.680Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-05T17:27:33.680Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-05T17:27:33.680Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-05T17:27:33.700Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/api/shortTerm-2024-04-05T17:27:33.700Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-05T17:27:33.700Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/api/shortTerm-2024-04-05T17:27:33.700Z"],"workRunningCount":1}
+[debug] [2024-04-05T17:27:33.700Z] Accepted request PUT /nicaragua-project/us-central1/api/shortTerm --> us-central1-api
+[debug] [2024-04-05T17:27:33.701Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-05T17:27:33.701Z] [functions] Got req.url=/nicaragua-project/us-central1/api/shortTerm, mapping to path=/shortTerm {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/api/shortTerm, mapping to path=/shortTerm"}}
+[debug] [2024-04-05T17:27:33.701Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-04-05T17:27:33.702Z] [worker-us-central1-api-ab67b12a-2505-4273-b3ed-1db42e76ec74]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-ab67b12a-2505-4273-b3ed-1db42e76ec74]: BUSY"}}
+[info] >  14 new forecase {"user":"14 new forecase","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m 14 new forecase"}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    'El Bramadero', 'Daraili', {"user":"  'El Bramadero', 'Daraili',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'El Bramadero', 'Daraili',"}}
+[info] >    'La Laguna',    'San Andres', {"user":"  'La Laguna',    'San Andres',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'La Laguna',    'San Andres',"}}
+[info] >    'Las Limas',    'Venecia', {"user":"  'Las Limas',    'Venecia',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'Las Limas',    'Venecia',"}}
+[info] >    'El Bijahual',  'El Naranjito', {"user":"  'El Bijahual',  'El Naranjito',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'El Bijahual',  'El Naranjito',"}}
+[info] >    'San Jeronimo', 'El Naranjo', {"user":"  'San Jeronimo', 'El Naranjo',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'San Jeronimo', 'El Naranjo',"}}
+[info] >    'Los Planes',   'El Robledalito', {"user":"  'Los Planes',   'El Robledalito',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'Los Planes',   'El Robledalito',"}}
+[info] >    'Varonesa',     'La Palmera' {"user":"  'Varonesa',     'La Palmera'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'Varonesa',     'La Palmera'"}}
+[info] >  ] alert regions {"user":"] alert regions","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ] alert regions"}}
+[info] >  /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js:54 {"user":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js:54","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js:54"}}
+[info] >                  res.statusCode = 401; {"user":"                res.statusCode = 401;","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m                 res.statusCode = 401;"}}
+[info] >                  ^ {"user":"                ^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m                 ^"}}
+[info] >   {"user":"","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m "}}
+[info] >  ReferenceError: res is not defined {"user":"ReferenceError: res is not defined","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ReferenceError: res is not defined"}}
+[info] >      at /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js:54:17 {"user":"    at /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js:54:17","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     at /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js:54:17"}}
+[info] >   {"user":"","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m "}}
+[info] >  Node.js v20.11.0 {"user":"Node.js v20.11.0","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Node.js v20.11.0"}}
+[error] i  Request to function failed: Error: socket hang up {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Request to function failed: Error: socket hang up"}}
+[debug] [2024-04-05T17:27:33.770Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-05T17:27:33.770Z] [worker-us-central1-api-ab67b12a-2505-4273-b3ed-1db42e76ec74]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-ab67b12a-2505-4273-b3ed-1db42e76ec74]: exited"}}
+[debug] [2024-04-05T17:27:33.770Z] [worker-us-central1-api-ab67b12a-2505-4273-b3ed-1db42e76ec74]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-ab67b12a-2505-4273-b3ed-1db42e76ec74]: FINISHED"}}
+[debug] [2024-04-05T17:27:49.740Z] File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js changed, reloading triggers"}}
+[debug] [2024-04-05T17:27:50.744Z] Validating nodejs source
+[debug] [2024-04-05T17:27:51.210Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-05T17:27:51.210Z] Building nodejs source
+[debug] [2024-04-05T17:27:51.210Z] Failed to find version of module node: reached end of search path /Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:27:51.211Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-05T17:27:51.212Z] Found firebase-functions binary at '/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8801
+
+[debug] [2024-04-05T17:27:51.467Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2024-04-05T17:28:13.731Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/api/user/login-2024-04-05T17:28:13.731Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-05T17:28:13.731Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/api/user/login-2024-04-05T17:28:13.731Z"],"workRunningCount":1}
+[debug] [2024-04-05T17:28:13.731Z] Accepted request POST /nicaragua-project/us-central1/api/user/login --> us-central1-api
+[debug] [2024-04-05T17:28:13.735Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-05T17:28:13.735Z] [functions] Got req.url=/nicaragua-project/us-central1/api/user/login, mapping to path=/user/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/api/user/login, mapping to path=/user/login"}}
+[debug] [2024-04-05T17:28:13.736Z] [worker-pool] Cleaned up workers for us-central1-api: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-api: 1 --> 0"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:28:13.740Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2024-04-05T17:28:13.740Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2024-04-05T17:28:14.501Z] [runtime-status] [49965] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49965] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-04-05T17:28:14.502Z] [runtime-status] [49965] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49965] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-05T17:28:14.502Z] [runtime-status] [49965] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49965] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2024-04-05T17:28:14.502Z] [runtime-status] [49965] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49965] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-05T17:28:14.687Z] [runtime-status] [49965] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49965] Checked functions.config() {\"config\":{}}"}}
+[debug] [2024-04-05T17:28:14.687Z] [runtime-status] [49965] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49965] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2024-04-05T17:28:14.688Z] [runtime-status] [49965] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49965] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-05T17:28:14.688Z] [runtime-status] [49965] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49965] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-04-05T17:28:14.690Z] [runtime-status] [49965] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49965] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-05T17:28:14.690Z] [runtime-status] [49965] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49965] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2024-04-05T17:28:14.871Z] [runtime-status] [49965] Functions runtime initialized. {"cwd":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend","node_version":"20.11.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49965] Functions runtime initialized. {\"cwd\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend\",\"node_version\":\"20.11.0\"}"}}
+[debug] [2024-04-05T17:28:14.871Z] [runtime-status] [49965] Listening to port: /var/folders/tj/b0q3gzvx3n75qntlth0jjc540000gn/T/fire_emu_c3517f939a6c991b.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [49965] Listening to port: /var/folders/tj/b0q3gzvx3n75qntlth0jjc540000gn/T/fire_emu_c3517f939a6c991b.sock"}}
+[debug] [2024-04-05T17:28:14.962Z] [worker-us-central1-api-7511638b-379a-4c97-85fc-5ca14a0fc2f1]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-7511638b-379a-4c97-85fc-5ca14a0fc2f1]: IDLE"}}
+[debug] [2024-04-05T17:28:14.962Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-04-05T17:28:14.962Z] [worker-us-central1-api-7511638b-379a-4c97-85fc-5ca14a0fc2f1]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-7511638b-379a-4c97-85fc-5ca14a0fc2f1]: BUSY"}}
+[warn] ⚠  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[debug] [2024-04-05T17:28:15.564Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 602.413584ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 602.413584ms"}}
+[debug] [2024-04-05T17:28:15.565Z] [worker-us-central1-api-7511638b-379a-4c97-85fc-5ca14a0fc2f1]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-7511638b-379a-4c97-85fc-5ca14a0fc2f1]: IDLE"}}
+[debug] [2024-04-05T17:28:15.565Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-05T17:28:15.565Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-05T17:28:15.565Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-05T17:28:15.589Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/api/shortTerm-2024-04-05T17:28:15.589Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-05T17:28:15.589Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/api/shortTerm-2024-04-05T17:28:15.589Z"],"workRunningCount":1}
+[debug] [2024-04-05T17:28:15.589Z] Accepted request PUT /nicaragua-project/us-central1/api/shortTerm --> us-central1-api
+[debug] [2024-04-05T17:28:15.590Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-05T17:28:15.591Z] [functions] Got req.url=/nicaragua-project/us-central1/api/shortTerm, mapping to path=/shortTerm {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/api/shortTerm, mapping to path=/shortTerm"}}
+[debug] [2024-04-05T17:28:15.591Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-04-05T17:28:15.591Z] [worker-us-central1-api-7511638b-379a-4c97-85fc-5ca14a0fc2f1]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-7511638b-379a-4c97-85fc-5ca14a0fc2f1]: BUSY"}}
+[info] >  14 new forecase {"user":"14 new forecase","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m 14 new forecase"}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    'El Bramadero', 'Daraili', {"user":"  'El Bramadero', 'Daraili',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'El Bramadero', 'Daraili',"}}
+[info] >    'La Laguna',    'San Andres', {"user":"  'La Laguna',    'San Andres',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'La Laguna',    'San Andres',"}}
+[info] >    'Las Limas',    'Venecia', {"user":"  'Las Limas',    'Venecia',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'Las Limas',    'Venecia',"}}
+[info] >    'El Bijahual',  'El Naranjito', {"user":"  'El Bijahual',  'El Naranjito',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'El Bijahual',  'El Naranjito',"}}
+[info] >    'San Jeronimo', 'El Naranjo', {"user":"  'San Jeronimo', 'El Naranjo',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'San Jeronimo', 'El Naranjo',"}}
+[info] >    'Los Planes',   'El Robledalito', {"user":"  'Los Planes',   'El Robledalito',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'Los Planes',   'El Robledalito',"}}
+[info] >    'Varonesa',     'La Palmera' {"user":"  'Varonesa',     'La Palmera'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'Varonesa',     'La Palmera'"}}
+[info] >  ] alert regions {"user":"] alert regions","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ] alert regions"}}
+[debug] [2024-04-05T17:28:15.792Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 201.786583ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 201.786583ms"}}
+[debug] [2024-04-05T17:28:15.793Z] [worker-us-central1-api-7511638b-379a-4c97-85fc-5ca14a0fc2f1]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-7511638b-379a-4c97-85fc-5ca14a0fc2f1]: IDLE"}}
+[debug] [2024-04-05T17:28:15.793Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-05T17:28:15.794Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-05T17:28:15.794Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-05T17:29:15.528Z] File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/waterAlertService.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/waterAlertService.js changed, reloading triggers"}}
+[debug] [2024-04-05T17:29:16.531Z] Validating nodejs source
+[debug] [2024-04-05T17:29:17.043Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-05T17:29:17.043Z] Building nodejs source
+[debug] [2024-04-05T17:29:17.043Z] Failed to find version of module node: reached end of search path /Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:29:17.050Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-05T17:29:17.051Z] Found firebase-functions binary at '/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8821
+
+[debug] [2024-04-05T17:29:17.513Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2024-04-05T17:29:22.523Z] [worker-pool] Shutting down IDLE worker (us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-api)"}}
+[debug] [2024-04-05T17:29:22.523Z] [worker-us-central1-api-7511638b-379a-4c97-85fc-5ca14a0fc2f1]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-7511638b-379a-4c97-85fc-5ca14a0fc2f1]: FINISHING"}}
+[debug] [2024-04-05T17:29:22.526Z] [worker-us-central1-api-7511638b-379a-4c97-85fc-5ca14a0fc2f1]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-7511638b-379a-4c97-85fc-5ca14a0fc2f1]: exited"}}
+[debug] [2024-04-05T17:29:22.526Z] [worker-us-central1-api-7511638b-379a-4c97-85fc-5ca14a0fc2f1]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-7511638b-379a-4c97-85fc-5ca14a0fc2f1]: FINISHED"}}
+[debug] [2024-04-05T17:30:15.224Z] File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Models/waterAlert.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Models/waterAlert.js changed, reloading triggers"}}
+[debug] [2024-04-05T17:30:16.226Z] Validating nodejs source
+[debug] [2024-04-05T17:30:16.800Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-05T17:30:16.800Z] Building nodejs source
+[debug] [2024-04-05T17:30:16.800Z] Failed to find version of module node: reached end of search path /Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:30:16.813Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-05T17:30:16.814Z] Found firebase-functions binary at '/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8648
+
+[debug] [2024-04-05T17:30:17.146Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2024-04-05T17:30:17.737Z] File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Models/waterAlert.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Models/waterAlert.js changed, reloading triggers"}}
+[debug] [2024-04-05T17:30:18.738Z] Validating nodejs source
+[debug] [2024-04-05T17:30:19.153Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-05T17:30:19.153Z] Building nodejs source
+[debug] [2024-04-05T17:30:19.153Z] Failed to find version of module node: reached end of search path /Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:30:19.157Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-05T17:30:19.158Z] Found firebase-functions binary at '/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8628
+
+[debug] [2024-04-05T17:30:19.396Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2024-04-05T17:30:26.741Z] File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/waterAlertService.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/waterAlertService.js changed, reloading triggers"}}
+[debug] [2024-04-05T17:30:27.744Z] Validating nodejs source
+[debug] [2024-04-05T17:30:28.139Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-05T17:30:28.140Z] Building nodejs source
+[debug] [2024-04-05T17:30:28.140Z] Failed to find version of module node: reached end of search path /Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:30:28.143Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-05T17:30:28.144Z] Found firebase-functions binary at '/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8658
+
+[debug] [2024-04-05T17:30:28.377Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2024-04-05T17:30:33.993Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/api/user/login-2024-04-05T17:30:33.993Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-05T17:30:33.993Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/api/user/login-2024-04-05T17:30:33.993Z"],"workRunningCount":1}
+[debug] [2024-04-05T17:30:33.993Z] Accepted request POST /nicaragua-project/us-central1/api/user/login --> us-central1-api
+[debug] [2024-04-05T17:30:33.998Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-05T17:30:33.998Z] [functions] Got req.url=/nicaragua-project/us-central1/api/user/login, mapping to path=/user/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/api/user/login, mapping to path=/user/login"}}
+[debug] [2024-04-05T17:30:33.999Z] [worker-pool] Cleaned up workers for us-central1-api: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-api: 1 --> 0"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:30:34.013Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2024-04-05T17:30:34.013Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2024-04-05T17:30:34.907Z] [runtime-status] [50307] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [50307] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-04-05T17:30:34.910Z] [runtime-status] [50307] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [50307] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-05T17:30:34.910Z] [runtime-status] [50307] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [50307] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2024-04-05T17:30:34.910Z] [runtime-status] [50307] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [50307] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-05T17:30:35.029Z] [runtime-status] [50307] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [50307] Checked functions.config() {\"config\":{}}"}}
+[debug] [2024-04-05T17:30:35.029Z] [runtime-status] [50307] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [50307] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2024-04-05T17:30:35.031Z] [runtime-status] [50307] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [50307] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-05T17:30:35.031Z] [runtime-status] [50307] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [50307] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-04-05T17:30:35.034Z] [runtime-status] [50307] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [50307] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-05T17:30:35.034Z] [runtime-status] [50307] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [50307] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2024-04-05T17:30:35.133Z] [runtime-status] [50307] Functions runtime initialized. {"cwd":"/Users/harshzota/Desktop/Dev/NicaAgua-Backend","node_version":"20.11.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [50307] Functions runtime initialized. {\"cwd\":\"/Users/harshzota/Desktop/Dev/NicaAgua-Backend\",\"node_version\":\"20.11.0\"}"}}
+[debug] [2024-04-05T17:30:35.133Z] [runtime-status] [50307] Listening to port: /var/folders/tj/b0q3gzvx3n75qntlth0jjc540000gn/T/fire_emu_fbd802400d47bf63.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [50307] Listening to port: /var/folders/tj/b0q3gzvx3n75qntlth0jjc540000gn/T/fire_emu_fbd802400d47bf63.sock"}}
+[debug] [2024-04-05T17:30:35.235Z] [worker-us-central1-api-2b801bdd-8896-4442-ad87-ac11d40d4c8f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-2b801bdd-8896-4442-ad87-ac11d40d4c8f]: IDLE"}}
+[debug] [2024-04-05T17:30:35.235Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-04-05T17:30:35.235Z] [worker-us-central1-api-2b801bdd-8896-4442-ad87-ac11d40d4c8f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-2b801bdd-8896-4442-ad87-ac11d40d4c8f]: BUSY"}}
+[warn] ⚠  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[debug] [2024-04-05T17:30:35.837Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 602.215833ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 602.215833ms"}}
+[debug] [2024-04-05T17:30:35.838Z] [worker-us-central1-api-2b801bdd-8896-4442-ad87-ac11d40d4c8f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-2b801bdd-8896-4442-ad87-ac11d40d4c8f]: IDLE"}}
+[debug] [2024-04-05T17:30:35.838Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-05T17:30:35.838Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-05T17:30:35.838Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-05T17:30:35.857Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/api/shortTerm-2024-04-05T17:30:35.857Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-05T17:30:35.857Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/api/shortTerm-2024-04-05T17:30:35.857Z"],"workRunningCount":1}
+[debug] [2024-04-05T17:30:35.857Z] Accepted request PUT /nicaragua-project/us-central1/api/shortTerm --> us-central1-api
+[debug] [2024-04-05T17:30:35.866Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-05T17:30:35.866Z] [functions] Got req.url=/nicaragua-project/us-central1/api/shortTerm, mapping to path=/shortTerm {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/api/shortTerm, mapping to path=/shortTerm"}}
+[debug] [2024-04-05T17:30:35.866Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-04-05T17:30:35.866Z] [worker-us-central1-api-2b801bdd-8896-4442-ad87-ac11d40d4c8f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-2b801bdd-8896-4442-ad87-ac11d40d4c8f]: BUSY"}}
+[info] >  14 new forecase {"user":"14 new forecase","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m 14 new forecase"}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    'El Bramadero', 'Daraili', {"user":"  'El Bramadero', 'Daraili',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'El Bramadero', 'Daraili',"}}
+[info] >    'La Laguna',    'San Andres', {"user":"  'La Laguna',    'San Andres',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'La Laguna',    'San Andres',"}}
+[info] >    'Las Limas',    'Venecia', {"user":"  'Las Limas',    'Venecia',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'Las Limas',    'Venecia',"}}
+[info] >    'El Bijahual',  'El Naranjito', {"user":"  'El Bijahual',  'El Naranjito',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'El Bijahual',  'El Naranjito',"}}
+[info] >    'San Jeronimo', 'El Naranjo', {"user":"  'San Jeronimo', 'El Naranjo',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'San Jeronimo', 'El Naranjo',"}}
+[info] >    'Los Planes',   'El Robledalito', {"user":"  'Los Planes',   'El Robledalito',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'Los Planes',   'El Robledalito',"}}
+[info] >    'Varonesa',     'La Palmera' {"user":"  'Varonesa',     'La Palmera'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   'Varonesa',     'La Palmera'"}}
+[info] >  ] alert regions {"user":"] alert regions","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ] alert regions"}}
+[info] >  { {"user":"{","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m {"}}
+[info] >    message: 'Testing Dashboard Notifications', {"user":"  message: 'Testing Dashboard Notifications',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   message: 'Testing Dashboard Notifications',"}}
+[info] >    regions: [ {"user":"  regions: [","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   regions: ["}}
+[info] >      'El Bramadero', 'Daraili', {"user":"    'El Bramadero', 'Daraili',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     'El Bramadero', 'Daraili',"}}
+[info] >      'La Laguna',    'San Andres', {"user":"    'La Laguna',    'San Andres',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     'La Laguna',    'San Andres',"}}
+[info] >      'Las Limas',    'Venecia', {"user":"    'Las Limas',    'Venecia',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     'Las Limas',    'Venecia',"}}
+[info] >      'El Bijahual',  'El Naranjito', {"user":"    'El Bijahual',  'El Naranjito',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     'El Bijahual',  'El Naranjito',"}}
+[info] >      'San Jeronimo', 'El Naranjo', {"user":"    'San Jeronimo', 'El Naranjo',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     'San Jeronimo', 'El Naranjo',"}}
+[info] >      'Los Planes',   'El Robledalito', {"user":"    'Los Planes',   'El Robledalito',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     'Los Planes',   'El Robledalito',"}}
+[info] >      'Varonesa',     'La Palmera', {"user":"    'Varonesa',     'La Palmera',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     'Varonesa',     'La Palmera',"}}
+[info] >      'Test' {"user":"    'Test'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     'Test'"}}
+[info] >    ] {"user":"  ]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   ]"}}
+[info] >  } object {"user":"} object","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m } object"}}
+[debug] [2024-04-05T17:30:36.062Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 196.158292ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 196.158292ms"}}
+[debug] [2024-04-05T17:30:36.063Z] [worker-us-central1-api-2b801bdd-8896-4442-ad87-ac11d40d4c8f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-2b801bdd-8896-4442-ad87-ac11d40d4c8f]: IDLE"}}
+[debug] [2024-04-05T17:30:36.063Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-05T17:30:36.063Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-05T17:30:36.063Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-05T17:31:13.035Z] File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js changed, reloading triggers"}}
+[debug] [2024-04-05T17:31:14.039Z] Validating nodejs source
+[debug] [2024-04-05T17:31:14.565Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-05T17:31:14.565Z] Building nodejs source
+[debug] [2024-04-05T17:31:14.565Z] Failed to find version of module node: reached end of search path /Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:31:14.570Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-05T17:31:14.571Z] Found firebase-functions binary at '/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8599
+
+[debug] [2024-04-05T17:31:14.917Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2024-04-05T17:31:19.932Z] [worker-pool] Shutting down IDLE worker (us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-api)"}}
+[debug] [2024-04-05T17:31:19.932Z] [worker-us-central1-api-2b801bdd-8896-4442-ad87-ac11d40d4c8f]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-2b801bdd-8896-4442-ad87-ac11d40d4c8f]: FINISHING"}}
+[debug] [2024-04-05T17:31:19.937Z] [worker-us-central1-api-2b801bdd-8896-4442-ad87-ac11d40d4c8f]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-2b801bdd-8896-4442-ad87-ac11d40d4c8f]: exited"}}
+[debug] [2024-04-05T17:31:19.937Z] [worker-us-central1-api-2b801bdd-8896-4442-ad87-ac11d40d4c8f]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-2b801bdd-8896-4442-ad87-ac11d40d4c8f]: FINISHED"}}
+[debug] [2024-04-05T17:31:24.784Z] File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js changed, reloading triggers"}}
+[debug] [2024-04-05T17:31:25.786Z] Validating nodejs source
+[debug] [2024-04-05T17:31:26.187Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-05T17:31:26.187Z] Building nodejs source
+[debug] [2024-04-05T17:31:26.187Z] Failed to find version of module node: reached end of search path /Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:31:26.188Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-05T17:31:26.188Z] Found firebase-functions binary at '/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8795
+
+[debug] [2024-04-05T17:31:26.528Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2024-04-05T17:31:29.605Z] File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/waterAlertService.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/waterAlertService.js changed, reloading triggers"}}
+[debug] [2024-04-05T17:31:30.607Z] Validating nodejs source
+[debug] [2024-04-05T17:31:31.042Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-05T17:31:31.043Z] Building nodejs source
+[debug] [2024-04-05T17:31:31.043Z] Failed to find version of module node: reached end of search path /Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:31:31.050Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-05T17:31:31.050Z] Found firebase-functions binary at '/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8236
+
+[debug] [2024-04-05T17:31:31.349Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2024-04-05T17:31:45.476Z] File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshzota/Desktop/Dev/NicaAgua-Backend/DomainLayer/Services/forecastService.js changed, reloading triggers"}}
+[debug] [2024-04-05T17:31:46.478Z] Validating nodejs source
+[debug] [2024-04-05T17:31:46.882Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-05T17:31:46.882Z] Building nodejs source
+[debug] [2024-04-05T17:31:46.882Z] Failed to find version of module node: reached end of search path /Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-05T17:31:46.886Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-05T17:31:46.886Z] Found firebase-functions binary at '/Users/harshzota/Desktop/Dev/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8345
+
+[debug] [2024-04-05T17:31:47.141Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}

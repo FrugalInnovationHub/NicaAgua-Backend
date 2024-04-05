@@ -1,5 +1,7 @@
 const {ForeCastRepository} = require("../../DataLayer/forecastRepository");
 const {ShortTermForecasts} = require("../Models/forecast");
+const sendNotification = require("./notificationService");
+const WaterAlertService = require("./waterAlertService");
 
 class ForecastService {
   constructor() {
@@ -13,6 +15,37 @@ class ForecastService {
   addForecast(object) {
     return new Promise((resolve, reject) => {
       var newForecast = new ShortTermForecasts(object).toJson();
+      let alertRegions = []
+      newForecast.forecasts.forEach(_forecast => {
+        if(_forecast.fiveDays > _forecast.fiveDaysMax || _forecast.fiveDays < _forecast.fiveDaysMin){
+          // console.log("Send Notif")
+          sendNotification(_forecast.community,"Anuncio", waterAlert.message)
+          const isInArray = alertRegions.includes(_forecast.community);
+          if(!isInArray){
+            alertRegions.push(_forecast.community)
+          }
+        }
+        if(_forecast.tenDays > _forecast.tenDaysMax || _forecast.tenDays < _forecast.tenDaysMin){
+          // console.log("Send Notif")
+          sendNotification(_forecast.community,"Anuncio", waterAlert.message)
+          const isInArray = alertRegions.includes(_forecast.community);
+          if(!isInArray){
+            alertRegions.push(_forecast.community)
+          }
+        }
+        if(_forecast.fifteenDays > _forecast.fifteenDaysMax || _forecast.fifteenDays < _forecast.fifteenDaysMin){
+          // console.log("Send Notif")
+          sendNotification(_forecast.community,"Anuncio", waterAlert.message)
+          const isInArray = alertRegions.includes(_forecast.community);
+          if(!isInArray){
+            alertRegions.push(_forecast.community)
+          }
+        }
+      });
+      if(alertRegions.length>0){
+        const data = {message:"Testing Dashboard Notifications",regions:alertRegions}
+        new WaterAlertService().addWaterAlert(data)
+      }
       this.foreCastRepository
         .getById(newForecast.date)
         .then((u) => {
