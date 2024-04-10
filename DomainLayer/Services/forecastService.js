@@ -15,35 +15,32 @@ class ForecastService {
   addForecast(object) {
     return new Promise((resolve, reject) => {
       var newForecast = new ShortTermForecasts(object).toJson();
-      let alertRegions = []
+      let alertRegionsMax = []
+      let alertRegionsMin = []
       newForecast.forecasts.forEach(_forecast => {
-        if(_forecast.fiveDays > _forecast.fiveDaysMax || _forecast.fiveDays < _forecast.fiveDaysMin){
+        if(_forecast.fiveDays > _forecast.fiveDaysMax || _forecast.tenDays > _forecast.tenDaysMax || _forecast.fifteenDays > _forecast.fifteenDaysMax ){
           // console.log("Send Notif")
-          sendNotification(_forecast.community,"Anuncio", waterAlert.message)
-          const isInArray = alertRegions.includes(_forecast.community);
+          sendNotification(_forecast.community,"Anuncio", "Se esperan condiciones mucho más lluviosas de lo normal")
+          const isInArray = alertRegionsMax.includes(_forecast.community);
           if(!isInArray){
-            alertRegions.push(_forecast.community)
+            alertRegionsMax.push(_forecast.community)
           }
         }
-        if(_forecast.tenDays > _forecast.tenDaysMax || _forecast.tenDays < _forecast.tenDaysMin){
+        if( _forecast.fiveDays < _forecast.fiveDaysMin || _forecast.tenDays < _forecast.tenDaysMin || _forecast.fifteenDays < _forecast.fifteenDaysMin){
           // console.log("Send Notif")
-          sendNotification(_forecast.community,"Anuncio", waterAlert.message)
-          const isInArray = alertRegions.includes(_forecast.community);
+          sendNotification(_forecast.community,"Anuncio", "Se esperan condiciones mucho más secas de lo normal")
+          const isInArray = alertRegionsMin.includes(_forecast.community);
           if(!isInArray){
-            alertRegions.push(_forecast.community)
-          }
-        }
-        if(_forecast.fifteenDays > _forecast.fifteenDaysMax || _forecast.fifteenDays < _forecast.fifteenDaysMin){
-          // console.log("Send Notif")
-          sendNotification(_forecast.community,"Anuncio", waterAlert.message)
-          const isInArray = alertRegions.includes(_forecast.community);
-          if(!isInArray){
-            alertRegions.push(_forecast.community)
+            alertRegionsMin.push(_forecast.community)
           }
         }
       });
-      if(alertRegions.length>0){
-        const data = {message:"Testing Dashboard Notifications",regions:alertRegions}
+      if(alertRegionsMin.length>0){
+        const data = {message:"Los próximos días serán excepcionalmente secos",regions:alertRegions}
+        new WaterAlertService().addWaterAlert(data)
+      }
+      if(alertRegionsMax.length>0){
+        const data = {message:"Los próximos días serán excepcionalmente lluviosos",regions:alertRegions}
         new WaterAlertService().addWaterAlert(data)
       }
       this.foreCastRepository
