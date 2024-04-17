@@ -12,7 +12,7 @@ class WaterAlertRepository extends BaseRepository {
    */
     constructor(collection) {
         super();
-        collection = collection ?? 'WaterAlert' ;
+        collection = this.getCollection(collection ?? 'WaterAlert');
         this.collection = this.DataBase.collection(collection);
     }
 

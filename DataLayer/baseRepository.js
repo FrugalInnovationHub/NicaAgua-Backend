@@ -15,6 +15,13 @@ class BaseRepository {
         this.DataBase = db;
     }
 
+    getCollection(collection){
+        if(process.env.ENVIRONMENT == "staging")
+            return `staging-${collection}`
+        else 
+            return collection;
+    }
+
     /**
      * Returns a array of Json objects in that collection that matches the filter conditions.
      * @returns Json Object

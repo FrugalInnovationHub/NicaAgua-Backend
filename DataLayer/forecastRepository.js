@@ -12,7 +12,7 @@ class ForeCastRepository extends BaseRepository {
   constructor(collection) {
     super();
     this.key = "date";
-    collection = collection ?? "ShortTerm";
+    collection = this.getCollection(collection ?? 'ShortTerm')
     this.collection = this.DataBase.collection(collection);
   }
 
@@ -52,7 +52,7 @@ class LongTermForeCastRepository extends BaseRepository {
    */
   constructor(collection) {
     super();
-    collection = collection ?? "LongTerm";
+    collection = this.getCollection(collection ?? 'LongTerm');
     this.key = "date";
     this.collection = this.DataBase.collection(collection);
   }

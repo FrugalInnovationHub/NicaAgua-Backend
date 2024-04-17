@@ -8,7 +8,7 @@ class WeatherRepository extends BaseRepository {
     constructor(collection) {
         super();
         this.key = "date";
-        collection = collection ?? 'Weather'
+        collection = this.getCollection(collection ?? 'Weather');
         this.collection = this.DataBase.collection(collection);
     }
 

@@ -8,7 +8,7 @@ class UserRepository extends BaseRepository {
     constructor(collection) {
         super();
         this.key = "phoneNumber";
-        collection = collection ?? 'Users' 
+        collection = this.getCollection(collection ?? 'Users');
         this.collection = this.DataBase.collection(collection);
     }
 }

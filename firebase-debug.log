@@ -1,0 +1,707 @@
+[debug] [2024-04-17T20:42:02.017Z] ----------------------------------------------------------------------
+[debug] [2024-04-17T20:42:02.019Z] Command:       /usr/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2024-04-17T20:42:02.019Z] CLI Version:   13.6.0
+[debug] [2024-04-17T20:42:02.020Z] Platform:      linux
+[debug] [2024-04-17T20:42:02.020Z] Node Version:  v18.13.0
+[debug] [2024-04-17T20:42:02.020Z] Time:          Wed Apr 17 2024 16:42:02 GMT-0400 (Eastern Daylight Time)
+[debug] [2024-04-17T20:42:02.020Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-17T20:42:02.092Z] Object ".functions" in "firebase.json" has unknown property: {"additionalProperty":"target"}
+[debug] [2024-04-17T20:42:02.093Z] Field ".functions" in "firebase.json" is possibly invalid: should be array
+[debug] [2024-04-17T20:42:02.093Z] Field ".functions" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2024-04-17T20:42:02.097Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-17T20:42:02.097Z] > authorizing via signed-in user (scufrugalinnovation@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2024-04-17T20:42:02.103Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-17T20:42:02.104Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-04-17T20:42:02.109Z] [hub] writing locator at /tmp/hub-nicaragua-project.json
+[debug] [2024-04-17T20:42:02.119Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-17T20:42:02.120Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-17T20:42:02.120Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[debug] [2024-04-17T20:42:02.123Z] defaultcredentials: writing to file /home/giulliano/.config/firebase/scufrugalinnovation_gmail_com_application_default_credentials.json
+[debug] [2024-04-17T20:42:02.125Z] Setting GAC to /home/giulliano/.config/firebase/scufrugalinnovation_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /home/giulliano/.config/firebase/scufrugalinnovation_gmail_com_application_default_credentials.json"}}
+[debug] [2024-04-17T20:42:02.127Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nicaragua-project/adminSdkConfig [none]
+[debug] [2024-04-17T20:42:02.706Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nicaragua-project/adminSdkConfig 200
+[debug] [2024-04-17T20:42:02.706Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nicaragua-project/adminSdkConfig {"projectId":"nicaragua-project","storageBucket":"nicaragua-project.appspot.com","locationId":"us-west3"}
+[debug] [2024-04-17T20:42:02.732Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-04-17T20:42:02.732Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-04-17T20:42:02.733Z] Starting Emulator UI with command {"binary":"node","args":["/home/giulliano/.cache/firebase/emulators/ui-v1.11.8/server/server.mjs"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/home/giulliano/.cache/firebase/emulators/ui-v1.11.8/server/server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-04-17T20:42:02.899Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2024-04-17T20:42:02.900Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "/home/giulliano/Projects/NicaAgua-Backend/" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/home/giulliano/Projects/NicaAgua-Backend/\" for Cloud Functions..."}}
+[debug] [2024-04-17T20:42:03.003Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2024-04-17T20:42:03.528Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-17T20:42:03.529Z] Building nodejs source
+[debug] [2024-04-17T20:42:03.530Z] Failed to find version of module node: reached end of search path /home/giulliano/Projects/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-17T20:42:03.535Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-17T20:42:03.540Z] Found firebase-functions binary at '/home/giulliano/Projects/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8652
+
+[debug] [2024-04-17T20:42:03.940Z] Got response from /__/functions.yaml {"endpoints":{"staging":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"staging"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: staging. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: staging."}}
+[info] ✔  functions[us-central1-staging]: http function initialized (http://127.0.0.1:5001/nicaragua-project/us-central1/staging). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/nicaragua-project/us-central1/staging)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-04-17T20:42:08.035Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:42:08.035Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:42:08.036Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:42:08.035Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:42:08.036Z] Accepted request POST /nicaragua-project/us-central1/staging/user/login --> us-central1-staging
+[debug] [2024-04-17T20:42:08.037Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:42:08.038Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-17T20:42:08.051Z] [worker-pool] addWorker(us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-staging)"}}
+[debug] [2024-04-17T20:42:08.052Z] [worker-pool] Adding worker with key us-central1-staging, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-staging, total=1"}}
+[debug] [2024-04-17T20:42:08.706Z] [runtime-status] [196287] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [196287] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-04-17T20:42:08.706Z] [runtime-status] [196287] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [196287] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-17T20:42:08.706Z] [runtime-status] [196287] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [196287] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2024-04-17T20:42:08.707Z] [runtime-status] [196287] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [196287] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-17T20:42:08.818Z] [runtime-status] [196287] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [196287] Checked functions.config() {\"config\":{}}"}}
+[debug] [2024-04-17T20:42:08.819Z] [runtime-status] [196287] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.7.0","resolution":"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [196287] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2024-04-17T20:42:08.819Z] [runtime-status] [196287] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [196287] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-17T20:42:08.820Z] [runtime-status] [196287] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [196287] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-04-17T20:42:08.822Z] [runtime-status] [196287] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [196287] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-17T20:42:08.822Z] [runtime-status] [196287] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [196287] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2024-04-17T20:42:08.944Z] [runtime-status] [196287] Functions runtime initialized. {"cwd":"/home/giulliano/Projects/NicaAgua-Backend","node_version":"18.13.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [196287] Functions runtime initialized. {\"cwd\":\"/home/giulliano/Projects/NicaAgua-Backend\",\"node_version\":\"18.13.0\"}"}}
+[debug] [2024-04-17T20:42:08.944Z] [runtime-status] [196287] Listening to port: /tmp/fire_emu_c7d8a40b83bb266c.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [196287] Listening to port: /tmp/fire_emu_c7d8a40b83bb266c.sock"}}
+[debug] [2024-04-17T20:42:08.965Z] [worker-us-central1-staging-bac8d0c0-426b-4627-9dce-cbdcc8e34f1f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-bac8d0c0-426b-4627-9dce-cbdcc8e34f1f]: IDLE"}}
+[debug] [2024-04-17T20:42:08.965Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:42:08.966Z] [worker-us-central1-staging-bac8d0c0-426b-4627-9dce-cbdcc8e34f1f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-bac8d0c0-426b-4627-9dce-cbdcc8e34f1f]: BUSY"}}
+[warn] ⚠  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[debug] [2024-04-17T20:42:09.767Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 801.306538ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 801.306538ms"}}
+[debug] [2024-04-17T20:42:09.768Z] [worker-us-central1-staging-bac8d0c0-426b-4627-9dce-cbdcc8e34f1f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-bac8d0c0-426b-4627-9dce-cbdcc8e34f1f]: IDLE"}}
+[debug] [2024-04-17T20:42:09.768Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:42:09.768Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:42:09.768Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:42:09.783Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/user-2024-04-17T20:42:09.783Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:42:09.783Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/user-2024-04-17T20:42:09.783Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:42:09.783Z] Accepted request PUT /nicaragua-project/us-central1/staging/user --> us-central1-staging
+[debug] [2024-04-17T20:42:09.785Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:42:09.785Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/user, mapping to path=/user {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/user, mapping to path=/user"}}
+[debug] [2024-04-17T20:42:09.785Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:42:09.785Z] [worker-us-central1-staging-bac8d0c0-426b-4627-9dce-cbdcc8e34f1f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-bac8d0c0-426b-4627-9dce-cbdcc8e34f1f]: BUSY"}}
+[info] >  { {"user":"{","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m {"}}
+[info] >    firstName: 'demo1', {"user":"  firstName: 'demo1',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m   firstName: 'demo1',"}}
+[info] >    lastName: 'demo1', {"user":"  lastName: 'demo1',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m   lastName: 'demo1',"}}
+[info] >    phoneNumber: '1029384756', {"user":"  phoneNumber: '1029384756',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m   phoneNumber: '1029384756',"}}
+[info] >    defaultCommunity: 'El Bramadero', {"user":"  defaultCommunity: 'El Bramadero',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m   defaultCommunity: 'El Bramadero',"}}
+[info] >    roleLevel: 2, {"user":"  roleLevel: 2,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m   roleLevel: 2,"}}
+[info] >    hashedPassword: 'pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=' {"user":"  hashedPassword: 'pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM='","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m   hashedPassword: 'pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM='"}}
+[info] >  } {"user":"}","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m }"}}
+[debug] [2024-04-17T20:42:10.184Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 398.92728ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 398.92728ms"}}
+[debug] [2024-04-17T20:42:10.185Z] [worker-us-central1-staging-bac8d0c0-426b-4627-9dce-cbdcc8e34f1f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-bac8d0c0-426b-4627-9dce-cbdcc8e34f1f]: IDLE"}}
+[debug] [2024-04-17T20:42:10.185Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:42:10.185Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:42:10.185Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:42:50.947Z] File /home/giulliano/Projects/NicaAgua-Backend/DataLayer/userRepository.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/giulliano/Projects/NicaAgua-Backend/DataLayer/userRepository.js changed, reloading triggers"}}
+[debug] [2024-04-17T20:42:51.949Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2024-04-17T20:42:52.428Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-17T20:42:52.428Z] Building nodejs source
+[debug] [2024-04-17T20:42:52.428Z] Failed to find version of module node: reached end of search path /home/giulliano/Projects/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-17T20:42:52.430Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-17T20:42:52.431Z] Found firebase-functions binary at '/home/giulliano/Projects/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8521
+
+[debug] [2024-04-17T20:42:52.820Z] Got response from /__/functions.yaml {"endpoints":{"staging":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"staging"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: staging. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: staging."}}
+[debug] [2024-04-17T20:42:52.832Z] [worker-pool] Shutting down IDLE worker (us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-staging)"}}
+[debug] [2024-04-17T20:42:52.833Z] [worker-us-central1-staging-bac8d0c0-426b-4627-9dce-cbdcc8e34f1f]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-bac8d0c0-426b-4627-9dce-cbdcc8e34f1f]: FINISHING"}}
+[debug] [2024-04-17T20:42:52.845Z] [worker-us-central1-staging-bac8d0c0-426b-4627-9dce-cbdcc8e34f1f]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-bac8d0c0-426b-4627-9dce-cbdcc8e34f1f]: exited"}}
+[debug] [2024-04-17T20:42:52.845Z] [worker-us-central1-staging-bac8d0c0-426b-4627-9dce-cbdcc8e34f1f]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-bac8d0c0-426b-4627-9dce-cbdcc8e34f1f]: FINISHED"}}
+[debug] [2024-04-17T20:42:59.062Z] File /home/giulliano/Projects/NicaAgua-Backend/DataLayer/waterAlertRepository.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/giulliano/Projects/NicaAgua-Backend/DataLayer/waterAlertRepository.js changed, reloading triggers"}}
+[debug] [2024-04-17T20:43:00.062Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2024-04-17T20:43:00.565Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-17T20:43:00.565Z] Building nodejs source
+[debug] [2024-04-17T20:43:00.565Z] Failed to find version of module node: reached end of search path /home/giulliano/Projects/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-17T20:43:00.567Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-17T20:43:00.567Z] Found firebase-functions binary at '/home/giulliano/Projects/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8922
+
+[debug] [2024-04-17T20:43:00.974Z] Got response from /__/functions.yaml {"endpoints":{"staging":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"staging"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: staging. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: staging."}}
+[debug] [2024-04-17T20:43:16.939Z] File /home/giulliano/Projects/NicaAgua-Backend/DataLayer/weatherRepository.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/giulliano/Projects/NicaAgua-Backend/DataLayer/weatherRepository.js changed, reloading triggers"}}
+[debug] [2024-04-17T20:43:17.940Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2024-04-17T20:43:18.428Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-17T20:43:18.428Z] Building nodejs source
+[debug] [2024-04-17T20:43:18.428Z] Failed to find version of module node: reached end of search path /home/giulliano/Projects/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-17T20:43:18.429Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-17T20:43:18.430Z] Found firebase-functions binary at '/home/giulliano/Projects/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8444
+
+[debug] [2024-04-17T20:43:18.827Z] Got response from /__/functions.yaml {"endpoints":{"staging":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"staging"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: staging. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: staging."}}
+[debug] [2024-04-17T20:43:37.785Z] File /home/giulliano/Projects/NicaAgua-Backend/DataLayer/regionRepository.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/giulliano/Projects/NicaAgua-Backend/DataLayer/regionRepository.js changed, reloading triggers"}}
+[debug] [2024-04-17T20:43:38.787Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2024-04-17T20:43:39.261Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-17T20:43:39.261Z] Building nodejs source
+[debug] [2024-04-17T20:43:39.261Z] Failed to find version of module node: reached end of search path /home/giulliano/Projects/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-17T20:43:39.262Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-17T20:43:39.263Z] Found firebase-functions binary at '/home/giulliano/Projects/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8948
+
+[debug] [2024-04-17T20:43:39.659Z] Got response from /__/functions.yaml {"endpoints":{"staging":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"staging"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: staging. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: staging."}}
+[debug] [2024-04-17T20:44:08.065Z] File /home/giulliano/Projects/NicaAgua-Backend/DataLayer/forecastRepository.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/giulliano/Projects/NicaAgua-Backend/DataLayer/forecastRepository.js changed, reloading triggers"}}
+[debug] [2024-04-17T20:44:09.066Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2024-04-17T20:44:09.538Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js"
+}
+[debug] [2024-04-17T20:44:09.538Z] Building nodejs source
+[debug] [2024-04-17T20:44:09.538Z] Failed to find version of module node: reached end of search path /home/giulliano/Projects/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-17T20:44:09.539Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-17T20:44:09.540Z] Found firebase-functions binary at '/home/giulliano/Projects/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8370
+
+[debug] [2024-04-17T20:44:09.952Z] Got response from /__/functions.yaml {"endpoints":{"staging":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"staging"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: staging. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: staging."}}
+[debug] [2024-04-17T20:44:23.569Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:44:23.569Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:44:23.569Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:44:23.569Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:44:23.569Z] Accepted request POST /nicaragua-project/us-central1/staging/user/login --> us-central1-staging
+[debug] [2024-04-17T20:44:23.574Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:44:23.574Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login"}}
+[debug] [2024-04-17T20:44:23.574Z] [worker-pool] Cleaned up workers for us-central1-staging: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-staging: 1 --> 0"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-04-17T20:44:23.587Z] [worker-pool] addWorker(us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-staging)"}}
+[debug] [2024-04-17T20:44:23.588Z] [worker-pool] Adding worker with key us-central1-staging, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-staging, total=1"}}
+[debug] [2024-04-17T20:44:24.245Z] [runtime-status] [197632] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [197632] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-04-17T20:44:24.245Z] [runtime-status] [197632] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [197632] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-17T20:44:24.246Z] [runtime-status] [197632] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [197632] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2024-04-17T20:44:24.246Z] [runtime-status] [197632] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [197632] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-17T20:44:24.361Z] [runtime-status] [197632] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [197632] Checked functions.config() {\"config\":{}}"}}
+[debug] [2024-04-17T20:44:24.361Z] [runtime-status] [197632] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.7.0","resolution":"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [197632] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2024-04-17T20:44:24.362Z] [runtime-status] [197632] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [197632] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-17T20:44:24.364Z] [runtime-status] [197632] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [197632] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-04-17T20:44:24.366Z] [runtime-status] [197632] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [197632] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-17T20:44:24.366Z] [runtime-status] [197632] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [197632] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/giulliano/Projects/NicaAgua-Backend/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2024-04-17T20:44:24.494Z] [runtime-status] [197632] Functions runtime initialized. {"cwd":"/home/giulliano/Projects/NicaAgua-Backend","node_version":"18.13.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [197632] Functions runtime initialized. {\"cwd\":\"/home/giulliano/Projects/NicaAgua-Backend\",\"node_version\":\"18.13.0\"}"}}
+[debug] [2024-04-17T20:44:24.495Z] [runtime-status] [197632] Listening to port: /tmp/fire_emu_d498d95946eeeea8.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[runtime-status] [197632] Listening to port: /tmp/fire_emu_d498d95946eeeea8.sock"}}
+[debug] [2024-04-17T20:44:24.502Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:44:24.502Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:44:24.503Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[warn] ⚠  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[debug] [2024-04-17T20:44:25.358Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 855.236893ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 855.236893ms"}}
+[debug] [2024-04-17T20:44:25.358Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:44:25.359Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:44:25.359Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:44:25.359Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:44:25.377Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:44:25.377Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:44:25.377Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:44:25.377Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:44:25.378Z] Accepted request POST /nicaragua-project/us-central1/staging/user/login --> us-central1-staging
+[debug] [2024-04-17T20:44:25.379Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:44:25.380Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login"}}
+[debug] [2024-04-17T20:44:25.380Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:44:25.380Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[debug] [2024-04-17T20:44:25.464Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 84.254261ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 84.254261ms"}}
+[debug] [2024-04-17T20:44:25.465Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:44:25.465Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:44:25.465Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:44:25.465Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:44:45.379Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:44:45.379Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:44:45.379Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:44:45.379Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:44:45.379Z] Accepted request POST /nicaragua-project/us-central1/staging/user/login --> us-central1-staging
+[debug] [2024-04-17T20:44:45.381Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:44:45.381Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login"}}
+[debug] [2024-04-17T20:44:45.381Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:44:45.381Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[debug] [2024-04-17T20:44:45.830Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 448.242474ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 448.242474ms"}}
+[debug] [2024-04-17T20:44:45.830Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:44:45.830Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:44:45.830Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:44:45.830Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:44:45.851Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/shortTerm-2024-04-17T20:44:45.850Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:44:45.851Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/shortTerm-2024-04-17T20:44:45.850Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:44:45.851Z] Accepted request PUT /nicaragua-project/us-central1/staging/shortTerm --> us-central1-staging
+[debug] [2024-04-17T20:44:45.853Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:44:45.853Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/shortTerm, mapping to path=/shortTerm {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/shortTerm, mapping to path=/shortTerm"}}
+[debug] [2024-04-17T20:44:45.853Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:44:45.853Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[debug] [2024-04-17T20:44:45.857Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 4.425227ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 4.425227ms"}}
+[debug] [2024-04-17T20:44:45.858Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:44:45.858Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:44:45.858Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:44:45.858Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[info] >  Invalid Token {"user":"Invalid Token","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m Invalid Token"}}
+[debug] [2024-04-17T20:45:03.454Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:45:03.453Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:45:03.454Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:45:03.453Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:45:03.454Z] Accepted request POST /nicaragua-project/us-central1/staging/user/login --> us-central1-staging
+[debug] [2024-04-17T20:45:03.455Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:45:03.455Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login"}}
+[debug] [2024-04-17T20:45:03.456Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:45:03.456Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[debug] [2024-04-17T20:45:03.530Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 74.528012ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 74.528012ms"}}
+[debug] [2024-04-17T20:45:03.531Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:45:03.531Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:45:03.531Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:45:03.531Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:45:03.544Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/weather/2024-02-01-2024-04-17T20:45:03.543Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:45:03.544Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/weather/2024-02-01-2024-04-17T20:45:03.543Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:45:03.544Z] Accepted request GET /nicaragua-project/us-central1/staging/weather/2024-02-01 --> us-central1-staging
+[debug] [2024-04-17T20:45:03.545Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:45:03.546Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/weather/2024-02-01, mapping to path=/weather/2024-02-01 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/weather/2024-02-01, mapping to path=/weather/2024-02-01"}}
+[debug] [2024-04-17T20:45:03.546Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:45:03.546Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[debug] [2024-04-17T20:45:03.550Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 3.814219ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 3.814219ms"}}
+[debug] [2024-04-17T20:45:03.550Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:45:03.550Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:45:03.550Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:45:03.550Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:45:18.399Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:45:18.399Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:45:18.399Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:45:18.399Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:45:18.399Z] Accepted request POST /nicaragua-project/us-central1/staging/user/login --> us-central1-staging
+[debug] [2024-04-17T20:45:18.400Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:45:18.401Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login"}}
+[debug] [2024-04-17T20:45:18.401Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:45:18.401Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[debug] [2024-04-17T20:45:18.484Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 83.02448ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 83.02448ms"}}
+[debug] [2024-04-17T20:45:18.485Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:45:18.485Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:45:18.485Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:45:18.485Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:45:18.499Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/user-2024-04-17T20:45:18.499Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:45:18.499Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/user-2024-04-17T20:45:18.499Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:45:18.499Z] Accepted request PUT /nicaragua-project/us-central1/staging/user --> us-central1-staging
+[debug] [2024-04-17T20:45:18.501Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:45:18.501Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/user, mapping to path=/user {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/user, mapping to path=/user"}}
+[debug] [2024-04-17T20:45:18.501Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:45:18.501Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[info] >  { {"user":"{","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m {"}}
+[info] >    firstName: 'demo1', {"user":"  firstName: 'demo1',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m   firstName: 'demo1',"}}
+[info] >    lastName: 'demo1', {"user":"  lastName: 'demo1',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m   lastName: 'demo1',"}}
+[info] >    phoneNumber: '7', {"user":"  phoneNumber: '7',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m   phoneNumber: '7',"}}
+[info] >    defaultCommunity: 'El Bramadero', {"user":"  defaultCommunity: 'El Bramadero',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m   defaultCommunity: 'El Bramadero',"}}
+[info] >    roleLevel: 2, {"user":"  roleLevel: 2,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m   roleLevel: 2,"}}
+[info] >    hashedPassword: 'pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=' {"user":"  hashedPassword: 'pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM='","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m   hashedPassword: 'pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM='"}}
+[info] >  } {"user":"}","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m }"}}
+[debug] [2024-04-17T20:45:18.867Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 366.196044ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 366.196044ms"}}
+[debug] [2024-04-17T20:45:18.868Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:45:18.868Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:45:18.868Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:45:18.868Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:45:24.261Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:45:24.261Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:45:24.261Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:45:24.261Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:45:24.261Z] Accepted request POST /nicaragua-project/us-central1/staging/user/login --> us-central1-staging
+[debug] [2024-04-17T20:45:24.263Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:45:24.263Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login"}}
+[debug] [2024-04-17T20:45:24.263Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:45:24.263Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[debug] [2024-04-17T20:45:24.348Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 84.726155ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 84.726155ms"}}
+[debug] [2024-04-17T20:45:24.349Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:45:24.349Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:45:24.349Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:45:24.349Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:45:24.364Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:45:24.364Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:45:24.365Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:45:24.364Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:45:24.365Z] Accepted request POST /nicaragua-project/us-central1/staging/user/login --> us-central1-staging
+[debug] [2024-04-17T20:45:24.366Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:45:24.366Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login"}}
+[debug] [2024-04-17T20:45:24.367Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:45:24.367Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[debug] [2024-04-17T20:45:24.470Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 103.147527ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 103.147527ms"}}
+[debug] [2024-04-17T20:45:24.470Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:45:24.470Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:45:24.470Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:45:24.470Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:45:31.828Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:45:31.828Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:45:31.828Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:45:31.828Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:45:31.828Z] Accepted request POST /nicaragua-project/us-central1/staging/user/login --> us-central1-staging
+[debug] [2024-04-17T20:45:31.830Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:45:31.830Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login"}}
+[debug] [2024-04-17T20:45:31.830Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:45:31.830Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[debug] [2024-04-17T20:45:31.902Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 72.183027ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 72.183027ms"}}
+[debug] [2024-04-17T20:45:31.903Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:45:31.903Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:45:31.903Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:45:31.903Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:45:31.916Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/shortTerm-2024-04-17T20:45:31.916Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:45:31.917Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/shortTerm-2024-04-17T20:45:31.916Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:45:31.917Z] Accepted request PUT /nicaragua-project/us-central1/staging/shortTerm --> us-central1-staging
+[debug] [2024-04-17T20:45:31.918Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:45:31.918Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/shortTerm, mapping to path=/shortTerm {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/shortTerm, mapping to path=/shortTerm"}}
+[debug] [2024-04-17T20:45:31.918Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:45:31.918Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[debug] [2024-04-17T20:45:31.921Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 3.157156ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 3.157156ms"}}
+[debug] [2024-04-17T20:45:31.922Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:45:31.922Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:45:31.922Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:45:31.922Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:46:05.213Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:46:05.213Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:46:05.213Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:46:05.213Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:46:05.213Z] Accepted request POST /nicaragua-project/us-central1/staging/user/login --> us-central1-staging
+[debug] [2024-04-17T20:46:05.214Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:46:05.215Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login"}}
+[debug] [2024-04-17T20:46:05.215Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:46:05.215Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[debug] [2024-04-17T20:46:05.286Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 71.510053ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 71.510053ms"}}
+[debug] [2024-04-17T20:46:05.287Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:46:05.287Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:46:05.287Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:46:05.287Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:46:05.303Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/shortTerm-2024-04-17T20:46:05.303Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:46:05.303Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/shortTerm-2024-04-17T20:46:05.303Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:46:05.303Z] Accepted request PUT /nicaragua-project/us-central1/staging/shortTerm --> us-central1-staging
+[debug] [2024-04-17T20:46:05.305Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:46:05.305Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/shortTerm, mapping to path=/shortTerm {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/shortTerm, mapping to path=/shortTerm"}}
+[debug] [2024-04-17T20:46:05.305Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:46:05.305Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[debug] [2024-04-17T20:46:05.308Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 3.132821ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 3.132821ms"}}
+[debug] [2024-04-17T20:46:05.309Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:46:05.309Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:46:05.309Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:46:05.309Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:47:01.937Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:47:01.937Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:47:01.937Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:47:01.937Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:47:01.937Z] Accepted request POST /nicaragua-project/us-central1/staging/user/login --> us-central1-staging
+[debug] [2024-04-17T20:47:01.938Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:47:01.938Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login"}}
+[debug] [2024-04-17T20:47:01.938Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:47:01.939Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[debug] [2024-04-17T20:47:02.036Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 97.196812ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 97.196812ms"}}
+[debug] [2024-04-17T20:47:02.036Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:47:02.036Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:47:02.036Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:47:02.037Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:47:02.051Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/waterAlert-2024-04-17T20:47:02.051Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:47:02.051Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/waterAlert-2024-04-17T20:47:02.051Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:47:02.051Z] Accepted request PUT /nicaragua-project/us-central1/staging/waterAlert --> us-central1-staging
+[debug] [2024-04-17T20:47:02.053Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:47:02.053Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/waterAlert, mapping to path=/waterAlert {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/waterAlert, mapping to path=/waterAlert"}}
+[debug] [2024-04-17T20:47:02.053Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:47:02.054Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[debug] [2024-04-17T20:47:02.056Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 2.187937ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 2.187937ms"}}
+[debug] [2024-04-17T20:47:02.056Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:47:02.056Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:47:02.056Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:47:02.056Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:47:30.351Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:47:30.351Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:47:30.352Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:47:30.351Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:47:30.352Z] Accepted request POST /nicaragua-project/us-central1/staging/user/login --> us-central1-staging
+[debug] [2024-04-17T20:47:30.353Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:47:30.354Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login"}}
+[debug] [2024-04-17T20:47:30.354Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:47:30.354Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[debug] [2024-04-17T20:47:30.429Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 75.444137ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 75.444137ms"}}
+[debug] [2024-04-17T20:47:30.430Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:47:30.430Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:47:30.430Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:47:30.430Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:47:30.444Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/shortTerm-2024-04-17T20:47:30.444Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:47:30.444Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/shortTerm-2024-04-17T20:47:30.444Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:47:30.444Z] Accepted request PUT /nicaragua-project/us-central1/staging/shortTerm --> us-central1-staging
+[debug] [2024-04-17T20:47:30.446Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:47:30.446Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/shortTerm, mapping to path=/shortTerm {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/shortTerm, mapping to path=/shortTerm"}}
+[debug] [2024-04-17T20:47:30.446Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:47:30.446Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[info] >  { {"user":"{","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m {"}}
+[info] >    forecasts: [ {"user":"  forecasts: [","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m   forecasts: ["}}
+[info] >      { {"user":"    {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m     {"}}
+[info] >        community: 'El Bramadero', {"user":"      community: 'El Bramadero',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m       community: 'El Bramadero',"}}
+[info] >        fiveDays: 13.8081771350306, {"user":"      fiveDays: 13.8081771350306,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m       fiveDays: 13.8081771350306,"}}
+[info] >        fiveDaysMax: 27.31868172807918, {"user":"      fiveDaysMax: 27.31868172807918,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m       fiveDaysMax: 27.31868172807918,"}}
+[info] >        fiveDaysMin: -1, {"user":"      fiveDaysMin: -1,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m       fiveDaysMin: -1,"}}
+[info] >        tenDays: 30.5124437244138, {"user":"      tenDays: 30.5124437244138,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m       tenDays: 30.5124437244138,"}}
+[info] >        tenDaysMax: 53.65778758500299, {"user":"      tenDaysMax: 53.65778758500299,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m       tenDaysMax: 53.65778758500299,"}}
+[info] >        tenDaysMin: 7.36709986382461, {"user":"      tenDaysMin: 7.36709986382461,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m       tenDaysMin: 7.36709986382461,"}}
+[info] >        fifteenDays: 49.06521242509726, {"user":"      fifteenDays: 49.06521242509726,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m       fifteenDays: 49.06521242509726,"}}
+[info] >        fifteenDaysMax: 77.13514239500259, {"user":"      fifteenDaysMax: 77.13514239500259,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m       fifteenDaysMax: 77.13514239500259,"}}
+[info] >        fifteenDaysMin: 20.99528245519194 {"user":"      fifteenDaysMin: 20.99528245519194","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m       fifteenDaysMin: 20.99528245519194"}}
+[info] >      } {"user":"    }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m     }"}}
+[info] >    ] {"user":"  ]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m   ]"}}
+[info] >  } {"user":"}","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"\u001b[90m> \u001b[39m }"}}
+[debug] [2024-04-17T20:47:30.451Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 5.173ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 5.173ms"}}
+[debug] [2024-04-17T20:47:30.452Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:47:30.452Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:47:30.452Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:47:30.452Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:47:39.296Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:47:39.296Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:47:39.297Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:47:39.296Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:47:39.297Z] Accepted request POST /nicaragua-project/us-central1/staging/user/login --> us-central1-staging
+[debug] [2024-04-17T20:47:39.298Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:47:39.298Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login"}}
+[debug] [2024-04-17T20:47:39.298Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:47:39.298Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[debug] [2024-04-17T20:47:39.385Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 86.968541ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 86.968541ms"}}
+[debug] [2024-04-17T20:47:39.386Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:47:39.386Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:47:39.386Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:47:39.386Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:48:19.808Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:48:19.808Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:48:19.808Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/user/login-2024-04-17T20:48:19.808Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:48:19.808Z] Accepted request POST /nicaragua-project/us-central1/staging/user/login --> us-central1-staging
+[debug] [2024-04-17T20:48:19.810Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:48:19.810Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/user/login, mapping to path=/user/login"}}
+[debug] [2024-04-17T20:48:19.810Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:48:19.810Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[debug] [2024-04-17T20:48:19.906Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 95.527516ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 95.527516ms"}}
+[debug] [2024-04-17T20:48:19.906Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:48:19.906Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:48:19.906Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:48:19.906Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:48:19.922Z] [work-queue] {"queuedWork":["/nicaragua-project/us-central1/staging/longterm-2024-04-17T20:48:19.922Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-17T20:48:19.923Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nicaragua-project/us-central1/staging/longterm-2024-04-17T20:48:19.922Z"],"workRunningCount":1}
+[debug] [2024-04-17T20:48:19.923Z] Accepted request PUT /nicaragua-project/us-central1/staging/longterm --> us-central1-staging
+[debug] [2024-04-17T20:48:19.924Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-17T20:48:19.925Z] [functions] Got req.url=/nicaragua-project/us-central1/staging/longterm, mapping to path=/longterm {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nicaragua-project/us-central1/staging/longterm, mapping to path=/longterm"}}
+[debug] [2024-04-17T20:48:19.925Z] [worker-pool] submitRequest(triggerId=us-central1-staging) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-staging)"}}
+[info] i  functions: Beginning execution of "us-central1-staging" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Beginning execution of \"us-central1-staging\""}}
+[debug] [2024-04-17T20:48:19.925Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: BUSY"}}
+[debug] [2024-04-17T20:48:20.096Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-staging" in 171.177839ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finished \"us-central1-staging\" in 171.177839ms"}}
+[debug] [2024-04-17T20:48:20.096Z] [worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"[worker-us-central1-staging-012945a4-82ef-40e7-a7f5-2214130098f7]: IDLE"}}
+[debug] [2024-04-17T20:48:20.096Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-17T20:48:20.096Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-staging"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-17T20:48:20.097Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}

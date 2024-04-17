@@ -8,7 +8,8 @@ app.use(bodyparser.json({ limit: '50mb' }))
 app.use(bodyparser.urlencoded({ extended: false }));
 
 app.get('/version',(req,res) => {
-	res.send("Nica Agua API: Version 1.01!")
+	const environment = process.env.ENVIRONMENT === 'staging' ? "Staging" : "Production";
+	res.send(`Nica Agua API: ${environment} Version 1.01!`)
 })
 
 require('./Controllers/userController')(app);

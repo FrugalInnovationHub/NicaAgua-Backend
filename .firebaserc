@@ -1,9 +1,9 @@
 {
   "projects": {
-    "default": "nicaragua-project"
+    "default": "nicaragua-weather-app"
   },
   "targets": {
-    "nicaragua-project": {
+    "nicaragua-weather-app": {
       "hosting": {
         "natest": [
           "natest"
