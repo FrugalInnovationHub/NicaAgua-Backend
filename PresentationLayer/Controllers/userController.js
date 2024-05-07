@@ -1,9 +1,13 @@
 var UserService = require('../../DomainLayer/Services/userService');
 const JwtIssuer = require('../jwtIssuer');
 const PermissionMiddleWare = require('../permissionMiddleWare')
-
+require('dotenv').config();
 const { SendOTPMessageCommand, VerifyOTPMessageCommand, PinpointClient} = require("@aws-sdk/client-pinpoint");
 const crypto = require('crypto');
+
+const REGION = process.env.AWS_REGION;
+const originationNumber = process.env.ORIGINATION_NUMBER;
+const projectId = process.env.PROJECT_ID;
 
 // Function to generate reference ID
 function generate_ref_id(destinationNumber, brandName, source) {
@@ -145,8 +149,8 @@ function UserController(app) {
         // Fetch data from request body
         const destinationNumber = req.body.mobile;
 
-        const originationNumber = process.env.ORIGINATION_NUMBER;
-        const projectId = process.env.PROJECT_ID;
+
+        // const projectId = process.env.PROJECT_ID;
         const brandName = "NicaAgua";
         const otp_len = 5;
 
@@ -165,8 +169,13 @@ function UserController(app) {
             }
         };
 
-        const REGION = process.env.AWS_REGION;
-        const pinClient = new PinpointClient({region: REGION});
+        const pinClient = new PinpointClient({
+            region: REGION,
+            credentials: {
+                accessKeyId: process.env.AWS_PINPOINT_ACCESS_KEY,
+                secretAccessKey: AWS_PINPOINT_SECRET,
+            }
+        });
 
         try {
             const data = await pinClient.send(new SendOTPMessageCommand(params));
@@ -183,7 +192,6 @@ function UserController(app) {
         const destinationNumber = req.body.mobile;
         const otp = req.body.otp;
 
-        const projectId = process.env.PROJECT_ID;
         const brandName = "NicaAgua";
 
         let params = {
@@ -195,8 +203,14 @@ function UserController(app) {
             }
         };
 
-        const REGION = process.env.AWS_REGION;
-        const pinClient = new PinpointClient({region: REGION});
+        // const REGION = process.env.AWS_REGION;
+        const pinClient = new PinpointClient({
+            region: REGION,
+            credentials: {
+                accessKeyId: process.env.AWS_PINPOINT_ACCESS_KEY,
+                secretAccessKey: process.env.AWS_PINPOINT_SECRET,
+            }
+        });
 
         try {
             const data = await pinClient.send(new VerifyOTPMessageCommand(params));
