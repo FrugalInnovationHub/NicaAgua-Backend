@@ -36,11 +36,11 @@ class ForecastService {
         }
       });
       if(alertRegionsMin.length>0){
-        const data = {message:"Los próximos días serán excepcionalmente secos",regions:alertRegions}
+        const data = {message:"Los próximos días serán excepcionalmente secos",regions:alertRegionsMin}
         new WaterAlertService().addWaterAlert(data)
       }
       if(alertRegionsMax.length>0){
-        const data = {message:"Los próximos días serán excepcionalmente lluviosos",regions:alertRegions}
+        const data = {message:"Los próximos días serán excepcionalmente lluviosos",regions:alertRegionsMax}
         new WaterAlertService().addWaterAlert(data)
       }
       this.foreCastRepository
