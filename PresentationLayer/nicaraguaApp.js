@@ -17,5 +17,6 @@ require('./Controllers/weatherController')(app);
 require('./Controllers/waterAlertController')(app);
 require('./Controllers/forecastController')(app);
 require('./Controllers/longTermForecastController')(app);
+require('./Controllers/weatherComparisonController.js')(app);
 
 module.exports =app;
