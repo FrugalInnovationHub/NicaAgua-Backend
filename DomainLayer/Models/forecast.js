@@ -15,74 +15,74 @@ class Forecast extends Base {
      * @summary the value will be rounded and cannot be smaller than zero
     */
     this.fiveDays = Math.round(object.fiveDays);
-    this.CheckNumber({ nullable: false, min: 0, max: null }, "fiveDays");
+    // this.CheckNumber({ nullable: false, min: 0, max: null }, "fiveDays");
     /**This is the minimum expected value for five days based on historical data.
     * @summary In the app this is the start of the shaded area.
     */
     this.fiveDaysMin = Math.round(object.fiveDaysMin);
-    this.CheckNumber({ nullable: false, min: 0, max: null }, "fiveDaysMin");
+    // this.CheckNumber({ nullable: false, min: 0, max: null }, "fiveDaysMin");
     /**This is the maximum expected value for five days based on historical data.
     * @summary In the app this is the end of the shaded area.
     */
     this.fiveDaysMax = Math.round(object.fiveDaysMax);
-    this.CheckNumber(
-      { nullable: false, min: this.fiveDaysMin, max: null },
-      "fiveDaysMax"
-    );
+    // this.CheckNumber(
+    //   { nullable: false, min: this.fiveDaysMin, max: null },
+    //   "fiveDaysMax"
+    // );
      /**Forecast for ten days
      * @summary the value will be rounded and cannot be smaller than zero
     */
     this.tenDays = Math.round(object.tenDays);
-    this.CheckNumber(
-      { nullable: false, min: this.fiveDays, max: null },
-      "tenDays"
-    );
+    // this.CheckNumber(
+    //   { nullable: false, min: this.fiveDays, max: null },
+    //   "tenDays"
+    // );
     /**This is the minimum expected value for ten days based on historical data.
     * @summary In the app this is the start of the shaded area.
     */
     this.tenDaysMin = Math.round(object.tenDaysMin);
-    this.CheckNumber(
-      { nullable: false, min: this.fiveDaysMin, max: null },
-      "tenDaysMin"
-    );
+    // this.CheckNumber(
+    //   { nullable: false, min: this.fiveDaysMin, max: null },
+    //   "tenDaysMin"
+    // );
     /**This is the maximum expected value for ten days based on historical data.
     * @summary In the app this is the end of the shaded area.
     */
     this.tenDaysMax = Math.round(object.tenDaysMax);
-    this.CheckNumber(
-      { nullable: false, min: this.fiveDaysMax, max: null },
-      "tenDaysMax"
-    );
+    // this.CheckNumber(
+    //   { nullable: false, min: this.fiveDaysMax, max: null },
+    //   "tenDaysMax"
+    // );
      /**Forecast for fifteen days
      * @summary the value will be rounded and cannot be smaller than zero
     */
     this.fifteenDays = Math.round(object.fifteenDays);
-    this.CheckNumber(
-      { nullable: false, min: this.tenDays, max: null },
-      "fifteenDays"
-    );
+    // this.CheckNumber(
+    //   { nullable: false, min: this.tenDays, max: null },
+    //   "fifteenDays"
+    // );
     /**This is the maximum expected value for fifteen days based on historical data.
     * @summary In the app this is the start of the shaded area.
     */
     this.fifteenDaysMax = Math.round(object.fifteenDaysMax);
-    this.CheckNumber(
-      { nullable: false, min: this.tenDaysMax, max: null },
-      "fifteenDaysMax"
-    );
+    // this.CheckNumber(
+    //   { nullable: false, min: this.tenDaysMax, max: null },
+    //   "fifteenDaysMax"
+    // );
     /**This is the minimum expected value for fifteen days based on historical data.
     * @summary In the app this is the start of the shaded area.
     */
     this.fifteenDaysMin = Math.round(object.fifteenDaysMin);
-    this.CheckNumber(
-      { nullable: false, min: this.tenDaysMin, max: null },
-      "fifteenDaysMin"
-    );
+    // this.CheckNumber(
+    //   { nullable: false, min: this.tenDaysMin, max: null },
+    //   "fifteenDaysMin"
+    // );
     /**Date this forecast was generated. */
     this.date =
       object.date != null
         ? moment(new Date(object.date)).format("YYYY-MM-DD")
         : moment(new Date()).format("YYYY-MM-DD");
-    this.CheckErrors();
+    // this.CheckErrors();
   }
 }
 
