@@ -24,6 +24,10 @@ class WaterAlertService {
         });
     }
 
+    /**
+     * Generate alert  to Dry Regions for the current Period
+     * @param {*} regions Dry Regions for this forecast
+     */
     addDryAlert(regions){
         if(regions.length > 0){
         const data = {message:"Los próximos días serán excepcionalmente secos",regions:regions}
@@ -31,8 +35,11 @@ class WaterAlertService {
         }
     }
 
+    /**
+     * Generate alert  to Wet Regions for the current Period
+     * @param {*} regions Wet Regions for this forecast
+     */
     addWetAlert(regions){
-        console.log(regions);
         if(regions.length > 0){
         const data = {message:"Los próximos días serán excepcionalmente lluviosos",regions:regions}
         this.addWaterAlert(data);

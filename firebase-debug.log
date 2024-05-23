@@ -154,3 +154,101 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 [debug] [2024-05-23T02:41:02.596Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
 [debug] [2024-05-23T02:41:02.596Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
 [debug] [2024-05-23T02:41:02.596Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-05-23T02:43:40.365Z] File /home/giulliano/Projects/NicaAgua-Backend/DomainLayer/Services/waterAlertService.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/giulliano/Projects/NicaAgua-Backend/DomainLayer/Services/waterAlertService.js changed, reloading triggers"}}
+[debug] [2024-05-23T02:43:41.367Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2024-05-23T02:43:41.907Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha Test/*.js",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js",
+  "devDependencies": {
+    "mocha": "^10.4.0"
+  }
+}
+[debug] [2024-05-23T02:43:41.907Z] Building nodejs source
+[debug] [2024-05-23T02:43:41.907Z] Failed to find version of module node: reached end of search path /home/giulliano/Projects/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-05-23T02:43:41.908Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-05-23T02:43:41.910Z] Found firebase-functions binary at '/home/giulliano/Projects/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8001
+
+[debug] [2024-05-23T02:43:42.300Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2024-05-23T02:43:42.315Z] [worker-pool] Shutting down IDLE worker (us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-api)"}}
+[debug] [2024-05-23T02:43:42.315Z] [worker-us-central1-api-df554c75-e79a-419c-857c-d9cd22f98428]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-df554c75-e79a-419c-857c-d9cd22f98428]: FINISHING"}}
+[debug] [2024-05-23T02:43:42.324Z] [worker-us-central1-api-df554c75-e79a-419c-857c-d9cd22f98428]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-df554c75-e79a-419c-857c-d9cd22f98428]: exited"}}
+[debug] [2024-05-23T02:43:42.325Z] [worker-us-central1-api-df554c75-e79a-419c-857c-d9cd22f98428]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-df554c75-e79a-419c-857c-d9cd22f98428]: FINISHED"}}
+[debug] [2024-05-23T02:43:48.137Z] File /home/giulliano/Projects/NicaAgua-Backend/DomainLayer/Services/waterAlertService.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/giulliano/Projects/NicaAgua-Backend/DomainLayer/Services/waterAlertService.js changed, reloading triggers"}}
+[debug] [2024-05-23T02:43:49.138Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2024-05-23T02:43:49.626Z] > [functions] package.json contents: {
+  "name": "nicaragua-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha Test/*.js",
+    "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "Giulliano Siviero",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "commander": "^9.4.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2"
+  },
+  "mocha.files.glob": "Test/**.js",
+  "devDependencies": {
+    "mocha": "^10.4.0"
+  }
+}
+[debug] [2024-05-23T02:43:49.626Z] Building nodejs source
+[debug] [2024-05-23T02:43:49.626Z] Failed to find version of module node: reached end of search path /home/giulliano/Projects/NicaAgua-Backend/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-05-23T02:43:49.627Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-05-23T02:43:49.628Z] Found firebase-functions binary at '/home/giulliano/Projects/NicaAgua-Backend/node_modules/.bin/firebase-functions'
+[info] Serving at port 8325
+
+[debug] [2024-05-23T02:43:50.013Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
