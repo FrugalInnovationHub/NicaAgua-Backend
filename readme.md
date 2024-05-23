@@ -22,7 +22,7 @@ Before you begin, ensure you have the following:
 ## Installation
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your-repository/nicaagua-backend.git
+   git clone https://github.com/FrugalInnovationHub/NicaAgua-Backend.git
    cd nicaagua-backend
    ```
 
