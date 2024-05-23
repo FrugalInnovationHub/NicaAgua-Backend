@@ -109,7 +109,7 @@ class ShortTermForecasts extends Base {
 
   get forecasts(){return this._forecasts.map(e => e.toJson())};
 
-  getNotifications() {console.log("Aqui 2")
+  getNotifications() {
     let dry = new Notification([], "Anuncio", "Se esperan condiciones mucho más lluviosas de lo normal");
     let wet = new Notification([], "Anuncio", "Se esperan condiciones mucho más secas de lo normal");
     this._forecasts.forEach((e) => {

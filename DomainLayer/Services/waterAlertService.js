@@ -12,6 +12,7 @@ class WaterAlertService {
 
     /**
      * Create a new Water Alert.
+     * Sends an PUSH notification to the related comunities
      * @param {*} object Object to be persisted to the database.
      * @returns A Promise that will resolve when the operation is successful.
      */
