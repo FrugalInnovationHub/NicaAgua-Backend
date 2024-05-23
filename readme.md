@@ -46,14 +46,7 @@ firebase emulators:start
 ```
 This command starts the Firebase emulators to run the code locally.
 
-## Admin Login
-Use the following credentials to log in as an admin:
-```json
-{
-    "phoneNumber": "7",
-    "password": "123"
-}
-```
+
 
 ## Postman Setup
 1. **Import the Postman collection:**
