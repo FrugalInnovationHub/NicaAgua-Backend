@@ -7,7 +7,8 @@ function ForecastController(app) {
             new ForecastService().addForecast(req.body).then(
                 (r) => res.send(r))
                 .catch((e) => {
-                    res.statusCode = 401;
+                    console.log(e);
+                    res.statusCode = 500;
                     res.send(e);
                 });
         }

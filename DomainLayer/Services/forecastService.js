@@ -23,7 +23,7 @@ class ForecastService {
         const data = {message:"Los próximos días serán excepcionalmente secos",regions:notifications.dry.regions}
         waterAlertService.addWaterAlert(data);
       }
-      if(notifications.wetNotification.regions.length>0){
+      if(notifications.wet.regions.length>0){
         const data = {message:"Los próximos días serán excepcionalmente lluviosos",regions:notifications.wet.regions}
         waterAlertService.addWaterAlert(data);
       }
