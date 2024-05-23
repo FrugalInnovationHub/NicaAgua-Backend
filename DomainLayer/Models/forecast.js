@@ -1,4 +1,5 @@
 var moment = require("moment");
+const Notification = require("./notification");
 const { Base } = require("../Utils/propertyValidator");
 /**Represents a Short term Forecast */
 class Forecast extends Base {
@@ -15,79 +16,82 @@ class Forecast extends Base {
      * @summary the value will be rounded and cannot be smaller than zero
     */
     this.fiveDays = Math.round(object.fiveDays);
-    // this.CheckNumber({ nullable: false, min: 0, max: null }, "fiveDays");
+    this.CheckNumber({ nullable: false, min: 0, max: null }, "fiveDays");
     /**This is the minimum expected value for five days based on historical data.
     * @summary In the app this is the start of the shaded area.
     */
     this.fiveDaysMin = Math.round(object.fiveDaysMin);
-    // this.CheckNumber({ nullable: false, min: 0, max: null }, "fiveDaysMin");
+    this.CheckNumber({ nullable: false, min: 0, max: null }, "fiveDaysMin");
     /**This is the maximum expected value for five days based on historical data.
     * @summary In the app this is the end of the shaded area.
     */
     this.fiveDaysMax = Math.round(object.fiveDaysMax);
-    // this.CheckNumber(
-    //   { nullable: false, min: this.fiveDaysMin, max: null },
-    //   "fiveDaysMax"
-    // );
-     /**Forecast for ten days
-     * @summary the value will be rounded and cannot be smaller than zero
-    */
+    this.CheckNumber(
+      { nullable: false, min: this.fiveDaysMin, max: null },
+      "fiveDaysMax"
+    );
+    /**Forecast for ten days
+    * @summary the value will be rounded and cannot be smaller than zero
+   */
     this.tenDays = Math.round(object.tenDays);
-    // this.CheckNumber(
-    //   { nullable: false, min: this.fiveDays, max: null },
-    //   "tenDays"
-    // );
+    this.CheckNumber(
+      { nullable: false, min: this.fiveDays, max: null },
+      "tenDays"
+    );
     /**This is the minimum expected value for ten days based on historical data.
     * @summary In the app this is the start of the shaded area.
     */
     this.tenDaysMin = Math.round(object.tenDaysMin);
-    // this.CheckNumber(
-    //   { nullable: false, min: this.fiveDaysMin, max: null },
-    //   "tenDaysMin"
-    // );
+    this.CheckNumber(
+      { nullable: false, min: this.fiveDaysMin, max: null },
+      "tenDaysMin"
+    );
     /**This is the maximum expected value for ten days based on historical data.
     * @summary In the app this is the end of the shaded area.
     */
     this.tenDaysMax = Math.round(object.tenDaysMax);
-    // this.CheckNumber(
-    //   { nullable: false, min: this.fiveDaysMax, max: null },
-    //   "tenDaysMax"
-    // );
-     /**Forecast for fifteen days
-     * @summary the value will be rounded and cannot be smaller than zero
-    */
+    this.CheckNumber(
+      { nullable: false, min: this.fiveDaysMax, max: null },
+      "tenDaysMax"
+    );
+    /**Forecast for fifteen days
+    * @summary the value will be rounded and cannot be smaller than zero
+   */
     this.fifteenDays = Math.round(object.fifteenDays);
-    // this.CheckNumber(
-    //   { nullable: false, min: this.tenDays, max: null },
-    //   "fifteenDays"
-    // );
+    this.CheckNumber(
+      { nullable: false, min: this.tenDays, max: null },
+      "fifteenDays"
+    );
     /**This is the maximum expected value for fifteen days based on historical data.
     * @summary In the app this is the start of the shaded area.
     */
     this.fifteenDaysMax = Math.round(object.fifteenDaysMax);
-    // this.CheckNumber(
-    //   { nullable: false, min: this.tenDaysMax, max: null },
-    //   "fifteenDaysMax"
-    // );
+    this.CheckNumber(
+      { nullable: false, min: this.tenDaysMax, max: null },
+      "fifteenDaysMax"
+    );
     /**This is the minimum expected value for fifteen days based on historical data.
     * @summary In the app this is the start of the shaded area.
     */
     this.fifteenDaysMin = Math.round(object.fifteenDaysMin);
-    // this.CheckNumber(
-    //   { nullable: false, min: this.tenDaysMin, max: null },
-    //   "fifteenDaysMin"
-    // );
+    this.CheckNumber(
+      { nullable: false, min: this.tenDaysMin, max: null },
+      "fifteenDaysMin"
+    );
     /**Date this forecast was generated. */
     this.date =
       object.date != null
         ? moment(new Date(object.date)).format("YYYY-MM-DD")
         : moment(new Date()).format("YYYY-MM-DD");
-    // this.CheckErrors();
+    this.CheckErrors();
   }
+
+  get isWet() {return this.fiveDays > this.fiveDaysMax || this.tenDays > this.tenDaysMax || this.fifteenDays > this.fifteenDaysMax}
+  get isDry() {return this.fiveDays < this.fiveDaysMin || this.tenDays < this.tenDaysMin || this.fifteenDays < this.fifteenDaysMin}
 }
 
 /**List of Forecasts */
-class ShortTermForecasts extends Base{
+class ShortTermForecasts extends Base {
   constructor(object) {
     super();
     var today = moment(new Date()).format("YYYY-MM-DD");
@@ -96,11 +100,27 @@ class ShortTermForecasts extends Base{
       object.date != null
         ? moment(new Date(object.date)).format("YYYY-MM-DD")
         : today;
-    /**List of Forecasts for this date*/
-    this.forecasts = object.forecasts.map((f) =>
-      new Forecast(f).toJson()
+    this._forecasts= object.forecasts.map((f) =>
+      new Forecast(f)
     );
+    /**List of Forecasts for this date*/
     this.CheckErrors();
+  }
+
+  get forecasts(){return this._forecasts.map(e => e.toJson())};
+
+  getNotifications() {console.log("Aqui 2")
+    let dry = new Notification([], "Anuncio", "Se esperan condiciones mucho más lluviosas de lo normal");
+    let wet = new Notification([], "Anuncio", "Se esperan condiciones mucho más secas de lo normal");
+    this._forecasts.forEach((e) => {
+        if (e.isDry) dry.addRegion(e.community)
+        if (e.isWet) wet.addRegion(e.community)
+    });
+    return {dry,wet};
+  }
+
+  toJson(){
+    return {date:this.date,forecasts:this.forecasts}
   }
 }
 
@@ -159,7 +179,7 @@ class LongTermForecasts extends Base {
       object.date != null
         ? moment(new Date(object.date)).format("YYYY-MM-DD")
         : today;
-        
+
     /**Array of Forecasts */
     this.forecasts = object.forecasts.map((f) =>
       new LongTermForecast(f).toJson()
@@ -168,4 +188,4 @@ class LongTermForecasts extends Base {
   }
 }
 
-module.exports = { Forecast, LongTermForecast, LongTermForecasts,ShortTermForecasts };
+module.exports = { Forecast, LongTermForecast, LongTermForecasts, ShortTermForecasts };

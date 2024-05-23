@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nyc --reporter=html --reporter=text mocha",
+    "test": "nyc --reporter=html --reporter=text mocha Test/*.js",
     "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
   },
   "engines": {
@@ -26,5 +26,8 @@
     "nyc": "^15.1.0",
     "request": "^2.88.2"
   },
-  "mocha.files.glob": "Test/**.js"
+  "mocha.files.glob": "Test/**.js",
+  "devDependencies": {
+    "mocha": "^10.4.0"
+  }
 }

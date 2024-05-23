@@ -3,7 +3,6 @@ const { Base } = require("../Utils/propertyValidator");
 /** This class is the implementation of a Weather Alert. */
 class WaterAlert extends Base{
   constructor(object) {
-    console.log(object,"object")
     super();
     this.CheckNullObject(object);
     this.CheckErrors();
