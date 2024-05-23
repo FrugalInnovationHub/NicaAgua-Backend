@@ -15,34 +15,11 @@ class ForecastService {
   addForecast(object) {
     return new Promise((resolve, reject) => {
       var newForecast = new ShortTermForecasts(object);
-      const notifications = newForecast.getNotifications();
-      sendNotification(notifications.dry.regions,notifications.dry.title,notifications.dry.body);
-      sendNotification(notifications.wet.regions,notifications.wet.title,notifications.wet.body);
-      const waterAlertService =new WaterAlertService();;
-      if(notifications.dry.regions.length>0){
-        const data = {message:"Los próximos días serán excepcionalmente secos",regions:notifications.dry.regions}
-        waterAlertService.addWaterAlert(data);
-      }
-      if(notifications.wet.regions.length>0){
-        const data = {message:"Los próximos días serán excepcionalmente lluviosos",regions:notifications.wet.regions}
-        waterAlertService.addWaterAlert(data);
-      }
-      this.foreCastRepository
-        .getById(newForecast.date)
-        .then((u) => {
-          this.foreCastRepository
-            .upsert(newForecast.toJson())
-            .then(() => resolve())
-            .catch((err) => {
-              reject(err);
-            });
-        })
-        .catch((err) => {
-          console.log(err);
-          reject(err);
-        });
-    });
-  }
+      const waterAlertService =new WaterAlertService();
+      waterAlertService.addDryAlert(newForecast.dryRegions);
+      waterAlertService.addWetAlert(newForecast.wetRegions);
+      this.foreCastRepository.upsert(newForecast.toJson()).then(() => resolve()).catch((e) => reject(e));
+    });}
 
   getForecast(community) {
     return new Promise((resolve, reject) => {

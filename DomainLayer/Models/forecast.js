@@ -86,8 +86,8 @@ class Forecast extends Base {
     this.CheckErrors();
   }
 
-  get isWet() {return this.fiveDays > this.fiveDaysMax || this.tenDays > this.tenDaysMax || this.fifteenDays > this.fifteenDaysMax}
-  get isDry() {return this.fiveDays < this.fiveDaysMin || this.tenDays < this.tenDaysMin || this.fifteenDays < this.fifteenDaysMin}
+  get isWet() { return this.fiveDays > this.fiveDaysMax || this.tenDays > this.tenDaysMax || this.fifteenDays > this.fifteenDaysMax }
+  get isDry() { return this.fiveDays < this.fiveDaysMin || this.tenDays < this.tenDaysMin || this.fifteenDays < this.fifteenDaysMin }
 }
 
 /**List of Forecasts */
@@ -100,27 +100,32 @@ class ShortTermForecasts extends Base {
       object.date != null
         ? moment(new Date(object.date)).format("YYYY-MM-DD")
         : today;
-    this._forecasts= object.forecasts.map((f) =>
+    this._forecasts = object.forecasts.map((f) =>
       new Forecast(f)
     );
     /**List of Forecasts for this date*/
     this.CheckErrors();
   }
 
-  get forecasts(){return this._forecasts.map(e => e.toJson())};
+  get forecasts() { return this._forecasts.map(e => e.toJson()) };
 
-  getNotifications() {
-    let dry = new Notification([], "Anuncio", "Se esperan condiciones mucho más lluviosas de lo normal");
-    let wet = new Notification([], "Anuncio", "Se esperan condiciones mucho más secas de lo normal");
-    this._forecasts.forEach((e) => {
-        if (e.isDry) dry.addRegion(e.community)
-        if (e.isWet) wet.addRegion(e.community)
-    });
-    return {dry,wet};
+  get dryRegions() {
+    let set = new Set();
+    for (let f of this._forecasts) 
+      if (f.isDry) set.add(f.community);
+    return Array.from(set);
   }
 
-  toJson(){
-    return {date:this.date,forecasts:this.forecasts}
+  get wetRegions() {
+    let set = new Set();
+    for (let f of this._forecasts) 
+      if (f.isWet) set.add(f.community);
+  
+    return Array.from(set);
+  }
+
+  toJson() {
+    return { date: this.date, forecasts: this.forecasts }
   }
 }
 

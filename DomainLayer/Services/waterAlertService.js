@@ -24,6 +24,21 @@ class WaterAlertService {
         });
     }
 
+    addDryAlert(regions){
+        if(regions.length > 0){
+        const data = {message:"Los próximos días serán excepcionalmente secos",regions:regions}
+        this.addWaterAlert(data);
+        }
+    }
+
+    addWetAlert(regions){
+        console.log(regions);
+        if(regions.length > 0){
+        const data = {message:"Los próximos días serán excepcionalmente lluviosos",regions:regions}
+        this.addWaterAlert(data);
+        }
+    }
+
     /**
      * Get Water Alert by its ID
      * @param {*} id Id of water alert to be fetched.
