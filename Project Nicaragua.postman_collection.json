@@ -1,0 +1,1007 @@
+{
+	"info": {
+		"_postman_id": "f7a70253-e615-490b-ab0a-51cc18ec620a",
+		"name": "Project Nicaragua",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30655689"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"phoneNumber\": \"7\",\"password\":\"123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/user/login",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new  User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"demo_test1\",\r\n    \"lastName\":\"demo_test1\",\r\n    \"phoneNumber\": \"14065545802\",\r\n    \"regions\": [\"*****\"],\r\n    \"password\": \"admin\",\r\n    \"defaultCommunity\":\"El Bramadero\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subscribe To Regions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDYwOTUxNDEsImRhdGEiOnsicm9sZSI6iwicGhvbmVOdW1iZXIiOiI3In0sImlhdCI6MTY0NjA5MTU0MX0.ouxIO6yUg5daOZm7G6TxOkBHfkCHSBjhmnwDJrexlD4",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"JOW\"]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{host}}/user/community",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"community"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set User Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"phoneNumber\":\"0000000000\",\"roleLevel\":5}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{host}}/user/role",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List of WeatherLogs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTE2MDk3NDksImRhdGEiOnsicm9sZUxldmVsIjoyLCJwaG9uZU51bWJlciI6IjExMjM0NTY3ODkwIn0sImlhdCI6MTcxMTYwNjE0OX0.1WoCCrvw4sIWEqBr88Tz2y2rKlurjlIEhf4Y27ohV-k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{host}}/weather?limit=100&dateTimeStart=2022-10-01",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"weather"
+					],
+					"query": [
+						{
+							"key": "dateTimeEnd",
+							"value": "2021-05-01",
+							"disabled": true
+						},
+						{
+							"key": "regions",
+							"value": "NIC02",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						},
+						{
+							"key": "dateTimeStart",
+							"value": "2022-10-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get WeatherLog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{host}}/weather/2024-02-01",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"weather",
+						"2024-02-01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Weather Log",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTcyMzc5MzQsImRhdGEiOnsicm9sZUxldmVsIjowLCJwaG9uZU51bWJlciI6IjcifSwiaWF0IjoxNjU3MjM0MzM0fQ.mG9nQUojDJu935-E54gOaejnYUOVzAQ3gns9lAT1ccg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n    \"userId\": \"1234\",\r\n    \"parameters\": [\r\n        {\r\n            \"unit\": \"mm\",\r\n            \"name\": \"precipitation\",\r\n            \"value\": 1\r\n        }\r\n    ],\r\n    \"regions\": [\r\n        \"*****\"\r\n    ]\r\n},{\r\n    \"userId\": \"1234\",\r\n    \"dateTime\": \"2022-07-11\",\r\n    \"parameters\": [\r\n        {\r\n            \"unit\": \"mm\",\r\n            \"name\": \"precipitation\",\r\n            \"value\": 1\r\n        }\r\n    ],\r\n    \"regions\": [\r\n        \"*****\"\r\n    ]\r\n},{\r\n    \"userId\": \"1234\",\r\n    \"dateTime\": \"2022-06-10\",\r\n    \"parameters\": [\r\n        {\r\n            \"unit\": \"mm\",\r\n            \"name\": \"precipitation\",\r\n            \"value\": 1\r\n        }\r\n    ],\r\n    \"regions\": [\r\n        \"*****\"\r\n    ]\r\n}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.nicaagua.net/weather",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nicaagua",
+						"net"
+					],
+					"path": [
+						"weather"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"phoneNumber\": \"6507326291\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{host}}/user",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Welcome to Nicaragua Project",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDYwOTUxNDEsImRhdGEiOnsicm9sZSI6MiwicGhvbmVOdW1iZXIiOiI3In0sImlhdCI6MTY0NjA5MTU0MX0.ouxIO6yUg5daOZm7G6TxOkBHfkCHSBjhmnwDJrexlD4",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://localhost:3004",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDYwOTUxNDEsImRhdGEiOnsicm9sZSI6MiwicGhvbmVOdW1iZXIiOiI3In0sImlhdCI6MTY0NjA5MTU0MX0.ouxIO6yUg5daOZm7G6TxOkBHfkCHSBjhmnwDJrexlD4",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{host}}/users",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Region",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"La Palmera\",\r\n    \"code\" : \"NIC13\",\r\n    \"country\":\"Nicaragua\",\r\n    \"latitude\": null,\r\n    \"longitude\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{token}}t/region",
+					"protocol": "https",
+					"host": [
+						"{{token}}t"
+					],
+					"path": [
+						"region"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Region",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{host}}/region",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"region"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Region",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDYyNTYxOTAsImRhdGEiOnsicm9sZUxldmVsIjowLCJwaG9uZU51bWJlciI6IjcifSwiaWF0IjoxNjQ2MjUyNTkwfQ.amcpHJWiXIqDWrP_IIpuCV9pmuyWeWAzvUCdVyv-eZc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"code\": \"NIC22\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.nicaagua.net/region",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nicaagua",
+						"net"
+					],
+					"path": [
+						"region"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Water Alerts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"message\":\"Testing Dashboard Notifications\",\"regions\":[\"El_Bramadero\",\"Daraili\",\"1\",\"2\",\"El_Bramadero\",\"Daraili\",\"1\",\"2\",\"El_Bramadero\",\"Daraili\",\"1\",\"2\",\"El_Bramadero\",\"Daraili\",\"1\",\"2\"]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{host}}/waterAlert",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"waterAlert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Water Alert",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://{{host}}/waterAlert",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"waterAlert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Push Notification",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"condition\": \"'Daraili' in topics || 'El_Naranjito' in topics\",\r\n    \"notification\": {\r\n        \"title\": \"Testing\",\r\n        \"body\": \"Body\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fcm.googleapis.com/fcm/send",
+					"protocol": "https",
+					"host": [
+						"fcm",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"fcm",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Short Term",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"forecasts\":[\r\n  {\r\n    \"community\": \"El Naranjito\",\r\n    \"fiveDays\": 8.8081771350306,\r\n    \"fiveDaysMax\": 27.31868172807918,\r\n    \"fiveDaysMin\": 10,\r\n    \"tenDays\": 30.5124437244138,\r\n    \"tenDaysMax\": 53.65778758500299,\r\n    \"tenDaysMin\": 12.36709986382461,\r\n    \"fifteenDays\": 49.06521242509726,\r\n    \"fifteenDaysMax\": 77.13514239500259,\r\n    \"fifteenDaysMin\": 20.99528245519194\r\n  }\r\n]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/shortTerm",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"shortTerm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Short Term Forecast",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/shortTerm",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"shortTerm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Long Term Forecast",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"forecasts\": [\r\n        {\r\n            \"community\": \"Venecia\",\r\n            \"dry\": 50,\r\n            \"wet\": 10,\r\n            \"startDate\": \"2022-01-01\",\r\n            \"endDate\": \"2022-03-31\"\r\n        },\r\n        {\r\n            \"community\": \"El Bramadero\",\r\n            \"dry\": 50,\r\n            \"wet\": 10,\r\n            \"startDate\": \"2022-01-01\",\r\n            \"endDate\": \"2022-03-31\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.nicaagua.net/longTerm",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nicaagua",
+						"net"
+					],
+					"path": [
+						"longTerm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Long Term Forecast",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"dry\": 10,\r\n  \"wet\": 15,\r\n  \"startDate\" : \"2022-01-01 GMT\",\r\n  \"endDate\" : \"2022-04-01\",\"date\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/longTerm/La",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"longTerm",
+						"La"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Long Term Forecast",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjAzMjcyNDQsImRhdGEiOnsicm9sZUxldmVsIjowLCJwaG9uZU51bWJlciI6IjcifSwiaWF0IjoxNjYwMzIzNjQ0fQ.1x3mXYUXrCWpIviA9-s_zi5xG0n7g9WhBSMF4HLobHk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\":\"2022-08-12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.nicaagua.net/longTerm",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nicaagua",
+						"net"
+					],
+					"path": [
+						"longTerm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Push",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "AAAAuJ9ccbc:APA91bG90TxQneaATwKRQnhI3mZdev96dOIysvgow4z16vXUnpjIpku45gce8GKPGCW4NgNasO_nG2DAjIDdUpJ2kj0KwUXCtqt7KYyNa_aiqnEvTY3uRiChgYVXfd3agyPw5Gd2Tibs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"condition\": \"'Daraili' in topics\",\r\n    \"notification\": {\r\n        \"title\": \"Daraili Anuncio\",\r\n        \"body\": \"Llubia Fuerte nos proximos dias\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fcm.googleapis.com/fcm/send",
+					"protocol": "https",
+					"host": [
+						"fcm",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"fcm",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "request otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobile\": \"14086464510\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/otp/request",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"otp",
+						"request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobile\": \"14086464510\",\r\n    \"otp\": \"21257\",\r\n    \"new_password\":\"test1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/otp/verify",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"otp",
+						"verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Statistics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.sendRequest({",
+					"  'method': 'POST',",
+					"  'url': `${pm.environment.get(\"host\")}/user/login`,",
+					"  'header': {",
+					"    'Content-Type': 'application/json'",
+					"  },",
+					"  body: JSON.stringify({",
+					"    \"phoneNumber\": \"7\",",
+					"    \"password\": \"123\"",
+					"  })",
+					"",
+					"},",
+					"",
+					"",
+					"",
+					"function (err, response) { console.log(response.text()); pm.environment.set(\"token\",response.text()) });"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTU5NzQ0MjUsImRhdGEiOnsicm9sZUxldmVsIjowLCJwaG9uZU51bWJlciI6IjcifSwiaWF0IjoxNzE1OTcwODI1fQ._VvFw25ZQd7lUMSUH6_GcBWyRnJgHq9P1ba4w-nvGv8"
+		},
+		{
+			"key": "host",
+			"value": "127.0.0.1:5001/nicaragua-project/us-central1/api",
+			"type": "string"
+		}
+	]
+}

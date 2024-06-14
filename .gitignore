@@ -7021,4 +7021,8 @@ amplifytools.xcconfig
 firebase_local_data/*
 .idea
 .env
-ecosystem.config.js
+.nyc_output/7bf4e077-eedc-4b05-a84c-e049a6333436.json
+.nyc_output/processinfo/7bf4e077-eedc-4b05-a84c-e049a6333436.json
+coverage/DomainLayer/Models/historical.js.html
+coverage/Test/historicalTest.js.html
+firebase-debug.log
