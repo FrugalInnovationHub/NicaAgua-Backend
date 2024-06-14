@@ -86,8 +86,10 @@ class Forecast extends Base {
     this.CheckErrors();
   }
 
-  get isWet() { return this.fiveDays > this.fiveDaysMax || this.tenDays > this.tenDaysMax || this.fifteenDays > this.fifteenDaysMax }
-  get isDry() { return this.fiveDays < this.fiveDaysMin || this.tenDays < this.tenDaysMin || this.fifteenDays < this.fifteenDaysMin }
+  // get isWet() { return this.fiveDays > this.fiveDaysMax || this.tenDays > this.tenDaysMax || this.fifteenDays > this.fifteenDaysMax }
+  // get isDry() { return this.fiveDays < this.fiveDaysMin || this.tenDays < this.tenDaysMin || this.fifteenDays < this.fifteenDaysMin }
+  get isWet() { return this.fiveDays > this.fiveDaysMax }
+  get isDry() { return this.fiveDays < this.fiveDaysMin }
 }
 
 /**List of Forecasts */
