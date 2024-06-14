@@ -15,6 +15,13 @@ class HistoricalService {
 
         });
     }
+    addHistoricalData(data) {
+        return new Promise((resolve, reject) => {
+            this.historicalRepository.addOrUpdateHistoricalData(data)
+            .then(() => resolve())
+            .catch((e) => reject(e));
+        });
+    }
 }
 
 module.exports = HistoricalService;

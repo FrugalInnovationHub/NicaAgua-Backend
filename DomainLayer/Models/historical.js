@@ -18,7 +18,7 @@ class HistoricalMeasures{
         if(isNaN(key)) throw Error("Invalid Year");
         if(isNaN(value)) throw Error("Invalid Value");
         this.year = parseInt(key);
-        this.value = parseInt(value);
+        this.value = parseFloat(parseFloat(value).toFixed(2));
     }
 }
 

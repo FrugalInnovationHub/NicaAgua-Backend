@@ -17,7 +17,22 @@ function HistoricalController(app) {
             res.statusCode = 400;
             res.send(e.message);
         }
-    })
+    });
+    app.post('/historical', (req, res) => {
+        try {
+            const data = req.body;
+            new HistoricalService().addHistoricalData(data)
+            .then(() => res.send("Data added successfully"))
+            .catch((e) => {
+                res.statusCode = 400;
+                res.send(e.message);
+            });
+        }
+        catch (e) {
+            res.statusCode = 400;
+            res.send(e.message);
+        }
+    });
 }
 
 module.exports = HistoricalController;
