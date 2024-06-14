@@ -6996,3 +6996,8 @@ coverage/lcov-report/Test/weatherLogTests.js.html
 coverage/lcov-report/functions/index.html
 coverage/lcov-report/functions/index.js.html
 .env
+.nyc_output/7bf4e077-eedc-4b05-a84c-e049a6333436.json
+.nyc_output/processinfo/7bf4e077-eedc-4b05-a84c-e049a6333436.json
+coverage/DomainLayer/Models/historical.js.html
+coverage/Test/historicalTest.js.html
+firebase-debug.log
