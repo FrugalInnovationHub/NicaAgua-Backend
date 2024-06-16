@@ -12,6 +12,7 @@ class WaterAlertService {
 
     /**
      * Create a new Water Alert.
+     * Sends an PUSH notification to the related comunities
      * @param {*} object Object to be persisted to the database.
      * @returns A Promise that will resolve when the operation is successful.
      */
@@ -21,6 +22,28 @@ class WaterAlertService {
             sendNotification(waterAlert.regions,"Anuncio", waterAlert.message)
             this.waterAlertRepository.add(waterAlert).then(() => resolve()).catch(() => reject());
         });
+    }
+
+    /**
+     * Generate alert  to Dry Regions for the current Period
+     * @param {*} regions Dry Regions for this forecast
+     */
+    addDryAlert(regions){
+        if(regions.length > 0){
+        const data = {message:"Los próximos días serán excepcionalmente secos",regions:regions}
+        this.addWaterAlert(data);
+        }
+    }
+
+    /**
+     * Generate alert  to Wet Regions for the current Period
+     * @param {*} regions Wet Regions for this forecast
+     */
+    addWetAlert(regions){
+        if(regions.length > 0){
+        const data = {message:"Los próximos días serán excepcionalmente lluviosos",regions:regions}
+        this.addWaterAlert(data);
+        }
     }
 
     /**
