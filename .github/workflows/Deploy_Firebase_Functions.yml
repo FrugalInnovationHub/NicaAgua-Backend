@@ -3,7 +3,7 @@ name: Deploy Firebase Functions
 'on':
   push:
     branches:
-      - Action_Tests
+      - main
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
