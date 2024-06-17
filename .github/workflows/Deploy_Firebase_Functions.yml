@@ -25,4 +25,10 @@ jobs:
           JWT_TOKEN: '${{ secrets.JWT_TOKEN }}'
           NOTIFICATION_TOKEN: '${{ secrets.NOTIFICATION_TOKEN }}'
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          AWS_REGION: '${{ secrets.AWS_REGION }}'
+          ORIGINATION_NUMBER : '${{ secrets.NOTIFICATION_TOKEN }}'
+          PROJECT_ID: '${{secrets.PROJECT_ID}}'
+          AWS_PINPOINT_ACCESS_KEY: '${{secrets.AWS_PINPOINT_ACCESS_KEY}}'
+          AWS_PINPOINT_SECRET : '${{secrets.AWS_PINPOINT_SECRET}}'
+          ENVIRONMENT: '${{secrets.ENVIRONMENT}}' 
         run: npx firebase-tools deploy --only functions
