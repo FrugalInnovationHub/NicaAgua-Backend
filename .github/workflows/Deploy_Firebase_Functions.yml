@@ -6,6 +6,8 @@ name: Deploy Firebase Functions
       - main
 jobs:
   build_and_deploy:
+    concurrency: production
+    environment: production
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,6 +16,16 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_NICARAGUA_PROJECT }}'
           projectId: nicaragua-project
           target: nicaragua-api
+      - name: Show Secret
+        run : |
+          echo $AWS_PINPOINT_ACCESS_KEY 
+        env:
+          AWS_PINPOINT_ACCESS_KEY: '${{secrets.AWS_PINPOINT_ACCESS_KEY}}'
+      - name: Show Variable
+        run : |
+          echo $PROJECT_ID 
+        env:
+          PROJECT_ID: '${{ vars.PROJECT_ID }}'
       - name: Install Firebase tools
         run: npm install -g firebase-tools
         working-directory: "."
@@ -25,4 +37,10 @@ jobs:
           JWT_TOKEN: '${{ secrets.JWT_TOKEN }}'
           NOTIFICATION_TOKEN: '${{ secrets.NOTIFICATION_TOKEN }}'
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          AWS_REGION: '${{ vars.AWS_REGION }}'
+          ORIGINATION_NUMBER : '${{ vars.NOTIFICATION_TOKEN }}'
+          PROJECT_ID: '${{ vars.PROJECT_ID }}'
+          AWS_PINPOINT_ACCESS_KEY: '${{ secrets.AWS_PINPOINT_ACCESS_KEY }}'
+          AWS_PINPOINT_SECRET : '${{ secrets.AWS_PINPOINT_SECRET }}'
+          ENVIRONMENT: '${{ vars.ENVIRONMENT }}' 
         run: npx firebase-tools deploy --only functions
