@@ -39,8 +39,8 @@ jobs:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
           AWS_REGION: '${{ vars.AWS_REGION }}'
           ORIGINATION_NUMBER : '${{ vars.NOTIFICATION_TOKEN }}'
-          PROJECT_ID: '${{vars.PROJECT_ID}}'
-          AWS_PINPOINT_ACCESS_KEY: '${{secrets.AWS_PINPOINT_ACCESS_KEY}}'
-          AWS_PINPOINT_SECRET : '${{secrets.AWS_PINPOINT_SECRET}}'
-          ENVIRONMENT: ${{vars.ENVIRONMENT}} 
+          PROJECT_ID: '${{ vars.PROJECT_ID }}'
+          AWS_PINPOINT_ACCESS_KEY: '${{ secrets.AWS_PINPOINT_ACCESS_KEY }}'
+          AWS_PINPOINT_SECRET : '${{ secrets.AWS_PINPOINT_SECRET }}'
+          ENVIRONMENT: '${{ vars.ENVIRONMENT }}' 
         run: npx firebase-tools deploy --only functions
