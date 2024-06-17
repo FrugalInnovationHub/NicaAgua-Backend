@@ -6,6 +6,8 @@ name: Deploy Firebase Functions
       - main
 jobs:
   build_and_deploy:
+    concurrency: production
+    environment: production
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
