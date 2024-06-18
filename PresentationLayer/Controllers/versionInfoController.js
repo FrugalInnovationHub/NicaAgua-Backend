@@ -43,7 +43,7 @@ function buildHTML(data){
 
                     <tr>
                         <th>Environment</th>
-                        <td><b> ${process.env.AWS_PINPOINT_ACCESS_KEY} | ${process.env.PROJECT_ID} | ${process.env.AWS_PINPOINT_SECRET} </b></td>
+                        <td><b> ${process.env.AWS_PINPOINT_ACCESS_KEY} - ${process.env.PROJECT_ID} - ${process.env.AWS_PINPOINT_SECRET} </b></td>
                     </tr>
                     <tr>
                         <th>Date Commited</th>
