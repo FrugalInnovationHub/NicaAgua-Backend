@@ -148,9 +148,6 @@ function UserController(app) {
     app.post('/user/otp/request', async (req, res) => {
         // Fetch data from request body
         const destinationNumber = req.body.mobile;
-
-
-        // const projectId = process.env.PROJECT_ID;
         const brandName = "NicaAgua";
         const otp_len = 5;
 
@@ -173,7 +170,7 @@ function UserController(app) {
             region: REGION,
             credentials: {
                 accessKeyId: process.env.AWS_PINPOINT_ACCESS_KEY,
-                secretAccessKey: AWS_PINPOINT_SECRET,
+                secretAccessKey: process.env.AWS_PINPOINT_SECRET,
             }
         });
 
