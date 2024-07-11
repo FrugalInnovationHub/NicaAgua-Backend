@@ -2,10 +2,16 @@ const PermissionMiddleWare = require("../permissionMiddleWare");
 const HistoricalService = require("../../DomainLayer/Services/historicalService");
 
 function HistoricalController(app) {
-    app.get('/historical/:community/:month', (req, res) => {
+    app.get('/historical', (req, res) => {
         try {
-            const community = req.params.community;
-            const month = req.params.month;
+            const community = req.query.community;
+            const month = req.query.month;
+
+            if (!community || !month) {
+                res.statusCode = 400;
+                res.send('Both community and month parameters are required');
+                return;
+            }
             new HistoricalService().getHistorical(community,month)
             .then((e) => res.send(e))
             .catch((e) => {
