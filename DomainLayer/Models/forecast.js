@@ -1,4 +1,5 @@
 var moment = require("moment");
+const Notification = require("./notification");
 const { Base } = require("../Utils/propertyValidator");
 /**Represents a Short term Forecast */
 class Forecast extends Base {
@@ -29,9 +30,9 @@ class Forecast extends Base {
       { nullable: false, min: this.fiveDaysMin, max: null },
       "fiveDaysMax"
     );
-     /**Forecast for ten days
-     * @summary the value will be rounded and cannot be smaller than zero
-    */
+    /**Forecast for ten days
+    * @summary the value will be rounded and cannot be smaller than zero
+   */
     this.tenDays = Math.round(object.tenDays);
     this.CheckNumber(
       { nullable: false, min: this.fiveDays, max: null },
@@ -53,9 +54,9 @@ class Forecast extends Base {
       { nullable: false, min: this.fiveDaysMax, max: null },
       "tenDaysMax"
     );
-     /**Forecast for fifteen days
-     * @summary the value will be rounded and cannot be smaller than zero
-    */
+    /**Forecast for fifteen days
+    * @summary the value will be rounded and cannot be smaller than zero
+   */
     this.fifteenDays = Math.round(object.fifteenDays);
     this.CheckNumber(
       { nullable: false, min: this.tenDays, max: null },
@@ -84,10 +85,15 @@ class Forecast extends Base {
         : moment(new Date()).format("YYYY-MM-DD");
     this.CheckErrors();
   }
+
+  // get isWet() { return this.fiveDays > this.fiveDaysMax || this.tenDays > this.tenDaysMax || this.fifteenDays > this.fifteenDaysMax }
+  // get isDry() { return this.fiveDays < this.fiveDaysMin || this.tenDays < this.tenDaysMin || this.fifteenDays < this.fifteenDaysMin }
+  get isWet() { return this.fiveDays > this.fiveDaysMax }
+  get isDry() { return this.fiveDays < this.fiveDaysMin }
 }
 
 /**List of Forecasts */
-class ShortTermForecasts extends Base{
+class ShortTermForecasts extends Base {
   constructor(object) {
     super();
     var today = moment(new Date()).format("YYYY-MM-DD");
@@ -96,11 +102,32 @@ class ShortTermForecasts extends Base{
       object.date != null
         ? moment(new Date(object.date)).format("YYYY-MM-DD")
         : today;
-    /**List of Forecasts for this date*/
-    this.forecasts = object.forecasts.map((f) =>
-      new Forecast(f).toJson()
+    this._forecasts = object.forecasts.map((f) =>
+      new Forecast(f)
     );
+    /**List of Forecasts for this date*/
     this.CheckErrors();
+  }
+
+  get forecasts() { return this._forecasts.map(e => e.toJson()) };
+
+  get dryRegions() {
+    let set = new Set();
+    for (let f of this._forecasts) 
+      if (f.isDry) set.add(f.community);
+    return Array.from(set);
+  }
+
+  get wetRegions() {
+    let set = new Set();
+    for (let f of this._forecasts) 
+      if (f.isWet) set.add(f.community);
+  
+    return Array.from(set);
+  }
+
+  toJson() {
+    return { date: this.date, forecasts: this.forecasts }
   }
 }
 
@@ -159,7 +186,7 @@ class LongTermForecasts extends Base {
       object.date != null
         ? moment(new Date(object.date)).format("YYYY-MM-DD")
         : today;
-        
+
     /**Array of Forecasts */
     this.forecasts = object.forecasts.map((f) =>
       new LongTermForecast(f).toJson()
@@ -168,4 +195,4 @@ class LongTermForecasts extends Base {
   }
 }
 
-module.exports = { Forecast, LongTermForecast, LongTermForecasts,ShortTermForecasts };
+module.exports = { Forecast, LongTermForecast, LongTermForecasts, ShortTermForecasts };

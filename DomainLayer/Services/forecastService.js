@@ -1,5 +1,7 @@
 const {ForeCastRepository} = require("../../DataLayer/forecastRepository");
 const {ShortTermForecasts} = require("../Models/forecast");
+const sendNotification = require("./notificationService");
+const WaterAlertService = require("./waterAlertService");
 
 class ForecastService {
   constructor() {
@@ -12,22 +14,12 @@ class ForecastService {
    */
   addForecast(object) {
     return new Promise((resolve, reject) => {
-      var newForecast = new ShortTermForecasts(object).toJson();
-      this.foreCastRepository
-        .getById(newForecast.date)
-        .then((u) => {
-          this.foreCastRepository
-            .upsert(newForecast)
-            .then(() => resolve())
-            .catch((err) => {
-              reject(err);
-            });
-        })
-        .catch((err) => {
-          reject(err);
-        });
-    });
-  }
+      var newForecast = new ShortTermForecasts(object);
+      const waterAlertService =new WaterAlertService();
+      waterAlertService.addDryAlert(newForecast.dryRegions);
+      waterAlertService.addWetAlert(newForecast.wetRegions);
+      this.foreCastRepository.upsert(newForecast.toJson()).then(() => resolve()).catch((e) => reject(e));
+    });}
 
   getForecast(community) {
     return new Promise((resolve, reject) => {

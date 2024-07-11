@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-nicaaguabackend-dev-180034-authRole",
+      "UnauthRoleArn": "arn:aws:iam::270250712350:role/amplify-nicaaguabackend-dev-180034-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::270250712350:role/amplify-nicaaguabackend-dev-180034-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-nicaaguabackend-dev-180034-deployment",
+      "UnauthRoleName": "amplify-nicaaguabackend-dev-180034-unauthRole",
+      "StackName": "amplify-nicaaguabackend-dev-180034",
+      "StackId": "arn:aws:cloudformation:us-west-2:270250712350:stack/amplify-nicaaguabackend-dev-180034/55084c70-1f86-11ee-8b15-0afe5a22443d",
+      "AmplifyAppId": "d37prrrrnjm74z"
+    }
+  }
+}

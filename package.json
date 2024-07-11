@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nyc --reporter=html --reporter=text mocha",
+    "test": "nyc --reporter=html --reporter=text mocha Test/*.js",
     "start": "node PresentationLayer/nicaraguaApp.js -p 3001"
   },
   "engines": {
@@ -13,6 +13,9 @@
   "author": "Giulliano Siviero",
   "license": "ISC",
   "dependencies": {
+    "@aws-sdk/client-pinpoint": "^3.282.0",
+    "aws-amplify": "^5.0.15",
+    "axios": "^1.7.2",
     "bcrypt": "^5.0.1",
     "commander": "^9.4.1",
     "cors": "^2.8.5",
@@ -26,5 +29,8 @@
     "nyc": "^15.1.0",
     "request": "^2.88.2"
   },
-  "mocha.files.glob": "Test/**.js"
+  "mocha.files.glob": "Test/**.js",
+  "devDependencies": {
+    "mocha": "^10.4.0"
+  }
 }
